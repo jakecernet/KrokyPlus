@@ -1,75 +1,23 @@
 <!DOCTYPE html>
-
-<html lang="sl">
+<html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>webmail.arnes.si :: Dobrodošli v webmail.arnes.si</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0">
-    <meta name="theme-color" content="#f4f4f4">
-    <meta name="msapplication-navbutton-color" content="#f4f4f4">
-    <link rel="shortcut icon" href="skins/arnes_elastic/images/favicon.ico?s=1678707469">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="files/login.css">
 </head>
 
-<body class="task-login action-none">
-
-    <div id="layout">
-        <h1 class="voice">webmail.arnes.si Prijava</h1>
-
-        <div id="layout-content" class="selected no-navbar login-table" role="main">
-            <div class="table-row">
-                <img src="skins/arnes_elastic/images/arnes-logo-orange.svg?s=1678707469" data-src-small="0" id="logo"
-                    alt="Logo">
-            </div>
-            <div class="table-row">
-                <div class="table-cell">
-                    <form id="login-form" name="login-form" method="post" class="propform" action="/?_task=login">
-                        <input type="hidden" name="_token" value="FAptqoD89ndzNWnPOrtutpxw9RIj0SSj">
-                        <input type="hidden" name="_task" value="login"><input type="hidden" name="_action"
-                            value="login"><input type="hidden" name="_timezone" id="rcmlogintz" value="_default_"><input
-                            type="hidden" name="_url" id="rcmloginurl" value="">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="title"><label for="rcmloginuser">Uporabniško ime</label></td>
-                                    <td class="input"><input name="_user" id="rcmloginuser" required size="40"
-                                            class="form-control" autocapitalize="off" autocomplete="off" value=""
-                                            type="text"></td>
-                                </tr>
-                                <tr>
-                                    <td class="title"><label for="rcmloginpwd">Geslo</label></td>
-                                    <td class="input"><input name="_pass" id="rcmloginpwd" required size="40"
-                                            class="form-control" autocapitalize="off" autocomplete="off"
-                                            type="password"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="formbuttons"><button type="submit" id="rcmloginsubmit"
-                                class="button mainaction submit">Prijava</button></p>
-                </div>
-
-            </div>
-            <div class="table-row">
-                <div class="table-cell ali">ali</div>
-            </div>
-            <div class="table-row">
-                <div class="table-cell">
-                    <div class="login-form">
-                        <p class="formbuttons"><a id="aai-login" href="https://proxy.aai.arnes.si/webmail/loginhandle"
-                                class="aai-login button btn btn-primary w-100 btn-lg">AAI-prijava</a></p>
-                        <div id="loginuser-info-message"><span>Če se želite prijaviti z AAI-računom, najprej kliknite na
-                                gumb AAI-prijava.</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div style='display:none !important;'><input type='hidden' id='rcsPhone' name='rcsPhone' value='0' /><input
-            type='hidden' id='rcsTablet' name='rcsTablet' value='0' /><input type='hidden' id='rcsSkin' name='rcsSkin'
-            value='arnes_elastic' />
+<body>
+    <div class="log-form">
+        <h2>Login to your account</h2>
+        <form>
+            <input type="text" title="username" placeholder="username" />
+            <input type="password" title="username" placeholder="password" />
+            <button type="submit" class="btn">Login</button>
+            <a class="forgot" href="#">Forgot Username?</a>
+        </form>
     </div>
 </body>
 
