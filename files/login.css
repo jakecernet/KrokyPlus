@@ -28,6 +28,7 @@ body {
     border-color: #000000;
     display: flex;
     height: 60px;
+    float: right;
 }
 
 .nav-links {
@@ -57,14 +58,12 @@ body {
     display: block;
     font-family: 'Montserrat';
     font-size: 1.2rem;
-    float: right;
 }
 
 .nav-links li a:hover {
     background-color: rgb(45, 83, 155);;
     color: rgb(255, 255, 255);
 }
-
 
 .log-form {
     width: 40%;
@@ -106,8 +105,7 @@ input {
     width: 100%;
     margin-bottom: 2em;
     padding: .5em 0;
-    border: none;
-    border-bottom: 1px solid #eaeaea;
+    border: 1px solid #eaeaea;
     padding-bottom: 1.25em;
     color: #757575;
 }
@@ -115,7 +113,7 @@ input {
 .btn {
     display: inline-block;
     background: rgb(74, 74, 238);
-    border: 1px solid darken(rgb(58, 133, 204), 5%);
+    border: 1px;
     padding: .5em 2em;
     color: white;
     margin-right: .5em;
@@ -124,6 +122,7 @@ input {
 
 .btn:hover {
     background: darken(rgb(58, 133, 204), 5%);
+    border: 1px solid #000000;
 }
 
 .forgot {
