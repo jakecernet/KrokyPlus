@@ -50,8 +50,8 @@ input {
     width: 100%;
     margin-bottom: 2em;
     border: 1px solid #444444;
-    padding-bottom: 1.25em;
-    padding-top: 1.25em;
+    padding-bottom: .85em;
+    padding-top: .85em;
     color: #464646;
     border-radius: 2px;
     align-items: center;
