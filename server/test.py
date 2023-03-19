@@ -29,10 +29,13 @@ words=[word for word in words if not word==""]
 for word in words:
     for i in words_to_filter:
         if word==i:
-            words.pop(words.index(word))
+            try:
+                words.pop(words.index(word))
+            except:
+                pass
 
 
-print(sort_words_by_frequency(words)[-1])
+print(sort_words_by_frequency(words))
 
 
 
