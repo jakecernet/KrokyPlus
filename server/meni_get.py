@@ -2,11 +2,8 @@ import requests
 import re
 from datetime import datetime
 log_list = []
-username = "ČadLin"
-password = "hlamehhit"
 
-
-def hrana_teden(teden, username, password):
+def teden(teden, username, password):
 
 	data = {
 	    "username": username,
@@ -44,5 +41,3 @@ def hrana_teden(teden, username, password):
 	return daily_menu
 
 
-a = hrana_teden(1, username, password)
-print(a)
