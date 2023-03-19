@@ -3,7 +3,8 @@ import re
 from datetime import datetime
 log_list = []
 
-def teden(teden, username, password):
+
+def narocilo_meni(teden, username, password):
 
 	data = {
 	    "username": username,

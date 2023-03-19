@@ -2,8 +2,8 @@ import requests
 import re
 from datetime import datetime
 log_list=[]
-username = "ČadLin"
-password = "hlamehhit"
+username = "d"
+password = "d"
 
 def hrana_teden(teden, username, password):
 	user_food_list=[]
@@ -87,10 +87,16 @@ food_log=open("food_log.txt", "w", encoding="utf-8")
 
 
 print(tedni)
+food_log.write(username)
+food_log.write(";")
+food_log.write(password)
+food_log.write("\n")
 for i in range(0, tedni):
 	a=hrana_teden(i, username, password)
 	print(a)
 	log_list.extend(a)
+	
+
 	for z in a:
 		food_log.write(z)
 		food_log.write("\n")
