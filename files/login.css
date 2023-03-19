@@ -64,9 +64,9 @@ input {
 .register {
     line-height: .5em;
     position: relative;
-    top: 2.5em;
+    top: 1.2em;
     text-decoration: none;
-    font-size: .75em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     float: right;
@@ -74,5 +74,5 @@ input {
 }
 
 .register:hover {
-    color: rgb(74, 74, 238);
+    color: rgb(0, 0, 0);
 }
