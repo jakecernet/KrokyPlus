@@ -1,0 +1,36 @@
+.options{
+    display: block;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 400px;
+    float: left;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    margin-left: 150px;
+}
+
+.options ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options ul li{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.options ul li a{
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.options ul li a:hover{
+    color: #000;
+}
