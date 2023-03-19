@@ -1,3 +1,15 @@
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder {
+    text-align: center;
+}
+
+::placeholder {
+    text-align: center;
+}
+
 .log-form {
     width: 40%;
     min-width: 320px;
@@ -11,7 +23,7 @@
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 form {
@@ -30,18 +42,21 @@ h2 {
     box-shadow: inset 0px 1px 1px fadeout(white, 95%);
     margin: 0;
     font-weight: 200;
+    color: white;
 }
 
 input {
     display: block;
-    margin: auto auto;
     width: 100%;
     margin-bottom: 2em;
     padding: .5em 0;
-    border: 1px solid #eaeaea;
+    border: 1px solid #444444;
     padding-bottom: 1.25em;
-    color: #757575;
-    border-radius: 4px;
+    padding-top: 1.25em;
+    color: #464646;
+    border-radius: 2px;
+    align-items: center;
+    font-size: small;
 }
 
 .btn {
