@@ -2,8 +2,8 @@ import requests
 import re
 from datetime import datetime
 log_list=[]
-username = "imeuporabnisko"
-password = "geslo"
+username = "Lin"
+password = "hlamehhit"
 
 def hrana_teden(teden, username, password):
 	user_food_list=[]
