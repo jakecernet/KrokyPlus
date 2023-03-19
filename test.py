@@ -4,10 +4,8 @@ input_list= file.read().split("\n")
 from collections import Counter
 
 def sort_words_by_frequency(word_list):
-    # Count the frequency of each word
     word_counts = Counter(word_list)
     
-    # Sort the words by their frequency, in descending order
     sorted_words = sorted(word_counts.items(), key=lambda x: x[1], reverse=True)
     
     return sorted_words
