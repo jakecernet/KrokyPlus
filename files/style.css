@@ -57,6 +57,11 @@ footer a{
     margin-top: 30px;
 }
 
+footer a:hover{
+    color: #000000;
+    text-decoration: none;
+}
+
 .footer-text{
     margin-top: 30px;
 }
@@ -76,4 +81,9 @@ footer a{
     color: #fff;
     text-decoration: none;
     font-weight: 400;
+}
+
+.footer-text ul li a:hover{
+    color: #000000;
+    text-decoration: none;
 }
