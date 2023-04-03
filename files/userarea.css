@@ -1,17 +1,17 @@
 .options{
-    width: 40%;
-    min-width: 320px;
-    max-width: 475px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    left: 0;
+    top: 80pt;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
 .options:hover{
