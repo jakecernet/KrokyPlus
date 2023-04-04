@@ -16,9 +16,48 @@
     </div>
     <div class="options">
         <ul>
-            <li><a href="#blck" id="blck">Blacklist</a></li>
-            <li><a href="#wht" id="wht">Whitelist</a></li>
-            <li><a href="#reset" id="reset">Reset algoritma</a></li>
+            <li><a onclick="showBlacklist()">Blacklist</a></li>
+            <li><a onclick="showWhitelist()">Whitelist</a></li>
+            <li><a onclick="resetList()">Reset algoritma</a></li>
+    </div>
+    <div class="blacklist" id="blacklist">
+        <h2>Blacklist</h2>
+        <p>Blacklist je seznam spletnih strani, ki jih ne želite videti v vašem iskalnem rezultatu.</p>
+        <form action="user-area.html" method="post">
+            <input type="text" name="blacklist" id="blacklist" placeholder="Vnesite URL">
+            <input type="submit" value="Dodaj">
+        </form>
+        <div class="blacklist-list">
+            <ul>
+                <li><a href="https://www.google.com/">Google</a></li>
+                <li><a href="https://www.youtube.com/">YouTube</a></li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.twitter.com/">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="whitelist" id="whitelist">
+        <h2>Whitelist</h2>
+        <p>Whitelist je seznam spletnih strani, ki jih želite videti v vašem iskalnem rezultatu.</p>
+        <form action="user-area.html" method="post">
+            <input type="text" name="whitelist" id="whitelist" placeholder="Vnesite URL">
+            <input type="submit" value="Dodaj">
+        </form>
+        <div class="whitelist-list">
+            <ul>
+                <li><a href="https://www.google.com/">Google</a></li>
+                <li><a href="https://www.youtube.com/">YouTube</a></li>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.twitter.com/">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="reset" id="reset">
+        <h2>Reset algoritma</h2>
+        <p>Če želite ponastaviti algoritem, kliknite na spodnjo povezavo.</p>
+        <a href="user-area.html">Ponastavi algoritem</a>
     </div>
     <footer>
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
@@ -31,6 +70,7 @@
             </ul>
         </div>
     </footer>
+    <script src="files/script.js"></script>
 </body>
-    
+
 </html>
