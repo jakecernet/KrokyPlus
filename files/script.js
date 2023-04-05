@@ -12,6 +12,10 @@ function showWhitelist(){
     } else {
         whitelist.style.display = "none";
     }
+    if (blacklist.style.display === "block" || reset.style.display === "block"){
+        blacklist.style.display = "none";
+        reset.style.display = "none";
+    }
 }
 
 function showBlacklist(){
@@ -20,6 +24,10 @@ function showBlacklist(){
     } else {
         blacklist.style.display = "none";
     }
+    if (reset.style.display === "block" || whitelist.style.display === "block"){
+        reset.style.display = "none";
+        whitelist.style.display = "none";
+    }
 }
 
 function resetList(){
@@ -27,5 +35,9 @@ function resetList(){
         reset.style.display = "block";
     } else {
         reset.style.display = "none";
+    }
+    if (blacklist.style.display === "block" || whitelist.style.display === "block"){
+        blacklist.style.display = "none";
+        whitelist.style.display = "none";
     }
 }

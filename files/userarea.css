@@ -14,12 +14,6 @@
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
-.options:hover{
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-}
-
 .options ul{
     list-style: none;
     margin: 0;
@@ -81,29 +75,6 @@
     text-align: center;
 }
 
-.whitelist ul{
-    list-style: none;
-}
-
-.whitelist ul li{
-    margin: 0;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.whitelist ul li:hover{
-    background-color: #cfcfcf;
-    box-shadow: #333;
-}
-
-.whitelist ul li a{
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .blacklist{
     width: 100%;
     min-width: 0;
@@ -120,11 +91,31 @@
     text-align: center;
 }
 
-.blacklist ul{
-    list-style: none;
+.blacklistlist{
+    width: 100%;
+    min-width: 0;
+    left: 0;
+    top: 80pt;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    background-color: #b8b8b8;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
 }
 
-.blacklist ul li{
+.blacklistlist ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.blacklistlist ul li{
     margin: 0;
     padding: 10px 15px;
     margin-bottom: 5px;
@@ -132,15 +123,9 @@
     cursor: pointer;
 }
 
-.blacklist ul li:hover{
+.blacklistlist ul li:hover{
     background-color: #cfcfcf;
     box-shadow: #333;
-}
-
-.blacklist ul li a{
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .reset{
@@ -158,27 +143,3 @@
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     text-align: center;
 }
-
-.reset ul{
-    list-style: none;
-}
-
-.reset ul li{
-    margin: 0;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.reset ul li:hover{
-    background-color: #cfcfcf;
-    box-shadow: #333;
-}
-
-.reset ul li a{
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
