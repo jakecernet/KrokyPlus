@@ -91,6 +91,29 @@
     text-align: center;
 }
 
+input[type=text]{
+    width: 280px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.isci{
+    background-color: cornflowerblue;
+    border: 10px solid cornflowerblue;
+    border-radius: 8px;
+}
+
+.isci:hover{
+    background-color: rgb(151, 187, 255);
+    border: 10px solid rgb(151, 187, 255);
+    box-shadow: #333;
+}
+
 .blacklistlist{
     width: 100%;
     min-width: 0;
