@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uporabniško območje</title>
+    <link rel="shortcut icon" href="files/icon.png" />
     <link rel="stylesheet" href="files/style.css">
     <link rel="stylesheet" href="files/userarea.css">
 </head>
@@ -16,21 +17,54 @@
     </div>
     <div class="options">
         <ul>
-            <li><a href="#blck">Blacklist</a></li>
-            <li><a href="#wht">Whitelist</a></li>
-            <li><a href="#reset">Reset algoritma</a></li>
+            <li onclick="showBlacklist()"><a>Blacklist</a></li>
+            <div class="blacklist" id="blacklist">
+                <h2>Blacklist</h2>
+                <p>Blacklist je seznam hrane, ki je ne maraš.</p>
+                <form action="user-area" method="post">
+                    <input type="text" name="Išči" id="blc" placeholder="Vnesite ime">
+                </form>
+                <div class="blacklist-list">
+                    <ul id="blcklst">
+
+                    </ul>
+                </div>
+            </div>
+            <li onclick="showWhitelist()"><a>Whitelist</a></li>
+            <div class="whitelist" id="whitelist">
+                <h2>Whitelist</h2>
+                <p>Whitelist je seznam jedi, ki so ti všeč.</p>
+                <form action="user-area" method="post">
+                    <input type="text" name="Išči" id="wht" placeholder="Vnesite ime">
+                </form>
+                <div class="whitelist-list">
+                    <ul id="whtlst">
+
+                    </ul>
+                </div>
+            </div>
+            <li onclick="resetList()"><a>Reset algoritma</a></li>
+            <div class="reset" id="reset">
+                <h2>Reset algoritma</h2>
+                <p>Če želite ponastaviti algoritem, kliknite na spodnjo povezavo.</p>
+                <input type="reset" class="isci" href="user-area">
+            </div>
+        </ul>
     </div>
     <footer>
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
         <div class="footer-text">
             <ul>
-                <li><a href="user-area.html">Uporabniško območje</a></li>
-                <li><a href="register.html">Registracija</a></li>
-                <li><a href="index.html">Prijava</a></li>
+                <li><a href="user-area">Uporabniško območje</a></li>
+                <li><a href="register">Registracija</a></li>
+                <li><a href="index">Prijava</a></li>
                 <li><a href="https://github.com/jakecernet/KrokyPlus">O tem projektu</a></li>
             </ul>
         </div>
     </footer>
+    <script src="files/script.js"></script>
+    <script src="files/blacklist.js"></script>
+    <script src="files/whitelist.js"></script>
 </body>
-    
+
 </html>
