@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="files/style.css">
     <link rel="stylesheet" href="files/index.css">
     <link rel="stylesheet" href="files/login.css">
+    <script src="files/auth.js"></script>
+
     <title>KrokyPlus</title>
 </head>
 <body>
@@ -39,82 +41,5 @@
     </footer>
 
 
-    <script>
-        function getMenu() {
-  const https = require('https');
-
-  const DAY = new Date().getDay() - 1;
-
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-
-  const loginData = new URLSearchParams({
-    username,
-    password,
-  }).toString();
-
-  const options = {
-    hostname: 'www.kroky.si',
-    path: '/2016/?mod=register&action=login',
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Content-Length': loginData.length,
-    },
-  };
-
-  let ac;
-
-  try {
-    const req = https.request(options, (res) => {
-      const cookies = res.headers['set-cookie'];
-      ac = cookies[0].match(/PHPSESSID=(\w+);?/)[1];
-
-      if (!ac) {
-        console.error('Login failed');
-        alert('Login failed');
-        return;
-      }
-
-      options.path = '/2016/?mod=register&action=order&pos=-1';
-      options.headers = {
-        cookie: `PHPSESSID=${ac}`,
-      };
-
-      https.get(options, (res) => {
-        let data = '';
-
-        res.on('data', (chunk) => {
-          data += chunk;
-        });
-
-        res.on('end', () => {
-          const menus = data.match(/<span class="lepo_ime">([^<]+)<\/span>/g).map((m) => m.replace(/<[^>]+>/g, ''));
-          const selected = data.match(/menu_id="(\d{1})".*checked/)[1];
-
-          const result = menus[(selected - 1) * 5 + DAY];
-          alert(result);
-        });
-      }).on('error', (err) => {
-        console.error(err);
-        alert(err.message);
-      });
-    });
-
-    req.on('error', (err) => {
-      console.error(err);
-      alert(err.message);
-    });
-
-    req.write(loginData);
-    req.end();
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-}
-
-
-    </script>
 </body>
 </html>
