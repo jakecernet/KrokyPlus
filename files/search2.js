@@ -1,8 +1,8 @@
 // JavaScript koda za iskalnik
-const itemsList = document.getElementById('seznam2');
+const itemsList = document.getElementById('whtlst');
 const searchInput = document.getElementById('isci2');
 
-fetch('https://api.github.com/users/hadley/orgs')
+fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
   .then(data => {
     displayItems(data); // funkcija za prikaz elementov v seznamu
