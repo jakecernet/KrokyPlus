@@ -10,6 +10,22 @@
     text-align: center;
 }
 
+.text{
+    font-size: 20px;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 70px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-height: 700px) {
+    .text{
+        opacity: 0;
+    }
+}
+
 .log-form {
     width: 40%;
     min-width: 320px;
