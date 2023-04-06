@@ -1,6 +1,6 @@
 // JavaScript koda za iskalnik
 const itemsList = document.getElementById('whtlst');
-const searchInput = document.getElementById('isci2');
+const searchInput = document.getElementById('wht');
 
 fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
