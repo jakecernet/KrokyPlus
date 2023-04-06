@@ -114,43 +114,6 @@ input[type=text]{
     box-shadow: #333;
 }
 
-.blacklistlist{
-    width: 100%;
-    min-width: 0;
-    left: 0;
-    top: 80pt;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-    background-color: #b8b8b8;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-    text-align: center;
-    display: flex;
-}
-
-.blacklistlist ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.blacklistlist ul li{
-    margin: 0;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.blacklistlist ul li:hover{
-    background-color: #cfcfcf;
-    box-shadow: #333;
-}
-
 .reset{
     width: 100%;
     min-width: 0;
