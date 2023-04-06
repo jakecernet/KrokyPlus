@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="files/icon.png" />
     <link rel="stylesheet" href="files/style.css">
     <link rel="stylesheet" href="files/register.css">
+    <script type="module" src="files/auth.js"></script>
     <title>KrokyPlus</title>
 </head>
 <body>
@@ -16,12 +17,12 @@
     <div class="log-form">
         <h2>Registracija</h2>
         <form>
-            <input type="text" title="E-pošta" placeholder="E-pošta (example@example.com)"/>
-            <input type="text" title="Uporabniško ime" placeholder="Uporabniško ime (ImePriimek)" />
-            <input type="password" title="Geslo" placeholder="Geslo"/>
+            <input id="email" type="text" title="E-pošta" placeholder="E-pošta (example@example.com)"/>
+            <input id="username" type="text" title="Uporabniško ime" placeholder="Uporabniško ime (ImePriimek)" />
+            <input id="password" type="password" title="Geslo" placeholder="Geslo"/>
             <input type="password" title="Ponovite geslo" placeholder="Ponovite geslo">
-            <button type="submit" class="btn" onclick="">Registracija</button>
-            <a class="login" href="index">Prijava</a>
+            <button id="submit" class="btn">Registracija</button>
+            <a  id="login" class="login" href="index">Prijava</a>
         </form>
     </div>
     <footer>
@@ -36,4 +37,5 @@
         </div>
     </footer>
 </body>
+
 </html>
