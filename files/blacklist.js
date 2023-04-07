@@ -2,7 +2,7 @@
 const itemsList = document.getElementById('blcklst');
 const searchInput = document.getElementById('blck');
 
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://spaces.tk/output.json')
   .then(response => response.json())
   .then(data => {
     displayItems(data); // funkcija za prikaz elementov v seznamu
@@ -12,6 +12,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
       displayItems(filteredItems); // funkcija za prikaz filtriranih elementov v seznamu
     });
   })
+  alert(output.json)
   .catch(error => console.error(error));
 
 function displayItems(items) {
