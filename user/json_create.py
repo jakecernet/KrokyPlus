@@ -6,7 +6,7 @@ file_f=open("food_log.txt", "r")
 file=file_f.readlines()
 file_f.close()
 
-new=open("output.txt", "w")
+new=open("output.json", "w")
 new.write("[")
 for index, line in enumerate(file, start=0):
     new.write("{\n")

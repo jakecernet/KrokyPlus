@@ -2,7 +2,7 @@
 const itemsList = document.getElementById('blcklst');
 const searchInput = document.getElementById('blck');
 
-fetch('https://spaces.tk/output.json')
+fetch('https://jakecernet.github.io/KrokyPlus/user/output.json')
   .then(response => response.json())
   .then(data => {
     displayItems(data); // funkcija za prikaz elementov v seznamu
