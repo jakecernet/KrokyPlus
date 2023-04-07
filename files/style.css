@@ -40,11 +40,11 @@ body {
 }
 
 footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    top: 110%;
+    top: 86%;
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: #575757;
     color: #fff;
     text-align: center;
