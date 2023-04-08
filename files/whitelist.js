@@ -1,4 +1,3 @@
-// JavaScript koda za iskalnik
 const itemsList = document.getElementById('whtlst');
 const searchInput = document.getElementById('wht');
 
