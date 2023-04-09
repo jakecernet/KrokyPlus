@@ -1,5 +1,6 @@
 from meni_get import narocilo_meni
 from collections import Counter
+import re
 creds = open("food_log.txt", "r", encoding="utf-8")
 creds_content = creds.readlines()[0]
 
@@ -62,12 +63,32 @@ def recommend(teden, dan, data):
     print(best_index)
     return daily_menu[best_index], best_index
 
-a=narocilo_meni(1, 0, username, password)
+
+
+import re
+
+def recommend_menu(order_history, menus):
+    keywords_count = {}
+    for item in order_history:
+        keywords = re.findall(r'\b\w+\b', item.lower())
+        for keyword in keywords:
+            if keyword in keywords_count:
+                keywords_count[keyword] += 1
+            else:
+                keywords_count[keyword] = 1
+    best_menu = None
+    best_score = -1
+    for menu in menus:
+        keywords = re.findall(r'\b\w+\b', menu.lower())
+        score = 0
+        for keyword in keywords:
+            if keyword in keywords_count:
+                score += keywords_count[keyword]
+        if score > best_score:
+            best_menu = menu
+            best_score = score
+    return best_menu
+
+
+a=recommend_menu(input_list, narocilo_meni(1, 4, username, password))
 print(a)
-"""
-words=parse_words(input_list)
-data=sort_words_by_frequency(words)
-
-
-print(recommend(1,1, data))
-"""

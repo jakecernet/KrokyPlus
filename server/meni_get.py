@@ -4,7 +4,7 @@ from datetime import datetime
 log_list = []
 
 
-def narocilo_meni(teden, username, password):
+def narocilo_meni(teden, day, username, password):
 
 	data = {
 	    "username": username,
@@ -12,9 +12,8 @@ def narocilo_meni(teden, username, password):
 
 	}
 
-
-
-	day = -4
+	day=5-day
+	day=-abs(day)
 
 	login_url = "https://www.kroky.si/2016/?mod=register&action=login"
 
@@ -36,9 +35,9 @@ def narocilo_meni(teden, username, password):
 		r'menu_id="(\d{1})".*checked', menu_page)]
 
 	stevilo_dni = int(len(menu_names)/11)+1
-	daily_menu=[]
+	daily_menu = []
 	for i in range(1, 11):
-		    daily_menu.append(menu_names[int(len(menu_names)/11)*i+day-1])
+	    daily_menu.append(menu_names[int(len(menu_names)/11)*i+day-1])
 	return daily_menu
 
 
