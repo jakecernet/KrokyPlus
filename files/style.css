@@ -22,6 +22,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
 .title {
@@ -40,11 +43,11 @@ body {
 }
 
 footer{
-    position: absolute;
+    margin-top: auto;
+    position: sticky;
     bottom: 0;
-    top: 110%;
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: #575757;
     color: #fff;
     text-align: center;
