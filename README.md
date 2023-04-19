@@ -33,7 +33,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is my personal webpage.
+This is an app that uses AI to order lunch on https://www.kroky.si/2016/?mod=register&action=order.
 
 
 
