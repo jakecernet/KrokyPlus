@@ -36,6 +36,9 @@
 This is an app that uses AI to order lunch on https://www.kroky.si/2016/?mod=register&action=order.
 
 
+## How to use it
+
+First, you login with your Kroky username and password.
 
 ### Built With
 
