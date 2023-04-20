@@ -94,7 +94,12 @@
 .isci{
     background-color: cornflowerblue;
     border: 10px solid cornflowerblue;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+input{
+    width: 320px;
 }
 
 .isci:hover{
