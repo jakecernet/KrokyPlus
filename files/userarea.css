@@ -91,17 +91,6 @@
     text-align: center;
 }
 
-input[type=text]{
-    width: 280px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
 .isci{
     background-color: cornflowerblue;
     border: 10px solid cornflowerblue;

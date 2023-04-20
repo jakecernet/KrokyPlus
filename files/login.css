@@ -61,19 +61,6 @@ h2 {
     color: white;
 }
 
-input {
-    display: block;
-    width: 100%;
-    margin-bottom: 2em;
-    border: 1px solid #444444;
-    padding-bottom: .85em;
-    padding-top: .85em;
-    color: #464646;
-    border-radius: 2px;
-    align-items: center;
-    font-size: small;
-}
-
 .btn {
     display: inline-block;
     background: rgb(74, 74, 238);
