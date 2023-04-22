@@ -40,6 +40,8 @@ This is an app that uses AI to order lunch on https://www.kroky.si/2016/?mod=reg
 
 First, you login with your Kroky username and password.
 
+<img src="http://www2.arnes.si/~jcern4/Posnetek%20zaslona%202023-04-22%20121453.png" width="1000px">
+
 ### Built With
 
 * [![HTML][HTML5]][Next-url]
