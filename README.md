@@ -33,8 +33,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is an app that uses AI to order lunch on https://www.kroky.si/2016/?mod=register&action=order.
+KrokyPlus uses AI to simplify the food ordering process on Kroky.si. Users can log in with their Kroky username and password and the app will automatically place an order for them based on their previous orders and preferences.
 
+## Project Status
+KrokyPlus is currently in development and is not intended for production use.
 
 ## How to use it
 
