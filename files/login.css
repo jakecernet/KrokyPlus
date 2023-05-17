@@ -10,7 +10,7 @@
     text-align: center;
 }
 
-.text{
+.text {
     font-size: 20px;
     color: #000;
     font-weight: 100;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (max-height: 700px) {
-    .text{
+    .text {
         opacity: 0;
     }
 }
@@ -92,4 +92,26 @@ h2 {
 
 .register:hover {
     color: rgb(0, 0, 0);
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+#warning {
+    color: red;
+    animation: infinite 1s fadeout;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 100px
 }

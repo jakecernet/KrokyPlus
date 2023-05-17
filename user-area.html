@@ -30,18 +30,25 @@
                     </ul>
                 </div>
             </div>
-            <li onclick="showWhitelist()"><a>Whitelist</a></li>
-            <div class="whitelist" id="whitelist">
-                <h2>Whitelist</h2>
-                <p>Whitelist je seznam jedi, ki so ti všeč.</p>
-                <form method="post">
-                    <input type="text" name="Išči" id="wht" placeholder="Vnesite ime">
-                </form>
-                <div>
-                    <ul id="whtlst">
-
-                    </ul>
-                </div>
+            <li onclick="showWhitelist()"><a>Meni blacklist</a></li>
+            <div class="meniblk" id="meniblk">
+                <h2>Meni blacklist</h2>
+                <p>Blacklist za menije, ki jih ne želiš.</p>
+                <ul>
+                    <input type="checkbox" id="1">
+                    <label for="1">1. Topli 1</label>
+                    <input type="checkbox" id="2">
+                    <label for="2">2. Topli 2</label>
+                    <input type="checkbox" id="3">
+                    <label for="3">3. Rastlinski</label>
+                    <input type="checkbox" id="4">
+                    <label for="4">4. Fast</label>
+                    <input type="checkbox" id="5">
+                    <label for="5">5. Solatni</label>
+                    <input type="checkbox" id="6">
+                    <label for="6">6. Sendviči</label>
+                </ul>
+                <button type="submit" onclick="save()" id="">Shrani</button>
             </div>
             <li onclick="resetList()"><a>Reset algoritma</a></li>
             <div class="reset" id="reset">
@@ -64,7 +71,6 @@
     </footer>
     <script src="files/script.js"></script>
     <script src="files/blacklist.js"></script>
-    <script src="files/whitelist.js"></script>
 </body>
 
 </html>
