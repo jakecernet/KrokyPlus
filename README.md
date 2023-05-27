@@ -38,11 +38,11 @@ KrokyPlus uses AI to simplify the food ordering process on Kroky.si. Users can l
 ## Project Status
 KrokyPlus is currently in development and is not intended for production use.
 
-## How to use it
+<!--## How to use it
 
 First, you register with your Kroky username and password.
 
-<img src="http://www2.arnes.si/~jcern4/Posnetek%20zaslona%202023-04-22%20121453.png" width="1000px">
+<img src="http://www2.arnes.si/~jcern4/Posnetek%20zaslona%202023-04-22%20121453.png" width="1000px">-->
 
 ### Built With
 
