@@ -10,8 +10,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://jakecernet.github.io/KrokyPlus/">
-    <img src="https://jakecernet.github.io/KrokyPlus/files/icon.png" alt="Logo" width="80" height="80">
+  <a href="https://krokyplus.me">
+    <img src="https://krokyplus.me/files/other/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
@@ -19,7 +19,7 @@
   <p align="center">
     Improvment for food ordering service.
     <br />
-    <a href="https://jakecernet.github.io/KrokyPlus" target="_blank"><strong>Visit the website »</strong></a>
+    <a href="https://krokyplus.me" target="_blank"><strong>Visit the website »</strong></a>
     <br />
     <br />
     <a href="https://github.com/jakecernet/KrokyPlus/issues">Report Bug</a>
