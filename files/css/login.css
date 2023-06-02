@@ -20,6 +20,17 @@
     margin-bottom: 10px;
 }
 
+.title {
+    font-size: 20px;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 1%;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+
 @media screen and (max-height: 700px) {
     .text {
         opacity: 0;
@@ -32,7 +43,7 @@
     max-width: 475px;
     background: #fff;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -102,17 +113,4 @@ h2 {
     to {
         opacity: 0;
     }
-}
-
-#warning {
-    color: red;
-    animation: infinite 1s fadeout;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    margin-top: 10px;
-    font-weight: 900;
-    font-size: 100px;
-    z-index: 9999;
 }
