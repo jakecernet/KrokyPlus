@@ -1,0 +1,1 @@
+console.log('Jaka, ne tega premaknt drgam');
