@@ -34,6 +34,13 @@
             <a class="register" href="register">Registracija</a>
         </form>
     </div>
+    <div class="cookie-popup" id="cookie-popup">
+        <p>This website uses cookies to ensure you get the best experience.</p>
+        <div class="button">
+            <button onclick="acceptCookies()">Accept</button>
+            <button onclick="rejectCookies()" id="red">Reject</button>
+        </div>
+    </div>
     <footer>
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
         <div class="footer-text">
@@ -45,8 +52,7 @@
             </ul>
         </div>
     </footer>
-
-
+    <script src="files/script/cookies.js"></script>
 </body>
 
 </html>
