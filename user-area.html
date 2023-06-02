@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="files/other/icon.png" />
     <link rel="stylesheet" href="files/css/style.css">
     <link rel="stylesheet" href="files/css/userarea.css">
-    <script src="files/script/script.js"></script>
-    <script src="files/script/blacklist.js"></script>
 </head>
 
 <body>
@@ -37,18 +35,30 @@
                 <h2>Meni blacklist</h2>
                 <p>Blacklist za menije, ki jih ne želiš.</p>
                 <ul>
-                    <input type="checkbox" id="1">
-                    <label for="1">1. Topli 1</label>
-                    <input type="checkbox" id="2">
-                    <label for="2">2. Topli 2</label>
-                    <input type="checkbox" id="3">
-                    <label for="3">3. Rastlinski</label>
-                    <input type="checkbox" id="4">
-                    <label for="4">4. Fast</label>
-                    <input type="checkbox" id="5">
-                    <label for="5">5. Solatni</label>
-                    <input type="checkbox" id="6">
-                    <label for="6">6. Sendviči</label>
+                    <li onclick="checkbox(1)">
+                        <input type="checkbox" id="1">
+                        <label for="1">1. Topli 1</label>
+                    </li>
+                    <li onclick="checkbox(2)">
+                        <input type="checkbox" id="2">
+                        <label for="2">2. Topli 2</label>
+                    </li>
+                    <li onclick="checkbox(3)">
+                        <input type="checkbox" id="3">
+                        <label for="3">3. Rastlinski</label>
+                    </li>
+                    <li onclick="checkbox(4)">
+                        <input type="checkbox" id="4">
+                        <label for="4">4. Fast</label>
+                    </li>
+                    <li onclick="checkbox(5)">
+                        <input type="checkbox" id="5">
+                        <label for="5">5. Solatni</label>
+                    </li>
+                    <li onclick="checkbox(6)">
+                        <input type="checkbox" id="6">
+                        <label for="6">6. Sendviči</label>
+                    </li>
                 </ul>
                 <button type="submit" onclick="save()" id="">Shrani</button>
             </div>
@@ -71,6 +81,8 @@
             </ul>
         </div>
     </footer>
+    <script src="files/script/script.js"></script>
+    <script src="files/script/blacklist.js"></script>
 </body>
 
 </html>
