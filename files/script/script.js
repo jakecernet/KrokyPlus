@@ -41,3 +41,12 @@ function resetList() {
         whitelist.style.display = "none";
     }
 }
+
+function checkbox(num) {
+    var checkbox = document.getElementById(num);
+    if (checkbox.checked == true) {
+        checkbox.checked = false;
+    } else {
+        checkbox.checked = true;
+    }
+}

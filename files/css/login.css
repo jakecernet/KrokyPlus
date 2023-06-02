@@ -113,5 +113,6 @@ h2 {
     display: flex;
     margin-top: 10px;
     font-weight: 900;
-    font-size: 100px
+    font-size: 100px;
+    z-index: 9999;
 }

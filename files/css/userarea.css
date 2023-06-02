@@ -119,11 +119,6 @@ input {
     min-width: 0;
     left: 0;
     top: 80pt;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
     background-color: #b8b8b8;
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -132,7 +127,53 @@ input {
 
 .meniblk ul {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin-left: -340px;
     text-align: center;
+}
+
+.meniblk ul li {
+    margin: 0;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.meniblk ul li:hover {
+    background-color: #cfcfcf;
+    box-shadow: #333;
+}
+
+.meniblk ul li label {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.meniblk ul li label:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.meniblk ul li input [type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    margin-left: 200px;
+}
+
+.meniblk ul li input [type="checkbox"]:hover {
+    background-color: #cfcfcf;
+    box-shadow: #333;
+}
+
+.meniblk button {
+    background-color: cornflowerblue;
+    border: 10px solid cornflowerblue;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
