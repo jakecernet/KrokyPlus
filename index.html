@@ -12,25 +12,25 @@
     <meta property="og:image" content="https://krokyplus.me/files/icon.png">
     <meta property="og:site_name" content="KrokyPlus">
     <meta property="og:locale" content="sl_SI">
-    <link rel="shortcut icon" href="files/icon.png" />
-    <link rel="stylesheet" href="files/style.css">
-    <link rel="stylesheet" href="files/index.css">
-    <link rel="stylesheet" href="files/login.css">
-    <script src="files/auth.js"></script>
+    <link rel="shortcut icon" href="files/other/icon.png" />
+    <link rel="stylesheet" href="files/css/style.css">
+    <link rel="stylesheet" href="files/css/index.css">
+    <link rel="stylesheet" href="files/css/login.css">
+    <script src="files/firebase/firebase.js"></script>
     <title>KrokyPlus</title>
 </head>
 
 <body>
     <a id="warning">Warning! Site in development!</a>
     <div class="title">
-        <h1>KrokyPlus</h1>
+        <h1>KrokyPlus | Vpis</h1>
     </div>
     <div class="log-form">
         <h2>Prijava</h2>
         <form>
             <input type="text" id="username" title="Uporabniško ime" placeholder="Uporabniško ime ali E-pošta" />
             <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-            <button type="submit" class="btn" id="submit" onclick="auth()">Prijava</button>
+            <button type="submit" class="btn" id="submit" onclick="login()">Prijava</button>
             <a class="register" href="register">Registracija</a>
         </form>
     </div>
