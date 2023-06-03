@@ -4,23 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>    
     <link rel="shortcut icon" href="files/other/icon.png" />
     <link rel="stylesheet" href="files/css/style.css">
     <link rel="stylesheet" href="files/css/register.css">
-    <script type="module" src="files/firebase/firebase.js"></script>
+    <script src="files/firebase/firebase.js"></script>
     <title>KrokyPlus | Registracija</title>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDFC2TYDhw7ILNi_HVB5TlF0ZW-g6CzJeY",
+          authDomain: "krokyplus-90d21.firebaseapp.com",
+          projectId: "krokyplus-90d21",
+          storageBucket: "krokyplus-90d21.appspot.com",
+          messagingSenderId: "747520605008",
+          appId: "1:747520605008:web:77b499fe9a4c7a4a7bca55",
+          measurementId: "G-QVC05RC76S"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        function register(){
+    const registerForm = document.getElementById("register-form");
+    registerForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const name = document.getElementById("name").value
+        const g_token = generateToken();
+        console.log(name, username, password, g_token)
+        saveUserInfo(name, username, password, g_token)
+        console.log("tukaj sem")
+    });
+}
+
+function generateToken() {
+    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  
+    const allChars = uppercaseChars + lowercaseChars;
+    let password = "";
+  
+    for (let i = 0; i < 30; i++) {
+      const randomIndex = Math.floor(Math.random() * allChars.length);
+      password += allChars.charAt(randomIndex);
+    }
+  
+    return password;
+}
+function saveUserInfo(name, username, password, g_token) {
+    const db = firebase.firestore();
+    db.collection("users")
+      .doc(username)
+      .set({
+        name: name,
+        username: username,
+        password: password,
+        token: g_token,
+      })
+      .then(() => {
+        console.log("User information saved successfully!");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  }
+      </script>
 </head>
 <body>
     <div class="title">
         <h1>KrokyPlus</h1>
     </div>
     <div class="log-form">
-        <h2>Registracija</h2>
-        <form>
-            <input id="username" type="text" title="Uporabniško ime" placeholder="Kroky uporabniško ime "/>
-            <input id="password" type="text" title="Geslo" placeholder="Kroky geslo" />
-            <input id="text" type="password" title="Vaše ime" placeholder="Ime"/>
-            <button id="submit" class="btn">Registracija</button>
+    <h2>Registracija</h2>
+        <form id="register-form">
+            <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime "/>
+            <input id="password" type="password" title="Geslo" required placeholder="Kroky geslo" />
+            <input id="name" type="text" title="Vaše ime" required placeholder="Ime"/>
+            <button id="submit" class="btn" onclick="register()">Registracija</button>
             <a id="login" class="login" href="index">Prijava</a>
         </form>
     </div>
