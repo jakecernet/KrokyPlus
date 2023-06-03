@@ -12,6 +12,7 @@
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-top: 100px;
 }
 
 .options ul {
@@ -176,4 +177,40 @@ input {
     width: 120px;
     margin-top: 40px;
     margin-bottom: 20px;
+}
+
+.navbar {
+    width: 100%;
+    min-width: 0;
+    left: 0;
+    background-color: #b8b8b8;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 20px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.login {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+.login a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
 }
