@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="files/css/index.css">
     <link rel="stylesheet" href="files/css/login.css">
     <script src="files/firebase/firebase.js"></script>
+    <script src="files/script/login.js"></script>
     <title>KrokyPlus | Vpis</title>
 </head>
 
@@ -33,7 +34,7 @@
         <form>
             <input type="text" id="username" title="Uporabniško ime" placeholder="Uporabniško ime ali E-pošta" />
             <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-            <button type="submit" class="btn" id="submit" onclick="login()">Prijava</button>
+            <a href="user-area.html"><button type="submit" class="btn" id="submit" onclick="login()">Prijava</button></a>
             <a class="register" href="register">Registracija</a>
         </form>
     </div>

@@ -90,7 +90,6 @@ function setCookie(name, value, days) {
       document.getElementById("cookie-popup").style.display = "block";
     }
 
-    // Check if the user has already accepted or rejected cookies
     var cookieAccepted = getCookie("cookieAccepted");
     if (cookieAccepted === null) {
       showCookiePopup();
