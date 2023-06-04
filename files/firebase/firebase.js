@@ -11,52 +11,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-function register(){
-  const registerForm = document.getElementById("register-form");
-  registerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const name = document.getElementById("name").value
-    const g_token = generateToken();
-    console.log(name, username, password, g_token)
-    saveUserInfo(name, username, password, g_token)
-    console.log("tukaj sem")
-  });
-}
-
-function generateToken() {
-  const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-
-  const allChars = uppercaseChars + lowercaseChars;
-  let password = "";
-
-  for (let i = 0; i < 30; i++) {
-  const randomIndex = Math.floor(Math.random() * allChars.length);
-  password += allChars.charAt(randomIndex);
-  }
-
-  return password;
-}
-function saveUserInfo(name, username, password, g_token) {
-  const db = firebase.firestore();
-  db.collection("users")
-  .doc(username)
-  .set({
-  name: name,
-  username: username,
-  password: password,
-  token: g_token,
-  })
-  .then(() => {
-    console.log("User information saved successfully!");
-    })
-    .catch((error) => {
-    console.log(error.message);
-  });
-}
-function saveUserInfo(name, username, password, g_token) {
+function saveUserInfo(name, username, email, password, g_token) {
     const db = firebase.firestore();
     db.collection("users")
       .doc(username)
@@ -65,6 +20,7 @@ function saveUserInfo(name, username, password, g_token) {
         username: username,
         password: password,
         token: g_token,
+        email: email,
       })
       .then(() => {
         console.log("User information saved successfully!");
@@ -149,7 +105,6 @@ function checkTokenOnLoad() {
     }
   }
 
-
 function register(){
     const registerForm = document.getElementById("register-form");
     registerForm.addEventListener("submit", (event) => {
@@ -157,10 +112,10 @@ function register(){
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
         const name = document.getElementById("name").value
+        const email = document.getElementById("email").value
         const g_token = generateToken();
-        console.log(name, username, password, g_token)
-        saveUserInfo(name, username, password, g_token)
-        console.log("tukaj sem")
+        checkUsernameExists(name, username, email, password, g_token);
+        setCookie("token", g_token)
     });
 }
 
@@ -177,4 +132,33 @@ function generateToken() {
     }
   
     return password;
+}
+
+function checkUsernameExists(name, username, email, password, g_token) {
+    return new Promise((resolve, reject) => {
+      const usersRef = db.collection("users");
+      const query = usersRef.where("username", "==", username).limit(1);
+  
+      query
+        .get()
+        .then((snapshot) => {
+          if (!snapshot.empty) {
+            alert("Uporabnik že obstaja, prosimo pišite na mail za pomoč.")
+            location.reload()
+            resolve(true);
+          } else {
+            saveUserInfo(name, username, email, password, g_token);
+            alert("Registracija je bila uspešna. Preusmerjam ...");
+            window.location.href = "/user-area"
+            resolve(false);
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  }
+
+function getUsernameFromToken(token){
+  
 }
