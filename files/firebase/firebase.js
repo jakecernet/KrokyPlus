@@ -189,7 +189,8 @@ function login(){
           setCookie("name", name);
           setCookie("username", username);
           setCookie("token", token);
-          alert("Uspešno si bil vpisan.")
+          alert("Uspešno si bil vpisan.");
+          window.location.href = "/profile";
         }
       }
       })
@@ -266,4 +267,16 @@ function spremeniP(){
   } else if (podatki_spremeni.style.display === "block") {
     podatki_spremeni.style.display = "none";
   }
+}
+
+function deleteCookie(cookieName) {
+  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+
+function logout(){
+  deleteCookie("name");
+  deleteCookie("token");
+  deleteCookie("username");
+  location.reload();
 }
