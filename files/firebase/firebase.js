@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   var loadingScreen = document.querySelector('.loading-screen');
   if (loadingScreen) {
-    loadingScreen.parentNode.removeChild(loadingScreen);
+    setTimeout(function() {
+      loadingScreen.parentNode.removeChild(loadingScreen);
+    }, 700);
   }
 });
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyDFC2TYDhw7ILNi_HVB5TlF0ZW-g6CzJeY",
@@ -206,42 +207,63 @@ function OnloadLogin(){
         if (token === "a0a0a0a0a0a0a0a0a0a0a0a0"){
           return
         } else{
-          db.collection
+          db.collection("users")
           .doc()
           .get()
           .then(() => {
-            const name = getCookie(name)
-            const token = getCookie(token)
-            checkTrueToken(name, token)
-            document.getElementById("naslov2").textContent = "KrokyPlus | Profil"
+            const name = getCookie("name");
+            const token = getCookie("token");
+            checkTrueToken(name, token);
           })
         }
-    } else {
-      console.log("No token found.");
-      pass
+      } else {
+        console.log("No token found.");
+        pass
+      }
+      if (decodeURIComponent(window.location.href === "/profile.html")){
+        setContent_profile();
+      } else{
+        console.log("ni me");
+      }
     }
-  }
-
-
+    
+    
 function checkTrueToken(name, token){
-  return new Promise((resolve, reject) => {
-    const usersRef = firebase.firestore().collection("users");
-    const query = usersRef.where("token", "==", token).limit(1);
-    query
-      .get()
-      .then((snapshot) => {
-        if (!snapshot.empty) {
-          const doc = snapshot.docs[0];
-          const storedName = doc.data().name;
-          if (name === storedName) {
-            console.log("Name is correct:", name);
-            resolve();
+      return new Promise((resolve, reject) => {
+        const usersRef = firebase.firestore().collection("users");
+        const query = usersRef.where("token", "==", token).limit(1);
+        query
+        .get()
+        .then((snapshot) => {
+          if (!snapshot.empty) {
+            const doc = snapshot.docs[0];
+            const storedName = doc.data().name;
+            if (name === storedName) {
+              console.log("Name is correct:", name);
+              resolve();
+            } else {
+              reject;
+            }
           } else {
             reject;
           }
-        } else {
-          reject;
-      }
-  })
-  })
+        })
+      })
+ }
+function setContent_profile(){
+  console.log("here");
+  document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
+  document.getElementById("register-form").style.display = "none";
+  document.getElementById("profile-settings").style.display = "block";
+  document.getElementById("navbar").style.display = "block";
+  document.getElementsById("navbar-old").style.display = "none";
+}
+
+function spremeniP(){
+  let podatki_spremeni = document.getElementById("sprememba-podatkov")
+  if (podatki_spremeni.style.display === "none"){
+    podatki_spremeni.style.display = "block";
+  } else if (podatki_spremeni.style.display === "block") {
+    podatki_spremeni.style.display = "none";
+  }
 }
