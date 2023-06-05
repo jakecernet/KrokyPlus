@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var loadingScreen = document.querySelector('.loading-screen');
+  if (loadingScreen) {
+    loadingScreen.parentNode.removeChild(loadingScreen);
+  }
+});
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDFC2TYDhw7ILNi_HVB5TlF0ZW-g6CzJeY",
@@ -101,22 +108,9 @@ for (let i = 0; i < cookies.length; i++) {
     return cookie[1];
   }
 }
-return null;
+return " ";
 }
 
-function checkTokenOnLoad() {
-    const token = getCookie("token");
-    if (token) {
-        if (token === "a0a0a0a0a0a0a0a0a0a0a0a0"){
-          return
-        } else{
-      getUsernameFromToken(token)
-        }
-    } else {
-      console.log("No token found.");
-      pass
-    }
-  }
 
 function register(){
     const registerForm = document.getElementById("register-form");
@@ -177,24 +171,77 @@ function checkUsernameExists(name, username, email, password, g_token) {
 function login(){
   document.getElementById("log-form").addEventListener("submit", (event) => {
     event.preventDefault();
-    document.getElementById("username").value = username;
+    const username = document.getElementById("username").value;
     db.collection("users")
     .doc(username)
     .get()
-    .then(() => {
-      const name = doc.name;
-      const token = doc.token;
-      document.getElementById("password").value = input_password;
+    .then((doc) => {
+      const name = doc.data().name;
+      const password = doc.data().password;
+      const token = doc.data().token;
+      const input_password = document.getElementById("password").value;
       if (password !== input_password){
         alert("Geslo ni pravilno, poskusi še enkrat.")
       }else{
-        if (getCookie("name") === ""){
+        const cookienamevalue = getCookie("name");
+        if (cookienamevalue === null){
           setCookie("name", name);
           setCookie("username", username);
           setCookie("token", token);
           alert("Uspešno si bil vpisan.")
         }
       }
+      })
+      .catch((error) => {
+        alert(error);
+      });
     })
-  })
   }
+
+
+function OnloadLogin(){
+  console.log("checking token onload")
+    const token = getCookie("token");
+    if (token) {
+        if (token === "a0a0a0a0a0a0a0a0a0a0a0a0"){
+          return
+        } else{
+          db.collection
+          .doc()
+          .get()
+          .then(() => {
+            const name = getCookie(name)
+            const token = getCookie(token)
+            checkTrueToken(name, token)
+            document.getElementById("naslov2").textContent = "KrokyPlus | Profil"
+          })
+        }
+    } else {
+      console.log("No token found.");
+      pass
+    }
+  }
+
+
+function checkTrueToken(name, token){
+  return new Promise((resolve, reject) => {
+    const usersRef = firebase.firestore().collection("users");
+    const query = usersRef.where("token", "==", token).limit(1);
+    query
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          const doc = snapshot.docs[0];
+          const storedName = doc.data().name;
+          if (name === storedName) {
+            console.log("Name is correct:", name);
+            resolve();
+          } else {
+            reject;
+          }
+        } else {
+          reject;
+      }
+  })
+  })
+}
