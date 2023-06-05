@@ -29,7 +29,20 @@ function saveUserInfo(name, username, email, password, g_token) {
         console.log(error.message);
       });
   }
-  
+
+function saveToken(token, username, name){
+  const db = firebase.firestore();
+  db.collection("tokens")
+    .doc(token)
+    .set({
+      name: name,
+      username: username,
+    })
+    .then(() => {
+      console.log("saved token");
+    })
+}
+
 function replaceCookieWithFirestore(email) {
     return new Promise((resolve, reject) => {
       const usersRef = db.collection("users");
@@ -56,7 +69,7 @@ function replaceCookieWithFirestore(email) {
 function createCookieWithFirestore(name) {
     return new Promise((resolve, reject) => {
       const usersRef = db.collection("users");
-      const query = usersRef.where("email", "==", name).limit(1);
+      const query = usersRef.where("name", "==", name).limit(1);
   
       query
         .get()
@@ -148,6 +161,8 @@ function checkUsernameExists(name, username, email, password, g_token) {
             resolve(true);
           } else {
             saveUserInfo(name, username, email, password, g_token);
+            saveToken(g_token, username, name)
+            setCookie("token", g_token)
             alert("Registracija je bila uspešna. Preusmerjam ...");
             window.location.href = "/user-area"
             resolve(false);

@@ -12,31 +12,31 @@
     <link rel="stylesheet" href="files/css/style.css">
     <link rel="stylesheet" href="files/css/register.css">
     <script src="files/firebase/firebase.js"></script>
-    <title>KrokyPlus | Registracija</title>
+    <title id="naslov">KrokyPlus | Registracija</title>
 </head>
 
 <body>
     <div class="title">
-        <h1>KrokyPlus | Register</h1>
+        <h1 id="naslov2">KrokyPlus | Register</h1>
     </div>
-    <div class="log-form">
 
-    <h2>Registracija</h2>
-        <form id="register-form">
-            <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime "/>
-            <input id="password" type="password" title="Geslo" required placeholder="Kroky geslo" />
-            <input id="name" type="text" title="Vaše ime" required placeholder="Ime"/>
-            <input id="email" type="email" title="Email za kontakt" required placeholder="Email"/>
-            <button id="submit" class="btn" onclick="register()">Registracija</button>
-            <a id="login" class="login" href="index">Prijava</a>
-        </form>
+    <div class="log-form" id="register-form">
+        <h2>Registracija</h2>
+            <form id="register-form">
+                <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime "/>
+                <input id="password" type="password" title="Geslo" required placeholder="Kroky geslo" />
+                <input id="name" type="text" title="Vaše ime" required placeholder="Ime"/>
+                <input id="email" type="email" title="Email za kontakt" required placeholder="Email"/>
+                <button id="submit" class="btn" onclick="register()">Registracija</button>
+                <a id="login" class="login" href="index">Prijava</a>
+            </form>
     </div>
     <footer>
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
         <div class="footer-text">
             <ul>
                 <li><a href="user-area">Uporabniško območje</a></li>
-                <li><a href="register">Registracija</a></li>
+                <li><a href="profile">Profile</a></li>
                 <li><a href="index">Prijava</a></li>
                 <li><a href="https://github.com/jakecernet/KrokyPlus">Pomoč</a></li>
             </ul>
