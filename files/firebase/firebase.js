@@ -174,6 +174,27 @@ function checkUsernameExists(name, username, email, password, g_token) {
     });
   }
 
-function getUsernameFromToken(token){
-  
-}
+function login(){
+  document.getElementById("log-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    document.getElementById("username").value = username;
+    db.collection("users")
+    .doc(username)
+    .get()
+    .then(() => {
+      const name = doc.name;
+      const token = doc.token;
+      document.getElementById("password").value = input_password;
+      if (password !== input_password){
+        alert("Geslo ni pravilno, poskusi še enkrat.")
+      }else{
+        if (getCookie("name") === ""){
+          setCookie("name", name);
+          setCookie("username", username);
+          setCookie("token", token);
+          alert("Uspešno si bil vpisan.")
+        }
+      }
+    })
+  })
+  }
