@@ -1,7 +1,7 @@
 {
   "name": "kroky",
   "version": "1.0.0",
-  "description": "app for ordering ood",
+  "description": "app for ordering food",
   "main": "index.js",
   "scripts": {
     "start": "node analiza.js"
