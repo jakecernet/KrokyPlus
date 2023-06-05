@@ -1,0 +1,145 @@
+MALICA PREBRANEC, ČEVAPČIČI, NAPITEK
+MALICA PEČEN RIŽ Z ZELENJAVO, NAPITEK
+MALICA JEŠPRENČKOVA RIŽOTA S TELETINO IN KORENČKOM, NAPITEK
+MALICA SENDVIČ S PURANJO ŠUNKO IN SIROM V SIROVI ŠTRUČKI, SLADICA, NAPITEK
+MALICA SVALJKI Z GOBOVO OMAKO, NAPITEK
+MALICA OCVRT PIŠČANČJI ZREZEK V BELI ŠTRUČKI Z MAJONEZO, NAPITEK
+MALICA NJOKI Z BUČKAMI IN GAMBERI, NAPITEK
+MALICA GOVEJI TRAKCI V GOBOVI OMAKI, PIRE KROMPIR, NAPITEK
+MALICA KROMPIRJEV GOLAŽ S PIŠČANČJO HRENOVKO, KRUH, NAPITEK
+MALICA PIRE KROMPIR, KREMNA ŠPINAČA KUHANO JAJCE, NAPITEK
+MALICA SVEDRČKI V SMETANOVI OMAKI S ŠUNKO, NAPITEK
+MALICA SIROVI KAPELETI V PARADIŽNIKOVI OMAKI, NAPITEK
+MALICA SENDVIČ S KRAŠKIM PRŠUTOM IN SIROM, NAPITEK
+MALICA KUS KUS S TUNINO IN MORSKIMI SADEŽI, NAPITEK
+MALICA FILE POSTRVI S KROMPIRJEM IN TRŽAŠKO OMAKO, NAPITEK
+MALICA NJOKI S CURRY OMAKO IN ARAŠIDI, NAPITEK
+MALICA DUŠENA GOVEDINA V ČEBULNI OMAKI, PIRE KROMPIR, NAPITEK
+MALICA POLPET V PARADIŽNIKOVI OMAKI, PIRE KROMPIR, NAPITEK
+MALICA GOBOVA JUHA S KROMPIRJEM, NAPITEK
+MALICA NJOKI S ŠPARGLJI IN OREHI, NAPITEK
+MALICA DVOJNI POLŽKI, BOLONJSKA OMAKA, NAPITEK
+MALICA PEČEN RIŽ S PIŠČANCEM IN ZELENJAVO, NAPITEK
+MALICA SENDVIČ Z MOZZARELLO, PARADIŽNIKOM IN RUKOLO, NAPITEK
+TESTENINSKA SOLATA PO GRŠKO, KRUH, NAPITEK
+MALICA SVALJKI V GOBOVI OMAKI, PEČENE PIŠČANČJE KOCKE, NAPITEK
+MALICA GOVEJI TRAKCI V GOBOVI OMAKI, PIRE KROMPIR, NAPITEK
+MALICA KROMPIRJEV GOLAŽ S PIŠČANČJO HRENOVKO, KRUH, NAPITEK
+MALICA PIRE KROMPIR, KREMNA ŠPINAČA KUHANO JAJCE, NAPITEK
+MALICA SVEDRČKI V SMETANOVI OMAKI S ŠUNKO, NAPITEK
+MALICA SIROVI KAPELETI V PARADIŽNIKOVI OMAKI, NAPITEK
+MALICA NJOKI S CURRY OMAKO IN ARAŠIDI, NAPITEK
+MALICA POLNOZRNATE TESTENINE S PESTOM IN ČEŠNJEVIM PARADIŽNIKOM, NAPITEK
+MALICA AMERIŠKA SOLATA, OCVRTE MOZZARELLINE PALČKE, KRUH, NAPITEK
+MALICA ŠOBSKA SOLATA Z BELIM SIROM, KRUH, NAPITEK
+MALICA NJOKI S ŠPARGLJI IN OREHI, NAPITEK
+MALICA PEČEN RIŽ S PIŠČANCEM IN ZELENJAVO, NAPITEK
+MALICA JEŠPRENČKOVA RIŽOTA S TELETINO IN KORENČKOM, NAPITEK
+MALICA GOVEJI TRAKCI V POROVI OMAKI, DUŠEN RIŽ, NAPITEK
+MALICA SVALJKI Z GOBOVO OMAKO, NAPITEK
+MALICA SVALJKI S ŠPARGLJI IN BUČKAMI, NAPITEK
+MALICA NJOKI Z BUČKAMI IN GAMBERI, NAPITEK
+MALICA FINGERSOVA SOLATA, BALZAMIČNI PRELIV, NAPITEK
+MALICA TESTENINSKA SOLATA S TUNO, NAPITEK
+MALICA PIŠČANČJI DUNAJSKI ZREZEK, PIRE KROMPIR, KUHANA MEŠANA ZEL., NAPITEK
+Njoki v curry omaki s čičeriko, voda v plastenki
+Sirovi kapeleti v paradižnikovi omaki, napitek
+Zelena solata z mlado špinačo, korenčkom in arašidi, balzamični preliv,  kruh, voda v plastenki
+Kus kus s tunino in morskimi sadeži, napitek
+File postrvi s krompirjem in tržaško omako, napitek
+Prebranec, čevapčiči, napitek
+Pečen riž z zelenjavo, napitek
+Ješprenjčkova rižota s teletino in korenčkom, napitek
+Puranja pečenka, ajdova kaša, napitek
+Svaljki z gobovo omako, napitek
+Svaljki s šparglji in bučkami, napitek
+Njoki z bučkami in gamberi, napitek
+Fingersova solata, balzamični preliv, voda v plastenki
+Grški sendvič z olivami, paradižnikom in feta sirom v polnozrnati štr., napitek, sadje
+Sočna solata s kus kusom, piščancem in zelenjavo, voda v plastenki
+Njoki s curry omako in arašidi, napitek
+Dušena govedina v čebulni omaki, pire krompir, napitek
+Domači skutni štruklji s suhim sadjem, napitek
+Bulgur z zelenjavo in tuno, napitek
+File postrvi s krompirjem in tržaško omako, napitek
+Dvojni polžki, bolones omaka,napitek
+Pečen riž s piščancem in zelenjavo,napitek
+Sendvič z mozzarello, paradižnikom in rukolo, napitek
+Puranja pečenka, ajdova kaša,napitek
+Svaljki z gobovo omako,napitek
+Svaljki s šparglji in bučkami, napitek
+Rižota s piščancem in zelenjavo, napitek
+Sendvič s kuhanim pršutom in sirom, napitek
+Golaž s sojinimi koščki, pečena polenta, kruh, voda v plastenki
+Ajdova kaša z jurčki, napitek
+Dušen riž, puranja pečenka v naravni omaki
+Sendvič z lososovim namazom in sirom, voda v plastenki
+Kus kus s tunino in morskimi sadeži, napitek
+File postrvi s krompirjem in tržaško omako,napitek
+Njoki s curry omako in arašidi
+Polnozrnate testenine s pestom in češnjevim paradižnikom
+Polpet v paradižnikovi omaki, pire krompir
+Protein box iz bulgurja, tune in zelenjave, voda v plastenki
+Njoki s šparglji in orehi
+Dvojni polžki, bolones omaka,napitek
+Pečen riž s piščancem in zelenjavo,napitek
+Veganski paprikaš, dušen riž,voda v plastenki
+Svaljki z gobovo omako,napitek
+Svaljki v smetanovi omaki s piščancem, napitek
+Njoki z bučkami in gamberi, napitek
+Sendvič s kuhanim pršutom in sirom, napitek
+Grški sendvič z olivami, paradižnikom in feta sirom v polnozrnati štr., napitek, sadje
+Mladi sir z zelišči v koruzni štručki, sladica, napitek
+Sirovi kapileti v paradižnikovi omaki, napitek
+Domači skutni štruklji s suhim sadjem, napitek
+Sendvič s piščančjo posebno salamo, majoneznim namazom  in sirom, napitek
+File postrvi z krompirjem in tržaško omako,napitek
+Njoki s curry omako in arašidi
+Dušena govedina v čebulni omaki, pire krompir
+Polpet v paradižnikovi omaki, pire krompir
+Sendvič z maslom in marmelado v beli mlečni štručki, napitek, sadje
+Grški zavitek s feta sirom in špinačo, sadje, napitek
+Pečen riž s piščancem in zelenjavo
+Ješprenčkova rižota s teletino in korenčkom
+Sendvič s tremi siri in svežo zelenjavo, voda v plastenki
+Krompirjeva solata s kumarami, ocvrte ribje palčke, voda v plastenki
+Rižota s piščancem in zelenjavo
+mesni burek z mlečnim napitkom
+Grški sendvič z olivami, paradižnikom in feta sirom v polnozrnati štr., napitek, sadje
+Sočna solata s kus kusom, piščancem in zelenjavo, voda v plastenki
+Ajdova kaša z jurčki
+Sirovi kapileti v paradižnikovi omaki
+Hot dog s piščančjo hrenovko pak. Majonezo in pak. Ketchupom, napitek
+Sendvič s piščančjo posebno salamo, majoneznim namazom  in sirom, napitek
+File postrvi z krompirjem in tržaško omako
+Njoki z vegansko bolonese omako
+Polnozrnate testenine s pestom in češnjevim paradižnikom
+Ameriška solata, ocvrte mozzarelline palčke, voda v plastenki
+Protein box iz bulgurja, tune in zelenjave, voda v plastenki
+Njoki s šparglji in orehi
+Grški zavitek s feta sirom in špinačo, sadje, napitek
+Pečen riž s piščancem in zelenjavo
+Zeljnata solata z  jajcem, fižolom in bučnim oljem, kruh, voda v plastenki
+Sendvič s tremi siri in svežo zelenjavo, voda v plastenki
+Mediteranska kvinoja, pečena mešana zelenjava, pečeni piščančji stripsi
+Svaljki s šparglji in bučkami
+Njoki z bučkami in gamberi
+Pire krompir, kremna špinača, pečeno jajce(kuhano)
+Krompirjev golaž s piščančjo hrenovko
+Goveji trakci v gobovi omaki, pire krompir
+Polnozrnati špageti z gobovo omako in rastlinskimi trakci z okusom govedine, napitek
+Polnozrnata testeninska solata z zelenjavo, jajcem in chia semeni, voda v plastenki
+Svinjski trakci s porovo omako, riž, napitek
+Ješprenčkova rižota s teletino in korenčkom, napitek
+Gurmanska ajdova kaša z gobicami, napite
+Njoki s šparglji in orehi, voda v plastenki
+Svaljki s piščancem v gobovi omaki, napitek
+Sendvič z lososovim namazom in dimljenim sirom, napitek
+Sendvič s piščančjo posebno salamo, majoneznim namazom in sirom, napitek
+File postrvi s krompirjem, napitek
+Svedri s smetanovo omako, napitek
+Njoki z gamberi in bučkami, voda v plastenki
+Polnjene bučke s čičeriko in veganskim sirom, voda v plastenki
+Pečen riž s piščancem in zelenjavo, napitek
+Testeninska solata s tunino, voda v plastenki
+Sočna solata s kus kusom, piščancem in zelenjavo, voda v plastenki
