@@ -11,52 +11,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-function register(){
-  const registerForm = document.getElementById("register-form");
-  registerForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const name = document.getElementById("name").value
-    const g_token = generateToken();
-    console.log(name, username, password, g_token)
-    saveUserInfo(name, username, password, g_token)
-    console.log("tukaj sem")
-  });
-}
-
-function generateToken() {
-  const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-
-  const allChars = uppercaseChars + lowercaseChars;
-  let password = "";
-
-  for (let i = 0; i < 30; i++) {
-  const randomIndex = Math.floor(Math.random() * allChars.length);
-  password += allChars.charAt(randomIndex);
-  }
-
-  return password;
-}
-function saveUserInfo(name, username, password, g_token) {
-  const db = firebase.firestore();
-  db.collection("users")
-  .doc(username)
-  .set({
-  name: name,
-  username: username,
-  password: password,
-  token: g_token,
-  })
-  .then(() => {
-    console.log("User information saved successfully!");
-    })
-    .catch((error) => {
-    console.log(error.message);
-  });
-}
-function saveUserInfo(name, username, password, g_token) {
+function saveUserInfo(name, username, email, password, g_token) {
     const db = firebase.firestore();
     db.collection("users")
       .doc(username)
@@ -65,6 +20,7 @@ function saveUserInfo(name, username, password, g_token) {
         username: username,
         password: password,
         token: g_token,
+        email: email,
       })
       .then(() => {
         console.log("User information saved successfully!");
@@ -73,7 +29,20 @@ function saveUserInfo(name, username, password, g_token) {
         console.log(error.message);
       });
   }
-  
+
+function saveToken(token, username, name){
+  const db = firebase.firestore();
+  db.collection("tokens")
+    .doc(token)
+    .set({
+      name: name,
+      username: username,
+    })
+    .then(() => {
+      console.log("saved token");
+    })
+}
+
 function replaceCookieWithFirestore(email) {
     return new Promise((resolve, reject) => {
       const usersRef = db.collection("users");
@@ -100,7 +69,7 @@ function replaceCookieWithFirestore(email) {
 function createCookieWithFirestore(name) {
     return new Promise((resolve, reject) => {
       const usersRef = db.collection("users");
-      const query = usersRef.where("email", "==", name).limit(1);
+      const query = usersRef.where("name", "==", name).limit(1);
   
       query
         .get()
@@ -149,7 +118,6 @@ function checkTokenOnLoad() {
     }
   }
 
-
 function register(){
     const registerForm = document.getElementById("register-form");
     registerForm.addEventListener("submit", (event) => {
@@ -157,10 +125,10 @@ function register(){
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
         const name = document.getElementById("name").value
+        const email = document.getElementById("email").value
         const g_token = generateToken();
-        console.log(name, username, password, g_token)
-        saveUserInfo(name, username, password, g_token)
-        console.log("tukaj sem")
+        checkUsernameExists(name, username, email, password, g_token);
+        setCookie("token", g_token)
     });
 }
 
@@ -178,3 +146,55 @@ function generateToken() {
   
     return password;
 }
+
+function checkUsernameExists(name, username, email, password, g_token) {
+    return new Promise((resolve, reject) => {
+      const usersRef = db.collection("users");
+      const query = usersRef.where("username", "==", username).limit(1);
+  
+      query
+        .get()
+        .then((snapshot) => {
+          if (!snapshot.empty) {
+            alert("Uporabnik že obstaja, prosimo pišite na mail za pomoč.")
+            location.reload()
+            resolve(true);
+          } else {
+            saveUserInfo(name, username, email, password, g_token);
+            saveToken(g_token, username, name)
+            setCookie("token", g_token)
+            alert("Registracija je bila uspešna. Preusmerjam ...");
+            window.location.href = "/user-area"
+            resolve(false);
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  }
+
+function login(){
+  document.getElementById("log-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    document.getElementById("username").value = username;
+    db.collection("users")
+    .doc(username)
+    .get()
+    .then(() => {
+      const name = doc.name;
+      const token = doc.token;
+      document.getElementById("password").value = input_password;
+      if (password !== input_password){
+        alert("Geslo ni pravilno, poskusi še enkrat.")
+      }else{
+        if (getCookie("name") === ""){
+          setCookie("name", name);
+          setCookie("username", username);
+          setCookie("token", token);
+          alert("Uspešno si bil vpisan.")
+        }
+      }
+    })
+  })
+  }
