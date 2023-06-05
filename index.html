@@ -23,18 +23,18 @@
     <title>KrokyPlus | Vpis</title>
 </head>
 
-<body>
+<body onload="OnloadLogin()">
     <a id="warning">Warning! Site in development!</a>
     <div class="title">
         <h1>KrokyPlus</h1>
     </div>
-    <div class="log-form">
+    <div class="log-form" id="log-form">
         <h2>Prijava</h2>
         <form>
             <input type="text" id="username" title="Uporabniško ime" placeholder="Uporabniško ime ali E-pošta" />
             <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-            <a href="user-area.html"><button type="submit" class="btn" id="submit" onclick="login()">Prijava</button></a>
-            <a class="register" href="register">Registracija</a>
+            <button type="submit" class="btn" id="submit" onclick="login()">Prijava</button>
+            <a class="register" href="profile">Registracija</a>
         </form>
     </div>
     <div class="cookie-popup" id="cookie-popup">
