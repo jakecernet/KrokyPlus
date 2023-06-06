@@ -1,14 +1,13 @@
 const kroky = require('kroky-api');
 const fs = require('fs');
 const { Console } = require('console');
-username = "";
-password = "";
 
-var FullMenu=[]
+
 var meni=[]
 
 function extractSelectedDishes(data) {
   const selectedDishes = [];
+
 
   for (const week of data) {
     for (const dish of week) {
@@ -22,13 +21,15 @@ function extractSelectedDishes(data) {
 }
 
 
-
-
-async function fetchMeals(username, password, week) {
-  kroky.login(username, password);
-  return await kroky.getMeals(week);
+function AutoSelectCheck(list) {
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] !== list[i - 1] + 14) {
+      return false;
+    }
+  }
+  return true;
 }
-  
+
 
 async function selectMeal(date, id, xl) {
   await kroky.login(username, password);
@@ -55,33 +56,35 @@ return week;
 
 }
 
-async function getFullMenu(){
+async function getFullMenu(username, password){
+  var FullMenu=[];
   var meni= await kroky.login(username, password);
   
   for (i = 1; i < weekDiff()+1; i++) {
     
     var x=parseInt("-"+i);
     data =await kroky.getMeals(x);
-    let selectedDishes = extractSelectedDishes(data);
-    FullMenu = [...FullMenu, ...selectedDishes];
+
+    const temp = [];
+for (const week of data) {
+  for (const dish of week) {
+    if (dish.selected) {
+      temp.push(dish.id);
+    }
+  }
+}
+
+if (AutoSelectCheck(temp)!= true) {
+  var selectedDishes = extractSelectedDishes(data);  
+    FullMenu=FullMenu.concat(selectedDishes);
+
+} 
 
   }
-  console.log(FullMenu);
+
   var out = FullMenu.join('\n');
-    fs.writeFile('menu.txt', out, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    }
-    );
-
+  console.log(out);
+  return out;
 }
-getFullMenu();
 
-
-
-
-
-
-
-
-
+getFullMenuBetter("ČadLin", "hlamehhit");
