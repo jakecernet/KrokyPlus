@@ -86,5 +86,3 @@ if (AutoSelectCheck(temp)!= true) {
   console.log(out);
   return out;
 }
-
-getFullMenuBetter("ČadLin", "hlamehhit");
