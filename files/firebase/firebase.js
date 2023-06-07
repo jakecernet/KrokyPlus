@@ -138,7 +138,6 @@ function generateToken() {
       const randomIndex = Math.floor(Math.random() * allChars.length);
       password += allChars.charAt(randomIndex);
     }
-  
     return password;
 }
 
@@ -214,59 +213,68 @@ function OnloadLogin(){
           .then(() => {
             const name = getCookie("name");
             const token = getCookie("token");
-            checkTrueToken(name, token);
-          })
+            const usersRef = firebase.firestore().collection("users");
+            const query = usersRef.where("token", "==", token).limit(1);
+            query.get().then((snapshot) => {
+                if (!snapshot.empty) {
+                  const doc = snapshot.docs[0];
+                  const storedName = doc.data().name;
+                  if (name === storedName) {
+                    console.log("Name is correct:", name);
+                    resolve(true);
+                    return true;
+                  } else {
+                    resolve(false);
+                    return true;
+                  }
+                } else {
+                  resolve(false);
+                }
+              })
+            })
+          }
+
+
+            if (palačinka === true && (decodeURIComponent(window.location.href) === "/profile.html")){
+              setContent_profile();
+            }else{
+              return;
+            }
+          }
         }
+    
+  
+
+function setContent_profile() {
+  console.log("name, token");
+  const name = getCookie("name");
+  const token = getCookie("token");
+  
+  const x = checkTrueToken(name, token);
+  console.log(x, "x"); 
+      if (x === true) {
+        console.log("Name is valid:", name);
+        document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
+        document.getElementById("register-form").style.display = "none";
+        document.getElementById("profile-settings").style.display = "block";
+        document.getElementById("navbar").style.display = "block";
+        document.getElementById("navbar-old").style.display = "none";
       } else {
-        console.log("No token found.");
-        pass
-      }
-      if (decodeURIComponent(window.location.href === "/profile.html")){
-        setContent_profile();
-      } else{
-        console.log("ni me");
+        alert("Name is invalid:", name);
       }
     }
-    
-    
-function checkTrueToken(name, token){
-      return new Promise((resolve, reject) => {
-        const usersRef = firebase.firestore().collection("users");
-        const query = usersRef.where("token", "==", token).limit(1);
-        query
-        .get()
-        .then((snapshot) => {
-          if (!snapshot.empty) {
-            const doc = snapshot.docs[0];
-            const storedName = doc.data().name;
-            if (name === storedName) {
-              console.log("Name is correct:", name);
-              resolve();
-            } else {
-              reject;
-            }
-          } else {
-            reject;
-          }
-        })
-      })
- }
-function setContent_profile(){
-  console.log("here");
-  document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
-  document.getElementById("register-form").style.display = "none";
-  document.getElementById("profile-settings").style.display = "block";
-  document.getElementById("navbar").style.display = "block";
-  document.getElementsById("navbar-old").style.display = "none";
-}
 
 function spremeniP(){
+  if (checkTrueToken() === true){
   let podatki_spremeni = document.getElementById("sprememba-podatkov")
   if (podatki_spremeni.style.display === "none"){
     podatki_spremeni.style.display = "block";
   } else if (podatki_spremeni.style.display === "block") {
     podatki_spremeni.style.display = "none";
   }
+}else{
+  pass
+}
 }
 
 function deleteCookie(cookieName) {
@@ -279,4 +287,8 @@ function logout(){
   deleteCookie("token");
   deleteCookie("username");
   location.reload();
+}
+
+function deleteCookie(name){
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
