@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var loadingScreen = document.querySelector('.loading-screen');
   if (loadingScreen) {
-    setTimeout(function() {
+    setTimeout(function () {
       loadingScreen.parentNode.removeChild(loadingScreen);
     }, 700);
   }
@@ -20,25 +20,25 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 function saveUserInfo(name, username, email, password, g_token) {
-    const db = firebase.firestore();
-    db.collection("users")
-      .doc(username)
-      .set({
-        name: name,
-        username: username,
-        password: password,
-        token: g_token,
-        email: email,
-      })
-      .then(() => {
-        console.log("User information saved successfully!");
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
-  }
+  const db = firebase.firestore();
+  db.collection("users")
+    .doc(username)
+    .set({
+      name: name,
+      username: username,
+      password: password,
+      token: g_token,
+      email: email,
+    })
+    .then(() => {
+      console.log("User information saved successfully!");
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+}
 
-function saveToken(token, username, name){
+function saveToken(token, username, name) {
   const db = firebase.firestore();
   db.collection("tokens")
     .doc(token)
@@ -52,243 +52,280 @@ function saveToken(token, username, name){
 }
 
 function replaceCookieWithFirestore(email) {
-    return new Promise((resolve, reject) => {
-      const usersRef = db.collection("users");
-      const query = usersRef.where("email", "==", email).limit(1);
-  
-      query
-        .get()
-        .then((snapshot) => {
-          if (!snapshot.empty) {
-            const doc = snapshot.docs[0];
-            const firestoreCode = doc.get("token");
-            setCookie("token", firestoreCode);
-            resolve();
-          } else {
-            reject(new Error("User not found"));
-          }
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
-  }
-  
+  return new Promise((resolve, reject) => {
+    const usersRef = db.collection("users");
+    const query = usersRef.where("email", "==", email).limit(1);
+
+    query
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          const doc = snapshot.docs[0];
+          const firestoreCode = doc.get("token");
+          setCookie("token", firestoreCode);
+          resolve();
+        } else {
+          reject(new Error("User not found"));
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
 function createCookieWithFirestore(name) {
-    return new Promise((resolve, reject) => {
-      const usersRef = db.collection("users");
-      const query = usersRef.where("name", "==", name).limit(1);
-  
-      query
-        .get()
-        .then((snapshot) => {
-          if (!snapshot.empty) {
-            const doc = snapshot.docs[0];
-            const firestoreCode = doc.get("token");
-            setCookie("token", firestoreCode);
-            resolve();
-          } else {
-            reject(new Error("User not found"));
-          }
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
-  }
+  return new Promise((resolve, reject) => {
+    const usersRef = db.collection("users");
+    const query = usersRef.where("name", "==", name).limit(1);
+
+    query
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          const doc = snapshot.docs[0];
+          const firestoreCode = doc.get("token");
+          setCookie("token", firestoreCode);
+          resolve();
+        } else {
+          reject(new Error("User not found"));
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
 
 function setCookie(name, value) {
-document.cookie = `${name}=${value}; path=/`;
+  var expires = "";
+  var date = new Date();
+  date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+  expires = "; expires=" + date.toUTCString();
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 function getCookie(name) {
-const cookies = document.cookie.split("; ");
-for (let i = 0; i < cookies.length; i++) {
-  const cookie = cookies[i].split("=");
-  if (cookie[0] === name) {
-    return cookie[1];
+  const cookies = document.cookie.split("; ");
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].split("=");
+    const cookieName = decodeURIComponent(cookie[0]);
+    const cookieValue = decodeURIComponent(cookie[1]);
+    if (cookieName === name) {
+      return cookieValue;
+    }
   }
-}
-return " ";
+  return "";
 }
 
 
-function register(){
-    const registerForm = document.getElementById("register-form");
-    registerForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const g_token = generateToken();
-        checkUsernameExists(name, username, email, password, g_token);
-        setCookie("token", g_token)
-    });
+function register() {
+  const registerForm = document.getElementById("register-form");
+  registerForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+    const g_token = generateToken();
+    checkUsernameExists(name, username, email, password, g_token);
+    setCookie("token", g_token)
+  });
 }
 
 function generateToken() {
-    const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-  
-    const allChars = uppercaseChars + lowercaseChars;
-    let password = "";
-  
-    for (let i = 0; i < 30; i++) {
-      const randomIndex = Math.floor(Math.random() * allChars.length);
-      password += allChars.charAt(randomIndex);
-    }
-    return password;
+  const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+
+  const allChars = uppercaseChars + lowercaseChars;
+  let password = "";
+
+  for (let i = 0; i < 30; i++) {
+    const randomIndex = Math.floor(Math.random() * allChars.length);
+    password += allChars.charAt(randomIndex);
+  }
+  return password;
 }
 
 function checkUsernameExists(name, username, email, password, g_token) {
-    return new Promise((resolve, reject) => {
-      const usersRef = db.collection("users");
-      const query = usersRef.where("username", "==", username).limit(1);
-  
-      query
-        .get()
-        .then((snapshot) => {
-          if (!snapshot.empty) {
-            alert("Uporabnik že obstaja, prosimo pišite na mail za pomoč.")
-            location.reload()
-            resolve(true);
-          } else {
-            saveUserInfo(name, username, email, password, g_token);
-            saveToken(g_token, username, name)
-            setCookie("token", g_token)
-            alert("Registracija je bila uspešna. Preusmerjam ...");
-            window.location.href = "/user-area"
-            resolve(false);
-          }
-        })
-        .catch((error) => {
-          reject(error);
-        });
-    });
-  }
+  return new Promise((resolve, reject) => {
+    const usersRef = db.collection("users");
+    const query = usersRef.where("username", "==", username).limit(1);
 
-function login(){
+    query
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          alert("Uporabnik že obstaja, prosimo pišite na mail za pomoč.")
+          location.reload()
+          resolve(true);
+        } else {
+          saveUserInfo(name, username, email, password, g_token);
+          saveToken(g_token, username, name)
+          setCookie("token", g_token)
+          alert("Registracija je bila uspešna. Preusmerjam ...");
+          window.location.href = "/user-area"
+          resolve(false);
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+function login() {
   document.getElementById("log-form").addEventListener("submit", (event) => {
     event.preventDefault();
     const username = document.getElementById("username").value;
     db.collection("users")
-    .doc(username)
-    .get()
-    .then((doc) => {
-      const name = doc.data().name;
-      const password = doc.data().password;
-      const token = doc.data().token;
-      const input_password = document.getElementById("password").value;
-      if (password !== input_password){
-        alert("Geslo ni pravilno, poskusi še enkrat.")
-      }else{
-        const cookienamevalue = getCookie("name");
-        if (cookienamevalue === null){
-          setCookie("name", name);
-          setCookie("username", username);
-          setCookie("token", token);
-          alert("Uspešno si bil vpisan.");
-          window.location.href = "/profile";
+      .doc(username)
+      .get()
+      .then((doc) => {
+        const name = doc.data().name;
+        const password = doc.data().password;
+        const token = doc.data().token;
+        const input_password = document.getElementById("password").value;
+        if (password !== input_password) {
+          alert("Geslo ni pravilno, poskusi še enkrat.")
+        } else {
+          const cookienamevalue = getCookie("name");
+          if (cookienamevalue === null) {
+            setCookie("name", name);
+            setCookie("username", username);
+            setCookie("token", token);
+            alert("Uspešno si bil vpisan.");
+            window.location.href = "/profile";
+          }
         }
-      }
       })
       .catch((error) => {
         alert(error);
       });
-    })
-  }
+  })
+}
 
-
-function OnloadLogin(){
+function OnloadLogin() {
   console.log("checking token onload")
-    const token = getCookie("token");
-    if (token) {
-        if (token === "a0a0a0a0a0a0a0a0a0a0a0a0"){
-          return
-        } else{
-          db.collection("users")
-          .doc()
-          .get()
-          .then(() => {
-            const name = getCookie("name");
-            const token = getCookie("token");
-            const usersRef = firebase.firestore().collection("users");
-            const query = usersRef.where("token", "==", token).limit(1);
-            query.get().then((snapshot) => {
-                if (!snapshot.empty) {
-                  const doc = snapshot.docs[0];
-                  const storedName = doc.data().name;
-                  if (name === storedName) {
-                    console.log("Name is correct:", name);
-                    resolve(true);
-                    return true;
-                  } else {
-                    resolve(false);
-                    return true;
-                  }
-                } else {
-                  resolve(false);
-                }
-              })
-            })
-          }
-
-
-            if (palačinka === true && (decodeURIComponent(window.location.href) === "/profile.html")){
-              setContent_profile();
-            }else{
-              return;
+  const token = getCookie("token");
+  if (token) {
+    if (token === "a0a0a0a0a0a0a0a0a0a0a0a0") {
+      return
+    } else {
+      db.collection("users")
+        .doc()
+        .get()
+        .then(() => {
+          const name = getCookie("name");
+          const token = getCookie("token");
+          const usersRef = firebase.firestore().collection("users");
+          const query = usersRef.where("token", "==", token).limit(1);
+          query.get().then((snapshot, resolve, reject) => {
+            if (!snapshot.empty) {
+              const doc = snapshot.docs[0];
+              const storedName = doc.data().name;
+              if (name === storedName) {
+                console.log("Name is correct:", name);
+                resolve(true);
+              } else {
+                reject;
+              }
+            } else {
+              reject;
             }
-          }
-        }
-    
-  
+          })
+        })
+    }
+  }
+}
 
 function setContent_profile() {
-  console.log("name, token");
   const name = getCookie("name");
   const token = getCookie("token");
-  
-  const x = checkTrueToken(name, token);
-  console.log(x, "x"); 
-      if (x === true) {
-        console.log("Name is valid:", name);
-        document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
-        document.getElementById("register-form").style.display = "none";
-        document.getElementById("profile-settings").style.display = "block";
-        document.getElementById("navbar").style.display = "block";
-        document.getElementById("navbar-old").style.display = "none";
-      } else {
-        alert("Name is invalid:", name);
+
+  checkTrueToken(name, token).then(() => {
+    console.log("Name is valid:", name);
+    document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
+    document.getElementById("register-form").style.display = "none";
+    document.getElementById("profile-settings").style.display = "block";
+    document.getElementById("navbar").style.display = "block";
+    document.getElementById("navbar-old").style.display = "none";
+  })
+    .catch(() => {
+      var palačinka = getCookie("name");
+      if (palačinka === "") {
+        return;
+      } else if (palačinka !== "") {
+        alert("Name is invalid:", palačinka);
+        deleteCookie("name");
+        deleteCookie("username");
+        deleteCookie("token");
       }
+    });
+}
+
+function spremeniP() {
+  if (checkTrueToken() === true) {
+    let podatki_spremeni = document.getElementById("sprememba-podatkov")
+    if (podatki_spremeni.style.display === "none") {
+      podatki_spremeni.style.display = "block";
+    } else if (podatki_spremeni.style.display === "block") {
+      podatki_spremeni.style.display = "none";
     }
-
-function spremeniP(){
-  if (checkTrueToken() === true){
-  let podatki_spremeni = document.getElementById("sprememba-podatkov")
-  if (podatki_spremeni.style.display === "none"){
-    podatki_spremeni.style.display = "block";
-  } else if (podatki_spremeni.style.display === "block") {
-    podatki_spremeni.style.display = "none";
+  } else {
+    pass
   }
-}else{
-  pass
-}
 }
 
-function deleteCookie(cookieName) {
-  document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function deleteCookie(name) {
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=yourdomain.com;";
 }
 
 
-function logout(){
+function logout() {
   deleteCookie("name");
   deleteCookie("token");
   deleteCookie("username");
   location.reload();
 }
 
-function deleteCookie(name){
+function deleteCookie(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+function checkTrueToken(name, token) {
+  return new Promise((resolve, reject) => {
+    name = getCookie("name");
+    const usersRef = firebase.firestore().collection("users");
+    const query = usersRef.where("token", "==", token).limit(1);
+    query
+      .get()
+      .then((snapshot) => {
+        if (!snapshot.empty) {
+          const doc = snapshot.docs[0];
+          const storedName = doc.data().name;
+          if (name === storedName) {
+            console.log("Ime in token sta pravilna:", name, " ", token);
+            resolve(true);
+          } else {
+            reject();
+          }
+        } else {
+          reject();
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  })
+}
+
+function spremeninaslov_Register(){
+  const name = getCookie("name");
+  if (name === ""){
+    return;
+  }else{
+    document.getElementById("spodnji-naslov-registracije").innerHTML = "Profil"
+  }
 }
