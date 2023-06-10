@@ -22,7 +22,9 @@
     <a href="https://krokyplus.me" target="_blank"><strong>Visit the website »</strong></a>
     <br />
     <br />
-    <iframe src="https://discord.com/widget?id=1117064159452995625&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    Discord server link for bugs and all things:
+  <iframe src="https://discord.com/widget?id=1117064159452995625&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
     <br />
     <a href="https://github.com/jakecernet/KrokyPlus/issues">Report Bug</a>
     ·
