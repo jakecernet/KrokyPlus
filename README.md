@@ -21,12 +21,13 @@
     Improvment for food ordering service.
     <br />
     <a href="https://krokyplus.me" target="_blank"><strong>Visit the website »</strong></a>
-    <br/>
-    <br/>
-    <br/>
-    <a href="https://github.com/jakecernet/KrokyPlus/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jakecernet/KrokyPlus/issues">Request Feature</a>
+    <br />
+    <br />
+    Discord server link for bugs and all things:
+    <br />
+    <a href="https://discord.gg/jGHReVrecJ">Report Bug</a>
+     .
+    <a href="https://discord.gg/jGHReVrecJ">Request Feature</a>
   </p>
 </div>
 
