@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-const firebaseConfig = {
+const firebaseConfig= {
   apiKey: "AIzaSyDFC2TYDhw7ILNi_HVB5TlF0ZW-g6CzJeY",
   authDomain: "krokyplus-90d21.firebaseapp.com",
   projectId: "krokyplus-90d21",
@@ -172,6 +172,7 @@ function login() {
             setCookie("username", username);
             setCookie("token", token);
             alert("Uspešno si bil vpisan.");
+            pokažipodatke(username);
             window.location.href = "/profile";
           }
         }

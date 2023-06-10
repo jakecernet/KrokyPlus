@@ -5,6 +5,47 @@ const { Console } = require('console');
 
 var meni=[]
 
+function CountData(data) {
+  var counts = {};
+  for (var i = 0; i < data.length; i++) {
+    var num = data[i];
+    counts[num] = counts[num] ? counts[num] + 1 : 1;
+  }
+  return counts;
+}
+
+
+
+function ClearData(data) {
+  const conjunctions = ["s", "z", "v", "na", "in", "pa", "k", "h", "ob"];
+  const other = [",", ".", ";", ":"];
+  
+  for (let j = 0; j < conjunctions.length; j++) {
+    var regex = new RegExp(`\\s${conjunctions[j]}\\s`, "g");
+    data = data.replaceAll(regex, " ");
+  }
+  
+for (let j = 0; j < other.length; j++) {
+  const regex = new RegExp(`\\${other[j]}`, "g");
+  data = data.replaceAll(regex, "");
+}
+  return data;
+}
+
+function DataTokenizer(data) {
+  data = data.replace(/\n|\r|\t/g, " ").toLowerCase();
+  const tokens = data.split(" ");
+  var dishes = [];
+  for (let i = 0; i < tokens.length; i++) {
+    if (tokens[i].length > 0) {
+      dishes.push(tokens[i]);
+    }
+  }
+  dishes=dishes.filter(item => item.trim() !== "").filter(item => item.trim() !== " ");
+  return dishes;
+}
+
+
 function extractSelectedDishes(data) {
   const selectedDishes = [];
 
@@ -37,7 +78,6 @@ async function selectMeal(date, id, xl) {
   //console.log("naročeno");
 }
 
-//poišče koliko tednov je minilo od začetka šolskega leta do danes
 function weekDiff(){
   const d = new Date();
 if (d.getMonth() < 8) {
@@ -60,7 +100,7 @@ async function getFullMenu(username, password){
   var FullMenu=[];
   var meni= await kroky.login(username, password);
   
-  for (i = 1; i < weekDiff()+1; i++) {
+  for (i = 35; i < weekDiff()+1; i++) {
     
     var x=parseInt("-"+i);
     data =await kroky.getMeals(x);
@@ -83,6 +123,17 @@ if (AutoSelectCheck(temp)!= true) {
   }
 
   var out = FullMenu.join('\n');
-  console.log(out);
   return out;
 }
+
+async function main(){
+  data = await getFullMenu("ČadLin", "hlamehhit");
+  data = ClearData(data);
+  data = DataTokenizer(data);
+  data = CountData(data);
+
+  console.log(data);
+
+
+}
+main();
