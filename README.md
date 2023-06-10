@@ -1,32 +1,33 @@
 <a name="readme-top"></a>
-
+<div align="center">
+  
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
+  
+</div>
 
 
 <!-- PROJECT LOGO -->
-<br />
+<br/>
 <div align="center">
   <a href="https://krokyplus.me">
     <img src="https://krokyplus.me/files/other/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
-
   <p align="center">
     Improvment for food ordering service.
     <br />
     <a href="https://krokyplus.me" target="_blank"><strong>Visit the website »</strong></a>
     <br />
     <br />
-    <iframe src="https://discord.com/widget?id=1117064159452995625&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    Discord server link for bugs and all things:
     <br />
-    <a href="https://github.com/jakecernet/KrokyPlus/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jakecernet/KrokyPlus/issues">Request Feature</a>
+    <a href="https://discord.gg/jGHReVrecJ">Report Bug</a>
+     .
+    <a href="https://discord.gg/jGHReVrecJ">Request Feature</a>
   </p>
 </div>
 
