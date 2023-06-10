@@ -1,21 +1,22 @@
 <a name="readme-top"></a>
-
+<div align="center">
+  
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
+  
+</div>
 
 
 <!-- PROJECT LOGO -->
-<br />
+<br/>
 <div align="center">
   <a href="https://krokyplus.me">
     <img src="https://krokyplus.me/files/other/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
-
   <p align="center">
     Improvment for food ordering service.
     <br />
@@ -25,7 +26,7 @@
     Discord server link for bugs and all things:
     <br />
     <a href="https://discord.gg/jGHReVrecJ">Report Bug</a>
-    ·
+     .
     <a href="https://discord.gg/jGHReVrecJ">Request Feature</a>
   </p>
 </div>
