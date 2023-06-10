@@ -149,3 +149,7 @@ h2 {
 #red {
     background-color: red;
 }
+input{
+    text-align: center;
+    font-size: 110%;
+}

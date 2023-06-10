@@ -214,3 +214,45 @@ input {
     text-decoration: none;
     font-weight: bold;
 }
+.login {
+    line-height: .5em;
+    position: relative;
+    top: 1.2em;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.login:hover {
+    color: rgb(0, 0, 0);
+}
+
+input{
+    text-align: center;
+    font-size: 110%;
+}
+.u_okvir {
+    display: inline-block;
+    background: rgb(74, 74, 238);
+    padding: 1em 1em;   
+    color: white;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 5% 4% 0 10%;
+    white-space: nowrap;
+}
+
+.u_okvir span {
+    margin-right: 0.5em;
+}
+
+.u_okvir:hover {
+    background: darken(rgb(58, 133, 204), 5%);
+    scale: 1.05;
+}
+

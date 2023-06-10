@@ -59,7 +59,7 @@ h2 {
 
 .btn:hover {
     background: darken(rgb(58, 133, 204), 5%);
-    border: 1px solid #000000;
+    scale: 1.05;
 }
 
 .login {
@@ -80,4 +80,36 @@ h2 {
 
 input{
     text-align: center;
+    font-size: 110%;
+}
+.u_okvir {
+    display: inline-block;
+    background: rgb(74, 74, 238);
+    padding: 1em 1em;   
+    color: white;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 5% 4% 0 10%;
+    white-space: nowrap;
+}
+
+.u_okvir span {
+    margin-right: 0.5em;
+}
+
+.u_okvir:hover {
+    background: darken(rgb(58, 133, 204), 5%);
+    scale: 1.05;
+}
+
+.podatki{
+    margin: 0 50% 0 0;
+    font-size: 110%;
+    text-align: center;
+    font-size: medium;
+}
+.podatki input{
+    border-radius: 4px;
 }

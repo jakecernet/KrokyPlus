@@ -51,29 +51,6 @@ function saveToken(token, username, name) {
     })
 }
 
-function replaceCookieWithFirestore(email) {
-  return new Promise((resolve, reject) => {
-    const usersRef = db.collection("users");
-    const query = usersRef.where("email", "==", email).limit(1);
-
-    query
-      .get()
-      .then((snapshot) => {
-        if (!snapshot.empty) {
-          const doc = snapshot.docs[0];
-          const firestoreCode = doc.get("token");
-          setCookie("token", firestoreCode);
-          resolve();
-        } else {
-          reject(new Error("User not found"));
-        }
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
-}
-
 function createCookieWithFirestore(name) {
   return new Promise((resolve, reject) => {
     const usersRef = db.collection("users");
@@ -206,27 +183,25 @@ function login() {
 }
 
 function OnloadLogin() {
-  console.log("checking token onload")
   const token = getCookie("token");
   if (token) {
-    if (token === "a0a0a0a0a0a0a0a0a0a0a0a0") {
+    if (token === "") {
       return
     } else {
       db.collection("users")
         .doc()
         .get()
-        .then(() => {
+        .then((resolve, reject) => {
           const name = getCookie("name");
           const token = getCookie("token");
-          const usersRef = firebase.firestore().collection("users");
-          const query = usersRef.where("token", "==", token).limit(1);
-          query.get().then((snapshot, resolve, reject) => {
-            if (!snapshot.empty) {
-              const doc = snapshot.docs[0];
+          const dokument = firebase.firestore().collection("users");
+          const query = dokument.where("token", "==", token).limit(1);
+          query.get().then((šara) => {
+            if (!šara.empty) {
+              const doc = šara.docs[0];
               const storedName = doc.data().name;
               if (name === storedName) {
-                console.log("Name is correct:", name);
-                resolve(true);
+                resolve;
               } else {
                 reject;
               }
@@ -244,7 +219,6 @@ function setContent_profile() {
   const token = getCookie("token");
 
   checkTrueToken(name, token).then(() => {
-    console.log("Name is valid:", name);
     document.getElementById("naslov2").innerHTML = "KrokyPlus | Profil";
     document.getElementById("register-form").style.display = "none";
     document.getElementById("profile-settings").style.display = "block";
@@ -256,7 +230,6 @@ function setContent_profile() {
       if (palačinka === "") {
         return;
       } else if (palačinka !== "") {
-        alert("Name is invalid:", palačinka);
         deleteCookie("name");
         deleteCookie("username");
         deleteCookie("token");
@@ -265,33 +238,25 @@ function setContent_profile() {
 }
 
 function spremeniP() {
-  if (checkTrueToken() === true) {
     let podatki_spremeni = document.getElementById("sprememba-podatkov")
     if (podatki_spremeni.style.display === "none") {
       podatki_spremeni.style.display = "block";
+      podatki_spremeni.classList.add = "vnos-spremembe";
     } else if (podatki_spremeni.style.display === "block") {
       podatki_spremeni.style.display = "none";
     }
-  } else {
-    pass
-  }
 }
 
 function deleteCookie(name) {
   document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=yourdomain.com;";
 }
-
 
 function logout() {
   deleteCookie("name");
   deleteCookie("token");
   deleteCookie("username");
-  location.reload();
-}
-
-function deleteCookie(name) {
-  document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  alert("Uspešno si bil odjavljen.");
+  window.location.href = "/index";
 }
 
 function checkTrueToken(name, token) {
@@ -306,13 +271,12 @@ function checkTrueToken(name, token) {
           const doc = snapshot.docs[0];
           const storedName = doc.data().name;
           if (name === storedName) {
-            console.log("Ime in token sta pravilna:", name, " ", token);
             resolve(true);
           } else {
-            reject();
+            reject(error);
           }
         } else {
-          reject();
+          reject(error);
         }
       })
       .catch((error) => {
@@ -326,6 +290,41 @@ function spremeninaslov_Register(){
   if (name === ""){
     return;
   }else{
-    document.getElementById("spodnji-naslov-registracije").innerHTML = "Profil"
+    document.getElementById("spodnji-naslov-registracije").innerHTML = "Profil";
+    if (window.location.href === "/profile"|| window.location.href === "/profile.html"){
+    document.title = "KrokyPlus | Profil";
+    document.getElementById("u_okvir").style.display = "block";
+    }else{
+      return
+    } 
   }
 }
+
+function spremeniU_ovkir() {
+  const name = getCookie("name");
+  const token = getCookie("token");
+  checkTrueToken(name, token).then(() => {
+    const okvirček = document.getElementById("u_okvir");
+      document.getElementById("u_okvir").style.display = "block";
+      document.getElementById("user-name").innerHTML = name;
+  }).catch((error) => {
+    console.log(error);
+  });
+}
+
+function pokažipodatke(username){
+  db.collection("users")
+  .get()
+  .doc(username)
+  .then(() => {
+      const geslo = doc.data().password;
+      const email = doc.data().email;
+      const username = doc.data().username;
+      const name = doc.data().name;
+      console.log(geslo, email, username, name);
+      document.getElementById("password").innerHTML = geslo;
+      document.getElementById("email").innerHTML = email;
+      document.getElementById("username").innerHTML = username;
+      document.getElementById("name").innerHTML = name;
+    });
+  }

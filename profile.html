@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="files/css/style.css">
     <link rel="stylesheet" href="files/css/register.css">
     <script src="files/firebase/firebase.js"></script>
-    <title id="naslov">KrokyPlus | Registracija</title>
+    <title id="naslov">KrokyPlus</title>
+    <!-- ne dodajaj login.js, ker ne dela pol -->
     <style>
         .loading-screen {
             position: fixed;
@@ -55,8 +56,8 @@
     </style>
 </head>
 
-<body onload="OnloadLogin(); setContent_profile()">
-    <div class="title" id="navbar-old" style="display: none">
+<body onload="OnloadLogin(); setContent_profile(); spremeninaslov_Register(); spremeniU_ovkir();">
+    <div class="title" id="navbar-old" style="display: block">
         <h1 id="naslov2">KrokyPlus | Register</h1>
     </div>
     <div class="loading-screen">
@@ -67,22 +68,34 @@
         <div class="title">
             <h1>KrokyPlus | Profil</h1>
         </div>
-        <div class="login">
-            <span id="user-name">Uporabnik</span>
-            <a onclick="logout()">Odjava</a>
+        <div class="login" style="margin: -4% 4% 0 10%; display: none;" id="u_okvir">
+            <div class="u_okvir" onclick="logout()">
+                <span id="user-name">Uporabnik</span><a> || odjava</a>
+            </div>
         </div>
     </div>
-    <div id="profile-settings" style="display: none; margin-left: 2%">   
-        <h1>Nastavitve</h1>
+    <div id="profile-settings" style="display: none; margin-left: 2%">
+        <h1 style="font-size: 30px">Nastavitve</h1>
+        <div class="profile-info">
+            <h1 style="font-size: 20px">Podatki o tebi:</h2>
+            <div style="margin-left: 2%;">
+                <h3 id="ime">Uporabnik: <span id="ime"></span></h1>
+                <p id="email">Email: <span id="email"></span></p>
+                <p id="username">Uporabniško ime: <span id="username"></span></p>
+                <p id="password">Geslo: <span id="geslo" type="password">* * * * * *</span></p>
+            </div>
+        </div>
         <p>Spremeni podatke:</p>
-        <div id="sprememba-podatkov" style="display: none">
-            <input id="username-change" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime" />
+        <div id="sprememba-podatkov" style="display: none" class="podatki">
+            <input id="username-change" type="text" title="Uporabniško ime" required
+                placeholder="Kroky uporabniško ime" />
             <input id="password-change" type="password" title="Geslo" required placeholder="Kroky geslo" />
             <input id="name-change" type="text" title="Vaše ime" required placeholder="Ime" />
             <input id="email-change" type="email" title="Email za kontakt" required placeholder="Email" />
         </div>
         <button style="margin-left: 2%" class="btn" onclick="spremeniP()">Spremeni</button>
-        
+        <br>
+        <br>
     </div>
     <div class="log-form" id="register-form">
         <h2>Registracija</h2>
