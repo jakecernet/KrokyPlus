@@ -329,3 +329,4 @@ function pokažipodatke(username){
       document.getElementById("name").innerHTML = name;
     });
   }
+  

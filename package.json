@@ -4,11 +4,12 @@
   "description": "app for ordering food",
   "main": "index.js",
   "scripts": {
-    "start": "node analiza.js"
+    "start": "node node.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "kroky-api": "^2.0.1"
   }
 }

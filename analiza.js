@@ -17,23 +17,20 @@ function CountData(data) {
 
 
 function ClearData(data) {
-  const conjunctions = ["s", "z", "v", "na", "in", "pa", "k", "h", "ob"];
-  const other = [",", ".", ";", ":"];
-  
-  for (let j = 0; j < conjunctions.length; j++) {
-    var regex = new RegExp(`\\s${conjunctions[j]}\\s`, "g");
-    data = data.replaceAll(regex, " ");
-  }
-  
-for (let j = 0; j < other.length; j++) {
-  const regex = new RegExp(`\\${other[j]}`, "g");
-  data = data.replaceAll(regex, "");
-}
+  NotFood=["malica", "s", "in", "v", "z", "ali", "h", "k", "na", "plastenki"]
+
+  for (const key in data) {
+    if (NotFood.includes(key)) {
+      delete data[key];
+    }
+    }
+
   return data;
+
 }
 
 function DataTokenizer(data) {
-  data = data.replace(/\n|\r|\t/g, " ").toLowerCase();
+  data = data.replace(/\n|\r|\t|,/g, " ").toLowerCase();
   const tokens = data.split(" ");
   var dishes = [];
   for (let i = 0; i < tokens.length; i++) {
@@ -100,7 +97,7 @@ async function getFullMenu(username, password){
   var FullMenu=[];
   var meni= await kroky.login(username, password);
   
-  for (i = 35; i < weekDiff()+1; i++) {
+  for (i = 1; i < weekDiff()+2; i++) {
     
     var x=parseInt("-"+i);
     data =await kroky.getMeals(x);
@@ -126,14 +123,21 @@ if (AutoSelectCheck(temp)!= true) {
   return out;
 }
 
-async function main(){
-  data = await getFullMenu("ČadLin", "hlamehhit");
-  data = ClearData(data);
+async function main(username, password){
+  data = await getFullMenu(username, password);
   data = DataTokenizer(data);
   data = CountData(data);
+  data = ClearData(data);
 
-  console.log(data);
-
-
+  
+  var max = 0;
+  var maxKey = "";
+  for (const key in data) {
+    if (data[key] > max) {
+      max = data[key];
+      maxKey = key;
+    }
+  }
+  console.log(maxKey);
+  return maxKey;
 }
-main();
