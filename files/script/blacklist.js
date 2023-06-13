@@ -21,4 +21,9 @@ function displayItems(items) {
     li.textContent = item.name;
     itemsList.appendChild(li);
   });
+  if (itemsList.innerHTML == '') {
+    const li = document.createElement('li');
+    li.textContent = 'Ni rezultatov';
+    itemsList.appendChild(li);
+  }
 }
