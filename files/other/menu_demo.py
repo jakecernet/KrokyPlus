@@ -1,3 +1,6 @@
+import os
+
+menu="""
 Prebranec, čevapčiči, napitek
 Pečen riž z zelenjavo, napitek
 Ješprenjčkova rižota s teletino in korenčkom, napitek
@@ -109,3 +112,17 @@ Svinjska pečenka s praženim krompirjem, voda v plastenki
 Njoki s šparglji in orehi, voda v plastenki
 Široki rezanci, gobova omaka, napitek
 Domači skutni štruklji s suhim sadjem, napitek
+
+
+"""
+
+menu=menu.split("\n")
+menu=[i for i in menu if i!=""]
+
+import random
+
+menu=random.sample(menu, 10)
+f=open("menu.txt", "w", encoding="utf-8")
+for i in menu:
+    f.write(i+"\n")
+    
