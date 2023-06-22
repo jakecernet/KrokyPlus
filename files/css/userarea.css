@@ -74,6 +74,7 @@
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+    overflow: hidden;
 }
 
 .isci {
@@ -107,6 +108,7 @@ input {
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+    overflow: hidden;
 }
 
 .reset button:hover {
@@ -124,6 +126,8 @@ input {
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+    transition: 0.3s;
+    overflow: hidden;
 }
 
 .meniblk ul {
