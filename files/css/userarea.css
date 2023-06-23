@@ -77,6 +77,29 @@
     overflow: hidden;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 300px;
+}
+
+.list {
+    width: 200px;
+    height: 100%;
+    padding: 10px;
+    background-color: #f1f1f1;
+    list-style-type: none;
+}
+
+.list li {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: move;
+}
+
 .isci {
     background-color: cornflowerblue;
     border: 10px solid cornflowerblue;
@@ -218,6 +241,7 @@ input {
     text-decoration: none;
     font-weight: bold;
 }
+
 .login {
     line-height: .5em;
     position: relative;
@@ -234,14 +258,15 @@ input {
     color: rgb(0, 0, 0);
 }
 
-input{
+input {
     text-align: center;
     font-size: 110%;
 }
+
 .u_okvir {
     display: inline-block;
     background: rgb(74, 74, 238);
-    padding: 1em 1em;   
+    padding: 1em 1em;
     color: white;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%);
@@ -259,4 +284,3 @@ input{
     background: darken(rgb(58, 133, 204), 5%);
     scale: 1.05;
 }
-
