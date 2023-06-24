@@ -77,19 +77,29 @@
     overflow: hidden;
 }
 
+.blacklist h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
 #column-undone {
     grid-area: all;
-    border: 1px solid #000000;
+    border: 2px solid #12252e;
+    height: 60vh;
 }
 
 #column-done {
     grid-area: blacklist;
-    border: 1px solid #000000
+    border: 2px solid #12252e;
 }
 
 #column-in-progress {
     grid-area: whitelist;
-    border: 1px solid #000000
+    border: 2px solid #12252e;
 }
 
 .container {
@@ -97,9 +107,54 @@
     grid-template-areas:
         'all blacklist'
         'all whitelist';
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
     border: 5px solid #ccc;
+    margin-bottom: 80px;
+}
+
+.food-item {
+    border: 0px solid #000000;
+    padding: 10px;
+    text-align: center;
+    background-color: #668492;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+.food-item:hover {
+    background-color: #cfcfcf;
+    box-shadow: #333;
+    cursor: grab;
+}
+
+.food-item:active {
+    cursor: grabbing;
+}
+
+.notes-column{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    margin-top: 80px;
+}
+
+#save-btn {
+    background-color: cornflowerblue;
+    border: 10px solid cornflowerblue;
+    border-radius: 10px;
+    width: 120px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#save-btn:hover {
+    background-color: rgb(151, 187, 255);
+    border: 10px solid rgb(151, 187, 255);
+    box-shadow: 5px 5px 10px #333;
+    cursor: pointer;
 }
 
 .isci {
