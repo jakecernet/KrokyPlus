@@ -2,6 +2,12 @@ var fileList1 = "../files/texts/text1.txt";
 var fileList2 = "../files/texts/text2.txt";
 var fileList3 = "../files/texts/text3.txt";
 
+var arrays = {
+  list1: [],
+  list2: [],
+  list3: []
+};
+
 loadTextFile(fileList1, "list1");
 loadTextFile(fileList2, "list2");
 loadTextFile(fileList3, "list3");
@@ -13,22 +19,36 @@ function loadTextFile(file, listId) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var text = xhr.responseText;
       var lines = text.split("\n");
-      var list = document.getElementById(listId);
-      lines.forEach(function (line) {
-        if (line.trim() !== "") {
-          var li = document.createElement("li");
-          li.draggable = true;
-          li.addEventListener("dragstart", function (event) {
-            drag(event);
-          });
-          li.innerText = line;
-          list.appendChild(li);
-          console.log("succse");
-        }
+      arrays[listId] = lines.filter(function (line) {
+        return line.trim() !== "";
       });
+      renderList(listId);
     }
   };
   xhr.send();
+}
+
+function renderList(listId) {
+  var list = document.getElementById(listId);
+  if (list) {
+    var array = arrays[listId];
+    list.innerHTML = ""; // Clear the list
+    array.forEach(function (item) {
+      var li = document.createElement("li");
+      li.draggable = true;
+      li.addEventListener("dragstart", function (event) {
+        drag(event);
+      });
+      li.innerText = item;
+      list.appendChild(li);
+    });
+    list.addEventListener("drop", function (event) {
+      drop(event);
+    });
+    list.addEventListener("dragover", function (event) {
+      allowDrop(event);
+    });
+  }
 }
 
 function drag(event) {
@@ -38,37 +58,34 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("text/plain");
-  var sourceListId = document.getElementById(data).parentNode.id;
-  var targetListId = event.target.id;
+  var sourceListId = document.getElementById(data)?.parentNode?.id;
+  var targetListId = event.currentTarget?.id;
   var text = event.dataTransfer.getData("text/plain");
 
-  // Update text file
-  if (sourceListId !== targetListId) {
-    var sourceFile = getSourceFile(sourceListId);
-    var targetFile = getSourceFile(targetListId);
-    var sourceList = document.getElementById(sourceListId);
-    var targetList = document.getElementById(targetListId);
-    var listItem = document.createElement("li");
-    listItem.draggable = true;
-    listItem.addEventListener("dragstart", function (event) {
-      drag(event);
-    });
-    listItem.innerText = text;
-    targetList.appendChild(listItem);
-    sourceList.removeChild(document.getElementById(data));
-
-    // Write to source file
-    var sourceContent = getListContent(sourceList);
-    writeTextFile(sourceFile, sourceContent);
-
-    // Write to target file
-    var targetContent = getListContent(targetList);
-    writeTextFile(targetFile, targetContent);
+  // Update arrays
+  if (sourceListId && targetListId && sourceListId !== targetListId) {
+    var sourceArray = arrays[sourceListId];
+    var targetArray = arrays[targetListId];
+    var index = sourceArray.indexOf(text);
+    if (index !== -1) {
+      sourceArray.splice(index, 1);
+      targetArray.push(text);
+    }
+    renderList(sourceListId);
+    renderList(targetListId);
   }
 }
 
 function allowDrop(event) {
   event.preventDefault();
+}
+
+function saveChanges() {
+  Object.keys(arrays).forEach(function (listId) {
+    var file = getSourceFile(listId);
+    var content = arrays[listId].join("\n");
+    writeTextFile(file, content);
+  });
 }
 
 function getSourceFile(listId) {
@@ -90,18 +107,10 @@ function getSourceFile(listId) {
   return file;
 }
 
-function getListContent(list) {
-  var content = "";
-  var items = list.getElementsByTagName("li");
-  for (var i = 0; i < items.length; i++) {
-    content += items[i].innerText + "\n";
-  }
-  return content.trim();
-}
-
 function writeTextFile(file, content) {
   var xhr = new XMLHttpRequest();
   xhr.open("PUT", file, true);
+  xhr.setRequestHeader("Content-type", "text/plain");
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       console.log("Text file updated successfully.");
