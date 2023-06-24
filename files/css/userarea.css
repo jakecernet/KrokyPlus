@@ -77,27 +77,31 @@
     overflow: hidden;
 }
 
+#list1 {
+    grid-area: all;
+    border: 1px solid #000000;
+}
+
+#list2 {
+    grid-area: blacklist;
+    border: 1px solid #000000
+}
+
+#list3 {
+    grid-area: whitelist;
+    border: 1px solid #000000
+}
+
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 300px;
-}
-
-.list {
-    width: 200px;
-    height: 100%;
+    display: grid;
+    grid-template-areas:
+        'all all all blacklist blacklist blacklist'
+        'all all all blacklist blacklist blacklist'
+        'all all all whitelist whitelist whitelist'
+        'all all all whitelist whitelist whitelist';
+    gap: 10px;
     padding: 10px;
-    background-color: #f1f1f1;
-    list-style-type: none;
-}
-
-.list li {
-    margin: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    cursor: move;
+    border: 5px solid #ccc;
 }
 
 .isci {

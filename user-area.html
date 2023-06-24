@@ -45,7 +45,8 @@
         </div>
         <div class="login" style="margin: 0 4% 0 10%; display: none;" id="u_okvir">
             <div class="u_okvir" onclick="logout()">
-                <span id="user-name">Uporabnik</span><p2>  ||  odjava</p2>
+                <span id="user-name">Uporabnik</span>
+                <p2> || odjava</p2>
             </div>
         </div>
     </div>
@@ -58,7 +59,7 @@
                     <ul class="list" id="list2" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
                     <ul class="list" id="list3" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
                 </div>
-                <button class="save" onclick="saveChanges()">Save</button>
+                <button id="save-btn">Save</button>
             </div>
             <li onclick="showWhitelist()"><a>Meni blacklist</a></li>
             <div class="meniblk" id="meniblk">
@@ -96,10 +97,11 @@
             <div class="reset" id="reset">
                 <h2>Reset algoritma</h2>
                 <p>Če želite ponastaviti algoritem, kliknite na spodnjo povezavo.</p>
-                <button type="submit" class="isci" onclick="window.location.href='user-area'" style="margin-bottom: 20px;">Ponastavi</button>
+                <button type="submit" class="isci" onclick="window.location.href='user-area'"
+                    style="margin-bottom: 20px;">Ponastavi</button>
             </div>
         </ul>
-        
+
     </div>
     <script>
         window.addEventListener('load', function () {
