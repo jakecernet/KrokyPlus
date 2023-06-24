@@ -41,7 +41,7 @@ function createNoteElement(index, note) {
   noteElement.setAttribute('draggable', 'true');
   noteElement.setAttribute('ondragstart', 'dragStart(event)');
   noteElement.setAttribute('data-index', index);
-  noteElement.innerHTML = `<span class="food-item">${note.text}</span>`;
+  noteElement.innerHTML = `<div class="food-item"><a>${note.text}</a></div>`;
   return noteElement;
 }
 

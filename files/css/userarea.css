@@ -74,32 +74,19 @@
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+    transition: 0.3s;
     overflow: hidden;
 }
 
-.blacklist h2{
+.blacklist h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     float: left;
     margin-left: 20px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-}
-
-#column-undone {
-    grid-area: all;
-    border: 2px solid #12252e;
-    height: 60vh;
-}
-
-#column-done {
-    grid-area: blacklist;
-    border: 2px solid #12252e;
-}
-
-#column-in-progress {
-    grid-area: whitelist;
-    border: 2px solid #12252e;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .container {
@@ -108,25 +95,69 @@
         'all blacklist'
         'all whitelist';
     gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #b8b8b8;
+}
+
+#column-undone {
+    grid-area: all;
+    height: 80vh;
+}
+
+#column-done {
+    grid-area: blacklist;
+    height: 39vh;
+}
+
+#column-in-progress {
+    grid-area: whitelist;
+    max-height: 39vh;
+}
+
+.column {
+    background-color: #b8b8b8;
     padding: 10px;
-    border: 5px solid #ccc;
-    margin-bottom: 80px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 2px;
+    text-decoration: none;
+    color: rgb(179, 196, 230);
+    transition: 0.3s;
+    box-shadow: 0 0 4px #000000;
+    overflow-y: scroll;
+}
+
+.notes-column {
+    display: grid;
+    grid-gap: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    padding: 20px;
+    background-color: #b8b8b8;
 }
 
 .food-item {
-    border: 0px solid #000000;
+    background-color: rgb(140, 153, 207);
     padding: 10px;
     text-align: center;
-    background-color: #668492;
-    height: 40px;
-    width: 40px;
-    border-radius: 4px;
-    margin-top: 40px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: rgb(179, 196, 230);
+    transition: 0.3s;
+    box-shadow: 0 0 4px #000000;
+}
+
+.food-item a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .food-item:hover {
     background-color: #cfcfcf;
-    box-shadow: #333;
+    box-shadow: 2px 2px 5px #333;
     cursor: grab;
 }
 
@@ -134,11 +165,8 @@
     cursor: grabbing;
 }
 
-.notes-column{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-    margin-top: 80px;
+.food-item a:hover {
+    color: rgb(0, 0, 0);
 }
 
 #save-btn {

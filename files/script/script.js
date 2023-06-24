@@ -28,7 +28,7 @@ function showBlacklist() {
   if (blacklist.style.height === "0px") {
     blacklist.style.display = "block";
     setTimeout(function () {
-      blacklist.style.height = "700px";
+      blacklist.style.height = "110vh";
       whitelist.style.height = "0px";
       reset.style.height = "0px";
     }, 10);
