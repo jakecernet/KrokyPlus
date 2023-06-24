@@ -22,7 +22,7 @@
 
 .title {
     font-size: 20px;
-    color: #000;
+    color: #ffffff;
     font-weight: 100;
     text-align: center;
     margin-top: 1%;
@@ -41,7 +41,7 @@
     width: 40%;
     min-width: 320px;
     max-width: 475px;
-    background: #fff;
+    background: #363636;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -50,7 +50,7 @@
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 form {
@@ -62,7 +62,7 @@ form {
 h2 {
     width: 100%;
     display: block;
-    background-color: gray;
+    background-color: rgb(24, 24, 24);
     width: 100%;
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
@@ -75,7 +75,7 @@ h2 {
 .btn {
     display: inline-block;
     background: rgb(74, 74, 238);
-    border: 1px;
+    border: 1px solid rgb(74, 74, 238);
     padding: .5em 2em;
     color: white;
     margin-right: .5em;
