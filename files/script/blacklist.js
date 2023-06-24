@@ -95,13 +95,10 @@ function drop(event) {
   const targetColumn = event.target.closest('.column');
   const targetStatus = targetColumn.id === 'column-done' ? true : false;
 
-  // Check if the target column is the "whitelist" column and return early
-  if (targetColumn.id === 'column-in-progress') {
-    return;
-  }
-
   if (sourceColumn !== targetColumn) {
     notes[index].done = targetStatus;
+    notes[index].inProgress = targetColumn.id === 'column-in-progress' ? true : false;
+
     localStorage.setItem('notes', JSON.stringify(notes));
     displayNotes();
   }
