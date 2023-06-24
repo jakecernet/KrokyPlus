@@ -109,8 +109,7 @@ function getSourceFile(listId) {
 
 function writeTextFile(file, content) {
   var xhr = new XMLHttpRequest();
-  xhr.open("PUT", file, true);
-  xhr.setRequestHeader("Content-type", "text/plain");
+  xhr.open("POST", file, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       console.log("Text file updated successfully.");
