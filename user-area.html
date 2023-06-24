@@ -52,12 +52,24 @@
     </div>
     <div class="options">
         <ul>
-            <li onclick="showBlacklist()" id="hint"><a>Blacklist</a></li>
+            <li onclick="showBlacklist()" id="hint"><a>Obroki</a></li>
             <div class="blacklist" id="blacklist">
                 <div class="container">
-                    <div id="list1" class="column" ondrop="drop(event, 'list1')" ondragover="allowDrop(event)"></div>
-                    <div id="list2" class="column" ondrop="drop(event, 'list2')" ondragover="allowDrop(event)"></div>
-                    <div id="list3" class="column" ondrop="drop(event, 'list3')" ondragover="allowDrop(event)"></div>
+                    <div id="column-undone" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Nerazvrščeno</h2>
+                        <div id="undone-notes" class="notes-column" ondragstart="dragStart(event)" draggable="true">
+                        </div>
+                    </div>
+                    <div id="column-done" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Blacklist</h2>
+                        <div id="done-notes" class="notes-column" ondragstart="dragStart(event)" draggable="true"></div>
+                    </div>
+                    <div id="column-in-progress" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h2>Whitelist</h2>
+                        <div id="in-progress-notes" class="notes-column" ondragstart="dragStart(event)"
+                            draggable="true">
+                        </div>
+                    </div>
                 </div>
                 <button id="save-btn">Save</button>
             </div>

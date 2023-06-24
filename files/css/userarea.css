@@ -77,17 +77,17 @@
     overflow: hidden;
 }
 
-#list1 {
+#column-undone {
     grid-area: all;
     border: 1px solid #000000;
 }
 
-#list2 {
+#column-done {
     grid-area: blacklist;
     border: 1px solid #000000
 }
 
-#list3 {
+#column-in-progress {
     grid-area: whitelist;
     border: 1px solid #000000
 }

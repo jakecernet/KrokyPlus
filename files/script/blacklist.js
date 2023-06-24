@@ -1,81 +1,85 @@
-var fileList1 = "../files/texts/text1.txt";
-var fileList2 = "../files/texts/text2.txt";
-var fileList3 = "../files/texts/text3.txt";
+// Clear localStorage
+localStorage.clear();
 
-var arrays = {
-  list1: [],
-  list2: [],
-  list3: [],
-};
+// Read data from three text files
+function readFiles() {
+  const fileNames = ['../files/texts/text1.txt', '../files/texts/text2.txt', '../files/texts/text3.txt'];
+  const filePromises = fileNames.map(fileName => fetch(fileName).then(response => response.text()));
 
-// Load text files and store data in local storage
-loadTextFile(fileList1, "list1");
-loadTextFile(fileList2, "list2");
-loadTextFile(fileList3, "list3");
+  Promise.all(filePromises)
+    .then(fileContents => {
+      notes = [];
 
-// Load text file and store data in local storage
-function loadTextFile(file, listId) {
-  // Clear local storage for the corresponding listId
-  localStorage.removeItem(listId);
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", file, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      var text = xhr.responseText;
-      var lines = text.split("\n");
-      arrays[listId] = lines.filter(function (line) {
-        return line.trim() !== "";
+      fileContents.forEach(fileContent => {
+        const lines = fileContent.trim().split('\n');
+
+        lines.forEach(line => {
+          const noteText = line.trim();
+          if (noteText !== '') {
+            const newNote = {
+              text: noteText,
+              done: false,
+              inProgress: false
+            };
+            notes.push(newNote);
+          }
+        });
       });
-      // Store data in local storage
-      localStorage.setItem(listId, JSON.stringify(arrays[listId]));
-      renderList(listId);
-    }
-  };
-  xhr.send();
+
+      localStorage.setItem('notes', JSON.stringify(notes));
+      displayNotes();
+    })
+    .catch(error => {
+      console.error('Error reading files:', error);
+    });
 }
 
-// Render the list from local storage
-function renderList(listId) {
-  var list = document.getElementById(listId);
-  if (list) {
-    var array = JSON.parse(localStorage.getItem(listId)) || [];
-    list.innerHTML = ""; // Clear the list
-    array.forEach(function (item, index) {
-      var li = document.createElement("li");
-      li.draggable = true;
-      li.addEventListener("dragstart", function (event) {
-        drag(event);
-      });
-      li.innerText = item;
-      li.setAttribute("data-index", index);
-      list.appendChild(li);
+// Create a note element
+function createNoteElement(index, note) {
+  const noteElement = document.createElement('div');
+  noteElement.className = 'note';
+  noteElement.setAttribute('draggable', 'true');
+  noteElement.setAttribute('ondragstart', 'dragStart(event)');
+  noteElement.setAttribute('data-index', index);
+  noteElement.innerHTML = `<span>${note.text}</span>`;
+  return noteElement;
+}
+
+// Display existing notes
+function displayNotes() {
+  const undoneNotesContainer = document.getElementById('undone-notes');
+  const inProgressNotesContainer = document.getElementById('in-progress-notes');
+  const doneNotesContainer = document.getElementById('done-notes');
+
+  undoneNotesContainer.innerHTML = '';
+  inProgressNotesContainer.innerHTML = '';
+  doneNotesContainer.innerHTML = '';
+
+  if (notes.length === 0) {
+    undoneNotesContainer.innerHTML = '<p>No notes yet</p>';
+  } else {
+    // Sort the notes by "done" status
+    notes.sort(function (a, b) {
+      return a.done - b.done;
+    });
+
+    notes.forEach(function (note, index) {
+      const noteElement = createNoteElement(index, note);
+
+      if (note.done) {
+        doneNotesContainer.appendChild(noteElement);
+      } else if (note.inProgress) {
+        inProgressNotesContainer.appendChild(noteElement);
+      } else {
+        undoneNotesContainer.appendChild(noteElement);
+      }
     });
   }
 }
 
 // Drag start event handler
-function drag(event) {
-  event.dataTransfer.setData("text/plain", event.target.dataset.index);
-}
-
-// Drop event handler
-function drop(event, listId) {
-  event.preventDefault();
-  var sourceIndex = event.dataTransfer.getData("text/plain");
-  var targetListId = listId;
-  var targetIndex = event.target.dataset.index;
-
-  // Update arrays in local storage
-  if (sourceIndex !== targetIndex) {
-    var sourceArray = JSON.parse(localStorage.getItem(targetListId)) || [];
-    var item = sourceArray.splice(sourceIndex, 1)[0];
-    var targetArray = JSON.parse(localStorage.getItem(targetListId)) || [];
-    targetArray.splice(targetIndex, 0, item);
-
-    // Update local storage
-    localStorage.setItem(targetListId, JSON.stringify(targetArray));
-    renderList(targetListId);
-  }
+function dragStart(event) {
+  event.dataTransfer.setData('text/plain', event.target.dataset.index);
 }
 
 // Allow drop event handler
@@ -83,53 +87,25 @@ function allowDrop(event) {
   event.preventDefault();
 }
 
-// Save changes to text files
-function saveChanges() {
-  Object.keys(arrays).forEach(function (listId) {
-    var file = getSourceFile(listId);
-    var content = localStorage.getItem(listId) || "";
-    writeTextFile(file, content);
-  });
-}
+// Drop event handler
+function drop(event) {
+  event.preventDefault();
+  const index = event.dataTransfer.getData('text/plain');
+  const sourceColumn = document.querySelector(`[data-index="${index}"]`).parentNode;
+  const targetColumn = event.target.closest('.column');
+  const targetStatus = targetColumn.id === 'column-done' ? true : false;
 
-// Get the file path based on the listId
-function getSourceFile(listId) {
-  var file;
-  switch (listId) {
-    case "list1":
-      file = fileList1;
-      break;
-    case "list2":
-      file = fileList2;
-      break;
-    case "list3":
-      file = fileList3;
-      break;
-    default:
-      file = "";
-      break;
+  // Check if the target column is the "whitelist" column and return early
+  if (targetColumn.id === 'column-in-progress') {
+    return;
   }
-  return file;
+
+  if (sourceColumn !== targetColumn) {
+    notes[index].done = targetStatus;
+    localStorage.setItem('notes', JSON.stringify(notes));
+    displayNotes();
+  }
 }
 
-// Write text file
-function writeTextFile(file, content) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", file, true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      console.log("Text file updated successfully.");
-    }
-  };
-  xhr.send(content);
-}
-
-// Event listener for the "Save" button
-document.getElementById("save-btn").addEventListener("click", function () {
-  saveChanges();
-});
-
-// Render the lists from local storage
-Object.keys(arrays).forEach(function (listId) {
-  renderList(listId);
-});
+// Call readFiles to load data from text files and display notes
+readFiles();
