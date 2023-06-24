@@ -55,9 +55,9 @@
             <li onclick="showBlacklist()" id="hint"><a>Blacklist</a></li>
             <div class="blacklist" id="blacklist">
                 <div class="container">
-                    <ul class="list" id="list1" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
-                    <ul class="list" id="list2" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
-                    <ul class="list" id="list3" ondrop="drop(event)" ondragover="allowDrop(event)"></ul>
+                    <div id="list1" class="column" ondrop="drop(event, 'list1')" ondragover="allowDrop(event)"></div>
+                    <div id="list2" class="column" ondrop="drop(event, 'list2')" ondragover="allowDrop(event)"></div>
+                    <div id="list3" class="column" ondrop="drop(event, 'list3')" ondragover="allowDrop(event)"></div>
                 </div>
                 <button id="save-btn">Save</button>
             </div>

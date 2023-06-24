@@ -5,7 +5,7 @@ var fileList3 = "../files/texts/text3.txt";
 var arrays = {
   list1: [],
   list2: [],
-  list3: []
+  list3: [],
 };
 
 // Load text files and store data in local storage
@@ -50,12 +50,6 @@ function renderList(listId) {
       li.setAttribute("data-index", index);
       list.appendChild(li);
     });
-    list.addEventListener("drop", function (event) {
-      drop(event, listId);
-    });
-    list.addEventListener("dragover", function (event) {
-      allowDrop(event);
-    });
   }
 }
 
@@ -73,19 +67,14 @@ function drop(event, listId) {
 
   // Update arrays in local storage
   if (sourceIndex !== targetIndex) {
-    var sourceArray = JSON.parse(localStorage.getItem(listId)) || [];
-    var targetArray = JSON.parse(localStorage.getItem(listId)) || [];
+    var sourceArray = JSON.parse(localStorage.getItem(targetListId)) || [];
     var item = sourceArray.splice(sourceIndex, 1)[0];
+    var targetArray = JSON.parse(localStorage.getItem(targetListId)) || [];
     targetArray.splice(targetIndex, 0, item);
 
     // Update local storage
-    localStorage.setItem(listId, JSON.stringify(targetArray));
-    renderList(listId);
-
-    // Remove the dragged element from its previous position
-    var sourceList = document.getElementById(listId);
-    var draggedElement = sourceList.querySelector(`[data-index="${sourceIndex}"]`);
-    sourceList.removeChild(draggedElement);
+    localStorage.setItem(targetListId, JSON.stringify(targetArray));
+    renderList(targetListId);
   }
 }
 
