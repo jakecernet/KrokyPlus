@@ -25,7 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
+}
 
 .title {
     font-weight: 600;
@@ -42,9 +42,8 @@ body {
     text-decoration: none;
 }
 
-footer{
-    margin-top: auto;
-    position: sticky;
+footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 100px;
@@ -55,41 +54,51 @@ footer{
     font-size: 15px;
 }
 
-footer a{
+footer a {
     color: #fff;
     text-decoration: none;
     margin-top: 30px;
 }
 
-footer a:hover{
+footer a:hover {
     color: #000000;
     text-decoration: none;
 }
 
-.footer-text{
+.footer-text {
     margin-top: 30px;
 }
 
-.footer-text ul{
+.footer-text ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.footer-text ul li{
+.footer-text ul li {
     display: inline-block;
     margin: 0 10px;
 }
 
-.footer-text ul li a{
+.footer-text ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
 }
 
-.footer-text ul li a:hover{
+.footer-text ul li a:hover {
     color: #000000;
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        height: 240px;
+    }
 }
 
 input {
@@ -116,4 +125,59 @@ input:focus {
 ::placeholder {
     color: #fff;
     font-family: 'Montserrat';
+}
+
+.log-form {
+    width: 40%;
+    min-width: 320px;
+    max-width: 475px;
+    background: #363636;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+form {
+    display: block;
+    width: 100%;
+    padding: 2em;
+}
+
+.btn {
+    display: inline-block;
+    background: rgb(74, 74, 238);
+    border: 1px solid rgb(74, 74, 238);
+    padding: .5em 2em;
+    color: white;
+    margin-right: .5em;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.btn:hover {
+    background: darken(rgb(58, 133, 204), 5%);
+    border: 1px solid #000000;
+}
+
+.register {
+    line-height: .5em;
+    position: relative;
+    top: 1.2em;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.register:hover {
+    color: rgb(0, 0, 0);
 }

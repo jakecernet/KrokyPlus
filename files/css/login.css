@@ -37,28 +37,6 @@
     }
 }
 
-.log-form {
-    width: 40%;
-    min-width: 320px;
-    max-width: 475px;
-    background: #363636;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-form {
-    display: block;
-    width: 100%;
-    padding: 2em;
-}
-
 h2 {
     width: 100%;
     display: block;
@@ -70,39 +48,6 @@ h2 {
     margin: 0;
     font-weight: 200;
     color: white;
-}
-
-.btn {
-    display: inline-block;
-    background: rgb(74, 74, 238);
-    border: 1px solid rgb(74, 74, 238);
-    padding: .5em 2em;
-    color: white;
-    margin-right: .5em;
-    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-.btn:hover {
-    background: darken(rgb(58, 133, 204), 5%);
-    border: 1px solid #000000;
-}
-
-.register {
-    line-height: .5em;
-    position: relative;
-    top: 1.2em;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    float: right;
-    cursor: pointer;
-}
-
-.register:hover {
-    color: rgb(0, 0, 0);
 }
 
 @keyframes fadeout {

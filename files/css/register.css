@@ -10,31 +10,10 @@
     text-align: center;
 }
 
-.log-form {
-    width: 40%;
-    min-width: 320px;
-    max-width: 475px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
-}
-
-form {
-    display: block;
-    width: 100%;
-    padding: 2em;
-}
-
 h2 {
     width: 100%;
     display: block;
-    background-color: gray;
+    background-color: rgb(24, 24, 24);
     width: 100%;
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
@@ -42,23 +21,6 @@ h2 {
     margin: 0;
     font-weight: 200;
     color: white;
-}
-
-.btn {
-    display: inline-block;
-    background: rgb(74, 74, 238);
-    border: 1px;
-    padding: .5em 2em;
-    color: white;
-    margin-right: .5em;
-    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-.btn:hover {
-    background: darken(rgb(58, 133, 204), 5%);
-    scale: 1.05;
 }
 
 .login {
