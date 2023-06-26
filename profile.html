@@ -59,7 +59,11 @@
         <h2>Registracija</h2>
         <form id="register-form">
             <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime " />
-            <input id="password" type="password" title="Geslo" required placeholder="Kroky geslo" />
+            <span>
+                <input type="password" id="password" title="Geslo" placeholder="Geslo" />
+                <button class="showpass" onclick="showPassword()"><img
+                        src="https://www.majmohar.me/IMG/iStock-845329690.png"></button>
+            </span>
             <input id="name" type="text" title="Vaše ime" required placeholder="Ime" />
             <input id="email" type="email" title="Email za kontakt" required placeholder="Email" />
             <button id="submit" class="btn" onclick="register()">Registracija</button>
@@ -78,6 +82,7 @@
             </ul>
         </div>
     </footer>
+    <script src="files/script/script.js"></script>
 </body>
 
 </html>

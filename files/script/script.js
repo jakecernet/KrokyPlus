@@ -63,39 +63,17 @@ function checkbox(num) {
   }
 }
 
-function save() {
-  var whitelist = document.getElementById("meniblk");
-  var blacklist = document.getElementById("blacklist");
-  var reset = document.getElementById("reset");
-  var whitelistArray = [];
-  var blacklistArray = [];
-  var resetArray = [];
-  var whitelistChecked = whitelist.getElementsByTagName("input");
-  var blacklistChecked = blacklist.getElementsByTagName("input");
-  var resetChecked = reset.getElementsByTagName("input");
-  for (var i = 0; i < whitelistChecked.length; i++) {
-    if (whitelistChecked[i].checked) {
-      whitelistArray.push(whitelistChecked[i].value);
-    }
-  }
-  for (var i = 0; i < blacklistChecked.length; i++) {
-    if (blacklistChecked[i].checked) {
-      blacklistArray.push(blacklistChecked[i].value);
-    }
-  }
-  for (var i = 0; i < resetChecked.length; i++) {
-    if (resetChecked[i].checked) {
-      resetArray.push(resetChecked[i].value);
-    }
-  }
-  chrome.storage.sync.set({ "whitelist": whitelistArray }, function () {
-    console.log("whitelist saved");
+function showPassword() {
+  const loginForm = document.getElementById("log-form");
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // prevent default form submission behavior
   });
-  chrome.storage.sync.set({ "blacklist": blacklistArray }, function () {
-    console.log("blacklist saved");
-  });
-  chrome.storage.sync.set({ "reset": resetArray }, function () {
-    console.log("reset saved");
-  });
-  window.close();
+
+  var passwordInput = document.getElementById("password");
+
+  if (passwordInput.type == "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
 }

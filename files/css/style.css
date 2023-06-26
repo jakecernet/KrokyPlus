@@ -34,7 +34,6 @@ body {
     margin-top: 30px;
     margin-left: 1.5rem;
     text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.05);
-    cursor: pointer;
 }
 
 .title:hover {
@@ -112,14 +111,14 @@ input {
     outline: none;
     border-radius: 5px;
     font-family: 'Montserrat';
-    background-color: rgb(110, 103, 99);
+    background-color: #828282;
     color: #fff;
 }
 
 input:focus {
     border: 3px solid #ccc;
     background-color: rgb(110, 103, 99);
-    color: #fff;
+    color: #f4f4f4
 }
 
 ::placeholder {
@@ -128,19 +127,16 @@ input:focus {
 }
 
 .log-form {
-    width: 40%;
-    min-width: 320px;
+    width: 50%;
+    min-width: 360px;
     max-width: 475px;
     background: #363636;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.863);
 }
 
 form {
@@ -149,21 +145,44 @@ form {
     padding: 2em;
 }
 
+#password {
+    display: inline-block;
+    width: 85%;
+}
+
+.showpass {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-left: 5px;
+    position: absolute;
+    background-color: #828282;
+    border: 3px solid #555;
+    border-radius: 5px;
+}
+
+.showpass img {
+    width: 40px;
+    height: 40px;
+}
+
 .btn {
     display: inline-block;
-    background: rgb(74, 74, 238);
-    border: 1px solid rgb(74, 74, 238);
+    background: #a7a7a7;
+    border: 3px solid rgb(110, 103, 99	);
     padding: .5em 2em;
     color: white;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%);
     cursor: pointer;
     border-radius: 2px;
+    font-family: 'Montserrat';
+    font-size: 1em;
+    margin-top: 40px;
 }
 
 .btn:hover {
-    background: darken(rgb(58, 133, 204), 5%);
-    border: 1px solid #000000;
+    background: #828282;
+    border: 3px solid #ccc;
 }
 
 .register {
@@ -176,6 +195,9 @@ form {
     padding: 0;
     float: right;
     cursor: pointer;
+    color: #f3f3f3;
+    font-family: 'Montserrat';
+    margin-top: 40px;
 }
 
 .register:hover {
