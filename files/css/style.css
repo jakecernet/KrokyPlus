@@ -17,11 +17,12 @@ body {
     max-width: 100%;
     font-family: 'Montserrat';
     overflow-x: hidden;
-    background-color: #19376D;
+    background-image: url(../other/stacked-waves-haikei.svg);
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -112,13 +113,14 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 3px solid #19376D;
+    border: 2px solid #19376D;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
     border-radius: 5px;
     font-family: 'Montserrat';
     background-color: #576CBC;
+    box-shadow: 2px 2px 5px #000000;
 }
 
 input:focus {
@@ -142,7 +144,7 @@ input:focus {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.863);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.863);
 }
 
 form {
@@ -162,7 +164,7 @@ form {
     margin-left: 5px;
     position: absolute;
     background-color: #576CBC;
-    border: 3px solid #19376D;
+    border: 2px solid #19376D;
     border-radius: 5px;
 }
 
@@ -174,7 +176,7 @@ form {
 .btn {
     display: inline-block;
     background: #576CBC;
-    border: 3px solid #19376D;
+    border: 2px solid #19376D;
     padding: .5em 2em;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%);
