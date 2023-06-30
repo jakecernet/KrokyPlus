@@ -36,7 +36,7 @@ body {
     margin-left: 1.5rem;
 }
 
-.title h1{
+.title h1 {
     color: #A5D7E8;
     text-shadow: 0px 0px 10px #0B2447;
 }
@@ -110,17 +110,14 @@ footer a:hover {
 
 input {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #19376D;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
     outline: none;
-    border-radius: 5px;
-    font-family: 'Montserrat';
-    background-color: #576CBC;
-    box-shadow: 2px 2px 5px #000000;
+    background: transparent;
 }
 
 input:focus {
@@ -132,19 +129,30 @@ input:focus {
 ::placeholder {
     color: #F5EFE7;
     font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
 }
 
 .log-form {
-    width: 50%;
-    min-width: 360px;
-    max-width: 475px;
-    background: #0B2447;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
+    padding: 40px;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.863);
+    background: rgba(3, 6, 17, 0.671);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    max-width: 475px;
+    width: 100%;
+}
+
+.log-form h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
 }
 
 form {
@@ -159,13 +167,15 @@ form {
 }
 
 .showpass {
-    display: inline-flex;
-    margin-top: 10px;
-    margin-left: 5px;
-    position: absolute;
-    background-color: #576CBC;
-    border: 2px solid #19376D;
-    border-radius: 5px;
+    margin-top: 4px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
 }
 
 .showpass img {
@@ -174,22 +184,30 @@ form {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
-    background: #576CBC;
-    border: 2px solid #19376D;
-    padding: .5em 2em;
-    margin-right: .5em;
-    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
-    cursor: pointer;
-    border-radius: 2px;
-    font-family: 'Montserrat';
-    font-size: 1em;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
     margin-top: 40px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid #03e9f4;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: #828282;
-    border: 3px solid #ccc;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
 }
 
 .register {
