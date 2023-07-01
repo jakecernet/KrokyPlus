@@ -121,8 +121,7 @@ input {
 }
 
 input:focus {
-    border: 3px solid #ccc;
-    background-color: rgb(110, 103, 99);
+    border-bottom: 3px solid #ffffff;
     color: #f4f4f4
 }
 
@@ -167,7 +166,6 @@ form {
 }
 
 .showpass {
-    margin-top: 4px;
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
@@ -176,11 +174,19 @@ form {
     border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
 }
 
-.showpass img {
-    width: 40px;
-    height: 40px;
+.showpass:hover{
+    scale: 1.1;
+}
+
+.showpass a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 .btn {
@@ -199,6 +205,7 @@ form {
     border-radius: 5px;
     border: 2px solid #03e9f4;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .btn:hover {
