@@ -16,9 +16,6 @@
 </head>
 
 <body onload="OnloadLogin(); setContent_profile(); spremeninaslov_Register(); spremeniU_ovkir();">
-    <div class="title" id="navbar-old" style="display: block">
-        <h1 id="naslov2">KrokyPlus | Register</h1>
-    </div>
     <div class="loading-screen">
         <div class="spinner"></div>
         <p>Loading...</p>
@@ -38,36 +35,36 @@
         <div class="profile-info">
             <h2 style="font-size: 20px">Podatki o tebi:</h2>
             <div style="margin-left: 2%;">
-                <h3 id="ime">Uporabnik: </h3><span id="ime"></span>
+                <h3 id="ime">Uporabnik: </h3><span id="ime-show"></span>
             </div>
-            <p id="email">Email: <span id="email"></span></p>
-            <p id="username">Uporabniško ime: <span id="username"></span></p>
-            <p id="password">Geslo: <span id="geslo" type="password">* * * * * *</span></p>
+            <p>Email: <span id="email-show"></span></p>
+            <p>Uporabniško ime: <span id="username-show"></span></p>
+            <p>Geslo: <span id="geslo" type="password">* * * * * *</span></p>
         </div>
     </div>
-    <p>Spremeni podatke:</p>
-    <div id="sprememba-podatkov" style="display: none" class="podatki">
-        <input id="username-change" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime" />
-        <input id="password-change" type="password" title="Geslo" required placeholder="Kroky geslo" />
-        <input id="name-change" type="text" title="Vaše ime" required placeholder="Ime" />
-        <input id="email-change" type="email" title="Email za kontakt" required placeholder="Email" />
+    <div class="data-change">
+        <p>Spremeni podatke:</p>
+        <div id="sprememba-podatkov" style="display: none" class="podatki">
+            <input id="username-change" type="text" title="Uporabniško ime" required
+                placeholder="Kroky uporabniško ime" />
+            <input id="password-change" type="password" title="Geslo" required placeholder="Kroky geslo" />
+            <input id="name-change" type="text" title="Vaše ime" required placeholder="Ime" />
+            <input id="email-change" type="email" title="Email za kontakt" required placeholder="Email" />
+        </div>
+        <button class="btn" onclick="spremeniP()">Spremeni</button>
     </div>
-    <button style="margin-left: 2%" class="btn" onclick="spremeniP()">Spremeni</button>
-    <br>
-    <br>
     <div class="log-form" id="register-form">
         <h2>Registracija</h2>
-        <form id="register-form">
+        <form>
             <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime " />
             <span>
                 <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-                <button class="showpass" onclick="showPassword()"><img
-                        src="https://www.majmohar.me/IMG/iStock-845329690.png"></button>
+                <button class="showpass" onclick="showPassword()"><a href="">👁</a></button>
             </span>
             <input id="name" type="text" title="Vaše ime" required placeholder="Ime" />
             <input id="email" type="email" title="Email za kontakt" required placeholder="Email" />
             <button id="submit" class="btn" onclick="register()">Registracija</button>
-            <a id="login" class="login" href="index">Prijava</a>
+            <a id="login" class="register" href="index">Prijava</a>
         </form>
     </div>
     <footer>

@@ -10,19 +10,6 @@
     text-align: center;
 }
 
-h2 {
-    width: 100%;
-    display: block;
-    background-color: rgb(24, 24, 24);
-    width: 100%;
-    text-transform: uppercase;
-    padding: .75em 1em .75em 1.5em;
-    box-shadow: inset 0px 1px 1px fadeout(white, 95%);
-    margin: 0;
-    font-weight: 200;
-    color: white;
-}
-
 .login {
     line-height: .5em;
     position: relative;
@@ -114,4 +101,8 @@ input {
     margin-top: 10px;
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.log-form {
+    margin-top: -50px;
 }
