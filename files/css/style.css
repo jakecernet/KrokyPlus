@@ -179,11 +179,11 @@ form {
     cursor: pointer;
 }
 
-.showpass:hover{
+.showpass:hover {
     scale: 1.1;
 }
 
-.showpass a{
+.showpass a {
     color: #fff;
     text-decoration: none;
     font-size: 30px;
@@ -234,4 +234,110 @@ form {
 
 .register:hover {
     color: rgb(0, 0, 0);
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    z-index: 9999;
+}
+
+.loading-screen p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.spinner {
+    border: 6px solid #ccc;
+    border-top: 6px solid gray;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+.login {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    float: right;
+    margin-right: 20px;
+    line-height: .5em;
+    position: relative;
+    top: 1.2em;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.login a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login:hover {
+    color: rgb(0, 0, 0);
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background-color: #b8b8b805;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+}
+
+.navbar h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #A5D7E8;
+    text-shadow: 0px 0px 10px #0B2447;
+}
+
+.navbar .u_okvir {
+    display: inline-flex;
+    margin-top: -80px;
+    margin-right: 20px;
+    float: right;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        height: 200px;
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navbar .u_okvir {
+        margin-top: 40px;
+        float: none;
+        align-items: center;
+        justify-content: center;
+    }
 }

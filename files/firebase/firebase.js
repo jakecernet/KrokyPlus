@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-const firebaseConfig= {
+const firebaseConfig = {
   apiKey: "AIzaSyDFC2TYDhw7ILNi_HVB5TlF0ZW-g6CzJeY",
   authDomain: "krokyplus-90d21.firebaseapp.com",
   projectId: "krokyplus-90d21",
@@ -239,13 +239,13 @@ function setContent_profile() {
 }
 
 function spremeniP() {
-    let podatki_spremeni = document.getElementById("sprememba-podatkov")
-    if (podatki_spremeni.style.display === "none") {
-      podatki_spremeni.style.display = "block";
-      podatki_spremeni.classList.add = "vnos-spremembe";
-    } else if (podatki_spremeni.style.display === "block") {
-      podatki_spremeni.style.display = "none";
-    }
+  let podatki_spremeni = document.getElementById("sprememba-podatkov")
+  if (podatki_spremeni.style.display === "none") {
+    podatki_spremeni.style.display = "block";
+    podatki_spremeni.classList.add = "vnos-spremembe";
+  } else if (podatki_spremeni.style.display === "block") {
+    podatki_spremeni.style.display = "none";
+  }
 }
 
 function deleteCookie(name) {
@@ -286,18 +286,18 @@ function checkTrueToken(name, token) {
   })
 }
 
-function spremeninaslov_Register(){
+function spremeninaslov_Register() {
   const name = getCookie("name");
-  if (name === ""){
+  if (name === "") {
     return;
-  }else{
+  } else {
     document.getElementById("spodnji-naslov-registracije").innerHTML = "Profil";
-    if (window.location.href === "/profile"|| window.location.href === "/profile.html"){
-    document.title = "KrokyPlus | Profil";
-    document.getElementById("u_okvir").style.display = "block";
-    }else{
+    if (window.location.href === "/profile" || window.location.href === "/profile.html") {
+      document.title = "KrokyPlus | Profil";
+      document.getElementById("u_okvir").style.display = "block";
+    } else {
       return
-    } 
+    }
   }
 }
 
@@ -306,18 +306,18 @@ function spremeniU_ovkir() {
   const token = getCookie("token");
   checkTrueToken(name, token).then(() => {
     const okvirček = document.getElementById("u_okvir");
-      document.getElementById("u_okvir").style.display = "block";
-      document.getElementById("user-name").innerHTML = name;
+    document.getElementById("u_okvir").style.display = "block";
+    document.getElementById("user-name").innerHTML = name;
   }).catch((error) => {
     console.log(error);
   });
 }
 
-function pokažipodatke(username){
+function pokažipodatke(username) {
   db.collection("users")
-  .get()
-  .doc(username)
-  .then(() => {
+    .get()
+    .doc(username)
+    .then(() => {
       const geslo = doc.data().password;
       const email = doc.data().email;
       const username = doc.data().username;
@@ -328,5 +328,13 @@ function pokažipodatke(username){
       document.getElementById("username").innerHTML = username;
       document.getElementById("name").innerHTML = name;
     });
+}
+
+function spremeniPodatke() {
+  if (document.getElementById("spremeni-podatke").style.display == "none") {
+    document.getElementById("spremeni-podatke").style.display = "block";
   }
-  
+  else {
+    document.getElementById("spremeni-podatke").style.display = "none";
+  }
+}

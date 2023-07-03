@@ -20,52 +20,59 @@
         <div class="spinner"></div>
         <p>Loading...</p>
     </div>
-    <div class="navbar" id="navbar" style="display: none">
-        <div class="title">
-            <h1>KrokyPlus | Profil</h1>
-        </div>
-        <div class="login" style="margin: -4% 4% 0 10%; display: none;" id="u_okvir">
-            <div class="u_okvir" onclick="logout()">
-                <span id="user-name">Uporabnik</span><a> || odjava</a>
-            </div>
+    <div class="logged-out" style="display: none;">
+        <div class="log-form" id="register-form">
+            <h2>Registracija</h2>
+            <form>
+                <input id="username" type="text" title="Uporabniško ime" required
+                    placeholder="Kroky uporabniško ime " />
+                <span>
+                    <input type="password" id="password" title="Geslo" placeholder="Geslo" />
+                    <button class="showpass" onclick="showPassword()"><a href="">👁</a></button>
+                </span>
+                <input id="name" type="text" title="Vaše ime" required placeholder="Ime" />
+                <input id="email" type="email" title="Email za kontakt" required placeholder="Email" />
+                <button id="submit" class="btn" onclick="register()">Registracija</button>
+                <a class="register" href="index">Prijava</a>
+            </form>
         </div>
     </div>
-    <div id="profile-settings" style="display: none; margin-left: 2%">
-        <h1 style="font-size: 30px">Nastavitve</h1>
+    <div class="logged-in" style="display: block;">
+        <div class="navbar" id="navbar">
+            <h1>Nastavitve</h1>
+            <div class="u_okvir btn" id="u_okvir" onclick="logout()">
+                <span id="user-name">Uporabnik </span>
+                <a>|| Odjava</a>
+            </div>
+        </div>
         <div class="profile-info">
-            <h2 style="font-size: 20px">Podatki o tebi:</h2>
-            <div style="margin-left: 2%;">
-                <h3 id="ime">Uporabnik: </h3><span id="ime-show"></span>
+            <h2>Podatki o tebi:</h2>
+            <div>
+                <h3 id="ime">Uporabnik: </h3>
+                <span id="ime-show"></span>
             </div>
             <p>Email: <span id="email-show"></span></p>
             <p>Uporabniško ime: <span id="username-show"></span></p>
             <p>Geslo: <span id="geslo" type="password">* * * * * *</span></p>
+            <button class="btn" onclick="spremeniPodatke()">Spremeni</button>
         </div>
-    </div>
-    <div class="data-change">
-        <p>Spremeni podatke:</p>
-        <div id="sprememba-podatkov" style="display: none" class="podatki">
-            <input id="username-change" type="text" title="Uporabniško ime" required
-                placeholder="Kroky uporabniško ime" />
-            <input id="password-change" type="password" title="Geslo" required placeholder="Kroky geslo" />
-            <input id="name-change" type="text" title="Vaše ime" required placeholder="Ime" />
-            <input id="email-change" type="email" title="Email za kontakt" required placeholder="Email" />
+        <div class="data-change" id="spremeni-podatke">
+            <h1>Spremeni podatke:</h1>
+            <div id="sprememba-podatkov">
+                <input id="username-change" type="text" title="Uporabniško ime" required
+                    placeholder="Kroky uporabniško ime" />
+                <input id="password-change" type="password" title="Geslo" required placeholder="Kroky geslo" />
+                <input id="name-change" type="text" title="Vaše ime" required placeholder="Ime" />
+                <input id="email-change" type="email" title="Email za kontakt" required placeholder="Email" />
+            </div>
+            <button class="btn" onclick="spremeniP()">Shrani</button>
         </div>
-        <button class="btn" onclick="spremeniP()">Spremeni</button>
-    </div>
-    <div class="log-form" id="register-form">
-        <h2>Registracija</h2>
-        <form>
-            <input id="username" type="text" title="Uporabniško ime" required placeholder="Kroky uporabniško ime " />
-            <span>
-                <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-                <button class="showpass" onclick="showPassword()"><a href="">👁</a></button>
-            </span>
-            <input id="name" type="text" title="Vaše ime" required placeholder="Ime" />
-            <input id="email" type="email" title="Email za kontakt" required placeholder="Email" />
-            <button id="submit" class="btn" onclick="register()">Registracija</button>
-            <a id="login" class="register" href="index">Prijava</a>
-        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="">salam</a>
     </div>
     <footer>
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>

@@ -291,81 +291,13 @@ input {
     margin-bottom: 20px;
 }
 
-.navbar {
-    width: 100%;
-    min-width: 0;
-    left: 0;
-    background-color: #b8b8b8;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    height: 100px;
-    position: absolute;
-    z-index: 1;
-}
-
-.title {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    float: left;
-    margin-left: 20px;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-
-.login {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    float: right;
-    margin-right: 20px;
-}
-
-.login a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login {
-    line-height: .5em;
-    position: relative;
-    top: 1.2em;
-    text-decoration: none;
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    float: right;
-    cursor: pointer;
-}
-
-.login:hover {
-    color: rgb(0, 0, 0);
-}
-
 input {
     text-align: center;
     font-size: 110%;
 }
 
-.u_okvir {
-    display: inline-block;
-    background: rgb(74, 74, 238);
-    padding: 1em 1em;
-    color: white;
-    margin-right: .5em;
-    box-shadow: inset 0px 1px 0px fadeout(white, 80%);
-    cursor: pointer;
-    border-radius: 3px;
-    margin: 5% 4% 0 10%;
-    white-space: nowrap;
-}
-
-.u_okvir span {
-    margin-right: 0.5em;
-}
-
-.u_okvir:hover {
-    background: darken(rgb(58, 133, 204), 5%);
-    scale: 1.05;
+@media screen and (max-width: 768px) {
+    .options{
+        margin-top: 200px;
+    }
 }
