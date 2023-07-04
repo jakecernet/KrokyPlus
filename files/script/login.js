@@ -66,3 +66,7 @@ function getPassword(username){
   console.log("tuki je password", password)
   return password
 }
+
+function show(){
+  document.getElementById("animation").style.display = "block";
+}
