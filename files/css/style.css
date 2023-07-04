@@ -115,9 +115,13 @@ input {
     color: #fff;
     margin-bottom: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 2px solid #fff;
     outline: none;
     background: transparent;
+}
+
+input .yes{
+    border: none;
 }
 
 input:focus {
@@ -165,8 +169,13 @@ form {
     width: 85%;
 }
 
+.yes{
+    border-bottom: 2px solid #fff;
+    padding: 11px 0;
+}
+
 .showpass {
-    padding: 10px 0;
+    padding: 5px 5px;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
@@ -174,12 +183,12 @@ form {
     outline: none;
     background: transparent;
     position: relative;
-    top: -3px;
+    top: 1px;
     cursor: pointer;
 }
 
 .showpass:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .showpass a {
