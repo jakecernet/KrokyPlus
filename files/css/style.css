@@ -247,7 +247,7 @@ form {
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .loading-screen p {
@@ -339,5 +339,114 @@ form {
         float: none;
         align-items: center;
         justify-content: center;
+    }
+}
+
+.animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000d2;
+    z-index: 999;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #050f1b, #0B2447);
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.box progress {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    height: 20px;
+    background: transparent;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    border: 2px solid #fff;
+}
+
+.box .ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.box .ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.box .text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    animation: blink 2s linear infinite;
+}
+
+.box .text:hover {
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    cursor: default;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
