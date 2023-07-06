@@ -2,6 +2,10 @@ var blacklist = document.getElementById("blacklist");
 var whitelist = document.getElementById("meniblk");
 var reset = document.getElementById("reset");
 var meniji = document.getElementById("meniji");
+var blacklist_btn = document.getElementById("blacklist_btn");
+var whitelist_btn = document.getElementById("whitelist_btn");
+var reset_btn = document.getElementById("reset_btn");
+var navbar = document.getElementById("navbar");
 
 whitelist.style.height = "0px";
 whitelist.style.display = "none";
@@ -17,10 +21,18 @@ function showWhitelist() {
       blacklist.style.height = "0px";
       reset.style.height = "0px";
     }, 10);
+    whitelist_btn.style.backgroundColor = "#f2f2f2";
+    whitelist_btn.style.color = "#000";
+    blacklist_btn.style.backgroundColor = "#091c38";
+    blacklist_btn.style.color = "white";
+    reset_btn.style.backgroundColor = "#091c38";
+    reset_btn.style.color = "white";
   }
   else {
     whitelist.style.height = "0px";
     setTimeout(function () { whitelist.style.display = "none"; }, 300);
+    whitelist_btn.style.backgroundColor = "#091c38";
+    whitelist_btn.style.color = "white";
   }
 }
 
@@ -32,10 +44,18 @@ function showBlacklist() {
       whitelist.style.height = "0px";
       reset.style.height = "0px";
     }, 10);
+    blacklist_btn.style.backgroundColor = "#f2f2f2";
+    blacklist_btn.style.color = "#000";
+    whitelist_btn.style.backgroundColor = "#091c38";
+    whitelist_btn.style.color = "white";
+    reset_btn.style.backgroundColor = "#091c38";
+    reset_btn.style.color = "white";
   }
   else {
     blacklist.style.height = "0px";
     setTimeout(function () { blacklist.style.display = "none"; }, 300);
+    blacklist_btn.style.backgroundColor = "#091c38";
+    blacklist_btn.style.color = "white";
   }
 }
 
@@ -47,10 +67,18 @@ function resetList() {
       blacklist.style.height = "0px";
       whitelist.style.height = "0px";
     }, 10);
+    reset_btn.style.backgroundColor = "#f2f2f2";
+    reset_btn.style.color = "#000";
+    blacklist_btn.style.backgroundColor = "#091c38";
+    blacklist_btn.style.color = "white";
+    whitelist_btn.style.backgroundColor = "#091c38";
+    whitelist_btn.style.color = "white";
   }
   else {
     reset.style.height = "0px";
     setTimeout(function () { reset.style.display = "none"; }, 300);
+    reset_btn.style.backgroundColor = "#091c38";
+    reset_btn.style.color = "white";
   }
 }
 

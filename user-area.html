@@ -28,68 +28,69 @@
             <a> || odjava</a>
         </div>
     </div>
-    <div class="options">
+    <nav id="navbar">
         <ul>
-            <li onclick="showBlacklist()" id="hint"><a>Obroki</a></li>
-            <div class="blacklist" id="blacklist">
-                <div class="container">
-                    <div id="column-undone" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h2>Nerazvrščeno</h2>
-                        <div id="undone-notes" class="notes-column" ondragstart="dragStart(event)">
-                        </div>
-                    </div>
-                    <div id="column-done" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h2>Blacklist</h2>
-                        <div id="done-notes" class="notes-column" ondragstart="dragStart(event)"></div>
-                    </div>
-                    <div id="column-in-progress" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <h2>Whitelist</h2>
-                        <div id="in-progress-notes" class="notes-column" ondragstart="dragStart(event)"></div>
+            <li onclick="showBlacklist()" id="blacklist_btn"><a>Blacklist</a></li>
+            <li onclick="showWhitelist()" id="whitelist_btn"><a>Meni blacklist</a></li>
+            <li onclick="resetList()" id="reset_btn"><a>Reset algoritma</a></li>
+        </ul>
+    </nav>
+    <div class=" options">
+        <div class="blacklist" id="blacklist">
+            <div class="container">
+                <div id="column-undone" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Nerazvrščeno</h2>
+                    <div id="undone-notes" class="notes-column" ondragstart="dragStart(event)">
                     </div>
                 </div>
-                <button id="save-btn">Save</button>
+                <div id="column-done" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Blacklist</h2>
+                    <div id="done-notes" class="notes-column" ondragstart="dragStart(event)"></div>
+                </div>
+                <div id="column-in-progress" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Whitelist</h2>
+                    <div id="in-progress-notes" class="notes-column" ondragstart="dragStart(event)"></div>
+                </div>
             </div>
-            <li onclick="showWhitelist()"><a>Meni blacklist</a></li>
-            <div class="meniblk" id="meniblk">
-                <h2>Meni blacklist</h2>
-                <p>Blacklist za menije, ki jih ne želiš.</p>
-                <ul id="meniji">
-                    <li onclick="checkbox(1)">
-                        <input type="checkbox" id="1">
-                        <label for="1">1. Topli 1</label>
-                    </li>
-                    <li onclick="checkbox(2)">
-                        <input type="checkbox" id="2">
-                        <label for="2">2. Topli 2</label>
-                    </li>
-                    <li onclick="checkbox(3)">
-                        <input type="checkbox" id="3">
-                        <label for="3">3. Rastlinski</label>
-                    </li>
-                    <li onclick="checkbox(4)">
-                        <input type="checkbox" id="4">
-                        <label for="4">4. Fast</label>
-                    </li>
-                    <li onclick="checkbox(5)">
-                        <input type="checkbox" id="5">
-                        <label for="5">5. Solatni</label>
-                    </li>
-                    <li onclick="checkbox(6)">
-                        <input type="checkbox" id="6">
-                        <label for="6">6. Sendviči</label>
-                    </li>
-                </ul>
-                <button type="submit" onclick="save()" id="">Shrani</button>
-            </div>
-            <li onclick="resetList()"><a>Reset algoritma</a></li>
-            <div class="reset" id="reset">
-                <h2>Reset algoritma</h2>
-                <p>Če želite ponastaviti algoritem, kliknite na spodnjo povezavo.</p>
-                <button type="submit" class="isci" onclick="window.location.href='user-area'"
-                    style="margin-bottom: 20px;">Ponastavi</button>
-            </div>
-        </ul>
-
+            <button id="save-btn">Save</button>
+        </div>
+        <div class="meniblk" id="meniblk">
+            <h2>Meni blacklist</h2>
+            <p>Blacklist za menije, ki jih ne želiš.</p>
+            <ul id="meniji">
+                <li onclick="checkbox(1)">
+                    <input type="checkbox" id="1">
+                    <label for="1">1. Topli 1</label>
+                </li>
+                <li onclick="checkbox(2)">
+                    <input type="checkbox" id="2">
+                    <label for="2">2. Topli 2</label>
+                </li>
+                <li onclick="checkbox(3)">
+                    <input type="checkbox" id="3">
+                    <label for="3">3. Rastlinski</label>
+                </li>
+                <li onclick="checkbox(4)">
+                    <input type="checkbox" id="4">
+                    <label for="4">4. Fast</label>
+                </li>
+                <li onclick="checkbox(5)">
+                    <input type="checkbox" id="5">
+                    <label for="5">5. Solatni</label>
+                </li>
+                <li onclick="checkbox(6)">
+                    <input type="checkbox" id="6">
+                    <label for="6">6. Sendviči</label>
+                </li>
+            </ul>
+            <button type="submit" onclick="save()" id="">Shrani</button>
+        </div>
+        <div class="reset" id="reset">
+            <h2>Reset algoritma</h2>
+            <p>Če želite ponastaviti algoritem, kliknite na spodnjo povezavo.</p>
+            <button type="submit" class="isci" onclick="window.location.href='user-area'"
+                style="margin-bottom: 20px;">Ponastavi</button>
+        </div>
     </div>
     <script>
         window.addEventListener('load', function () {
@@ -101,7 +102,6 @@
         <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
         <div class="footer-text">
             <ul>
-                <li><a href="user-area">Uporabniško območje</a></li>
                 <li><a href="profile" id="spodnji-naslov-registracije">Registracija</a></li>
                 <li><a href="index">Prijava</a></li>
                 <li><a href="https://github.com/jakecernet/KrokyPlus">Pomoč</a></li>
