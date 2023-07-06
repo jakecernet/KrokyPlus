@@ -145,32 +145,32 @@ nav ul li a {
 }
 
 .food-item:hover {
-    background-color: #cfcfcf;
+    background-color: rgba(84, 100, 158, 0.137);
     box-shadow: 2px 2px 5px #333;
+    color: #000000;
     cursor: grab;
+    scale: 1.04;
 }
 
 .food-item:active {
     cursor: grabbing;
 }
 
-.food-item a:hover {
-    color: rgb(0, 0, 0);
-}
-
 #save-btn {
-    background-color: cornflowerblue;
-    border: 10px solid cornflowerblue;
+    background-color: #091c38;
+    border: 10px solid #091c38;
     border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     width: 120px;
     margin-top: 40px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 #save-btn:hover {
-    background-color: rgb(151, 187, 255);
-    border: 10px solid rgb(151, 187, 255);
-    box-shadow: 5px 5px 10px #333;
+    background-color: #0B2447;
+    border: 10px solid #0B2447;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
     cursor: pointer;
 }
 
@@ -201,11 +201,11 @@ input {
     -o-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
-    background-color: #b8b8b8;
-    border: 1px solid #e5e5e5;
+    background-color: #091c38;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
     overflow: hidden;
+    color: #ffffff;
 }
 
 .reset button:hover {
@@ -219,8 +219,7 @@ input {
     min-width: 0;
     left: 0;
     top: 80pt;
-    background-color: #b8b8b8;
-    border: 1px solid #e5e5e5;
+    background-color: #091c38;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: 0.3s;
@@ -240,6 +239,7 @@ input {
     margin-bottom: 5px;
     margin-top: 15px;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .meniblk ul li:hover {
@@ -248,7 +248,7 @@ input {
 }
 
 .meniblk ul li label {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     align-items: center;
