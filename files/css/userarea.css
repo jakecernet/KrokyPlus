@@ -86,16 +86,19 @@ nav ul li a {
 #column-undone {
     grid-area: all;
     height: 80vh;
+    width: 42vw;
 }
 
 #column-done {
     grid-area: blacklist;
     height: 38.5vh;
+    width: 42vw;
 }
 
 #column-in-progress {
     grid-area: whitelist;
     height: 38.5vh;
+    width: 42vw;
 }
 
 .column {
