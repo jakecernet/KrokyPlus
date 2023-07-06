@@ -38,20 +38,15 @@ nav ul li a {
 
 .options {
     width: 90vw;
-    min-width: 0;
     max-width: 90vw;
     right: 0;
     top: 80pt;
     margin-left: 10vw;
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     margin-top: 100px;
     text-align: center;
-    height: 140vh;
+    overflow-y: hidden;
+    box-sizing: border-box;
 }
 
 .blacklist {
@@ -95,19 +90,19 @@ nav ul li a {
 
 #column-done {
     grid-area: blacklist;
-    height: 39vh;
+    height: 38.5vh;
 }
 
 #column-in-progress {
     grid-area: whitelist;
-    max-height: 39vh;
+    height: 38.5vh;
 }
 
 .column {
     background-color: #091c38;
     padding: 10px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 2px;
     text-decoration: none;
     color: rgb(255, 255, 255);
