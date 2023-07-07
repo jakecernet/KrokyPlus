@@ -31,8 +31,9 @@
     <nav id="navbar">
         <ul>
             <li onclick="showBlacklist()" id="blacklist_btn"><a>Blacklist</a></li>
-            <li onclick="showWhitelist()" id="whitelist_btn"><a>Meni blacklist</a></li>
+            <li onclick="showWhitelist()" id="whitelist_btn"><a>Nastavitve menijev</a></li>
             <li onclick="resetList()" id="reset_btn"><a>Reset algoritma</a></li>
+            <li onclick="save()" id="save_btn">Shrani</li>
         </ul>
     </nav>
     <div class=" options">
@@ -52,38 +53,66 @@
                     <div id="in-progress-notes" class="notes-column" ondragstart="dragStart(event)"></div>
                 </div>
             </div>
-            <button id="save-btn">Save</button>
         </div>
         <div class="meniblk" id="meniblk">
-            <h2>Meni blacklist</h2>
-            <p>Blacklist za menije, ki jih ne želiš.</p>
-            <ul id="meniji">
-                <li onclick="checkbox(1)">
-                    <input type="checkbox" id="1">
-                    <label for="1">1. Topli 1</label>
-                </li>
-                <li onclick="checkbox(2)">
-                    <input type="checkbox" id="2">
-                    <label for="2">2. Topli 2</label>
-                </li>
-                <li onclick="checkbox(3)">
-                    <input type="checkbox" id="3">
-                    <label for="3">3. Rastlinski</label>
-                </li>
-                <li onclick="checkbox(4)">
-                    <input type="checkbox" id="4">
-                    <label for="4">4. Fast</label>
-                </li>
-                <li onclick="checkbox(5)">
-                    <input type="checkbox" id="5">
-                    <label for="5">5. Solatni</label>
-                </li>
-                <li onclick="checkbox(6)">
-                    <input type="checkbox" id="6">
-                    <label for="6">6. Sendviči</label>
-                </li>
-            </ul>
-            <button type="submit" onclick="save()" id="">Shrani</button>
+            <h2>Nastavitve menijev</h2>
+            <p>Izberi, katere menije želiš in katere ne.</p>
+            <div class="meni-blacklist">
+                <ul class="meniji-blacklist">
+                    <h1>Blacklist</h1>
+                    <li onclick="checkbox('1-1')">
+                        <input type="checkbox" id="1-1">
+                        <label for="1-1">1. Topli 1</label>
+                    </li>
+                    <li onclick="checkbox('1-2')">
+                        <input type="checkbox" id="1-2">
+                        <label for="1-2">2. Topli 2</label>
+                    </li>
+                    <li onclick="checkbox('1-3')">
+                        <input type="checkbox" id="1-3">
+                        <label for="1-3">3. Rastlinski</label>
+                    </li>
+                    <li onclick="checkbox('1-4')">
+                        <input type="checkbox" id="1-4">
+                        <label for="1-4">4. Fast</label>
+                    </li>
+                    <li onclick="checkbox('1-5')">
+                        <input type="checkbox" id="1-5">
+                        <label for="1-5">5. Solatni</label>
+                    </li>
+                    <li onclick="checkbox('1-6')">
+                        <input type="checkbox" id="1-6">
+                        <label for="1-6">6. Sendviči</label>
+                    </li>
+                </ul>
+                <ul class="meniji-whitelist">
+                    <h1>Whitelist</h1>
+                    <li onclick="checkbox('2-1')">
+                        <input type="checkbox" id="2-1">
+                        <label for="2-1">1. Topli 1</label>
+                    </li>
+                    <li onclick="checkbox('2-2')">
+                        <input type="checkbox" id="2-2">
+                        <label for="2-2">2. Topli 2</label>
+                    </li>
+                    <li onclick="checkbox('2-3')">
+                        <input type="checkbox" id="2-3">
+                        <label for="2-3">3. Rastlinski</label>
+                    </li>
+                    <li onclick="checkbox('2-4')">
+                        <input type="checkbox" id="2-4">
+                        <label for="2-4">4. Fast</label>
+                    </li>
+                    <li onclick="checkbox('2-5')">
+                        <input type="checkbox" id="2-5">
+                        <label for="2-5">5. Solatni</label>
+                    </li>
+                    <li onclick="checkbox('2-6')">
+                        <input type="checkbox" id="2-6">
+                        <label for="2-6">6. Sendviči</label>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="reset" id="reset">
             <h2>Reset algoritma</h2>

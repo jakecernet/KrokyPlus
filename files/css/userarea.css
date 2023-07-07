@@ -122,7 +122,7 @@ nav ul li a {
     margin-top: 80px;
     margin-bottom: 20px;
     overflow-y: scroll;
-    padding: 20px;
+    padding: 8px;
     background-color: rgba(9, 28, 56, 0);
 }
 
@@ -152,24 +152,6 @@ nav ul li a {
 
 .food-item:active {
     cursor: grabbing;
-}
-
-#save-btn {
-    background-color: #091c38;
-    border: 10px solid #091c38;
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    width: 120px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-#save-btn:hover {
-    background-color: #0B2447;
-    border: 10px solid #0B2447;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .6);
-    cursor: pointer;
 }
 
 .isci {
@@ -212,75 +194,54 @@ input {
     box-shadow: #333;
 }
 
-.meniblk {
-    width: 100%;
-    min-width: 0;
-    left: 0;
-    top: 80pt;
-    background-color: #091c38;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: 0.3s;
-    overflow: hidden;
+.meni-blacklist {
+    display: grid;
+    grid-template-areas: 'blacklist whitelist';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
 }
 
-.meniblk ul {
+.meni-blacklist ul {
     list-style: none;
     padding: 0;
-    margin-left: -340px;
-    text-align: center;
+    margin: 0;
 }
 
-.meniblk ul li {
-    margin: 0;
-    padding: 10px 15px;
-    margin-bottom: 5px;
-    margin-top: 15px;
+.meni-blacklist ul li {
+    padding: 10px;
     cursor: pointer;
     color: #ffffff;
+    font-size: 1.1em;
+    left: 0;
+    top: 80pt;
 }
 
-.meniblk ul li:hover {
-    background-color: #cfcfcf;
-    box-shadow: #333;
-}
-
-.meniblk ul li label {
+.meniji-blacklist {
+    background-color: #091c38;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
     color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
+    grid-area: blacklist;
 }
 
-.meniblk ul li label:hover {
-    color: #000;
-    cursor: pointer;
-}
-
-.meniblk ul li input [type="checkbox"] {
-    margin: 0;
-    cursor: pointer;
-    margin-left: 200px;
-}
-
-.meniblk ul li input [type="checkbox"]:hover {
-    background-color: #cfcfcf;
-    box-shadow: #333;
-}
-
-.meniblk button {
-    background-color: cornflowerblue;
-    border: 10px solid cornflowerblue;
-    border-radius: 10px;
-    width: 120px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.meniji-whitelist {
+    background-color: #091c38;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    color: #ffffff;
+    grid-area: whitelist;
 }
 
 input {
     text-align: center;
     font-size: 110%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 15px;
+    height: 15px;
+    border: 5px solid #091c38;
 }
 
 @media screen and (max-width: 768px) {

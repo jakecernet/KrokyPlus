@@ -1,7 +1,6 @@
 var blacklist = document.getElementById("blacklist");
 var whitelist = document.getElementById("meniblk");
 var reset = document.getElementById("reset");
-var meniji = document.getElementById("meniji");
 var blacklist_btn = document.getElementById("blacklist_btn");
 var whitelist_btn = document.getElementById("whitelist_btn");
 var reset_btn = document.getElementById("reset_btn");
