@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
@@ -189,7 +194,7 @@ content {
     rotate: 180deg;
 }
 
-content{
+content {
     rotate: 180deg;
 }
 
@@ -197,22 +202,96 @@ content .content-text {
     rotate: 180deg;
 }
 
-content .content-image{
+content .content-image {
     rotate: 180deg;
 }
 
-content2{
+content2 {
     position: absolute;
-        width: 100%;
-        min-height: 100vh;
-        padding: 100px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: 0.6s;
-        margin-top: 400vh;
-        background: url(old/files/other/stacked-waves-haikei.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    margin-top: 400vh;
+    background: url(old/files/other/stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+content3 {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    margin-top: 600vh;
+    background: url(old/files/other/stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    rotate: 180deg;
+}
+
+content3 .content-text {
+    rotate: 180deg;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+.grid-item {
+    position: relative;
+    height: 400px;
+    width: 200px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.grid-item h2 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+}
+
+/*.grid-item {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    background: linear-gradient(0deg, #000, transparent);
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.grid-item:hover h2{
+    opacity: 1;
+    transform: translateY(0%);
 }
