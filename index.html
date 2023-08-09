@@ -35,21 +35,40 @@
         <div class="header-text">
             <h1>Avtomatizirajte naročanje hrane.</h1>
             <p>Preprosto in hitro naročanje hrane iz <a href="https://kroky.si">kroky.si</a>.</p>
-            <button href="https://krokyplus.me/profil">Register</button>
-        </div>
-        <div class="header-image">
-            <img src="header.png" alt="KrokyPlus">
+            <button href="https://app.krokyplus.si">Odpri aplikacijo</button>
         </div>
     </header>
     <content>
         <div class="content-text">
             <h1>Kaj je KrokyPlus?</h1>
-            <p>KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje hrane iz <a href="https://kroky.si">kroky.si</a>. KrokyPlus je namenjen predvsem študentom, ki želijo hitro in enostavno naročiti hrano iz kroky.si. KrokyPlus je brezplačen in odprt za vse.</p>
+            <p>KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje hrane iz <a
+                    href="https://kroky.si">kroky.si</a>. KrokyPlus je namenjen predvsem študentom, ki želijo hitro in
+                enostavno naročiti hrano iz kroky.si. KrokyPlus je brezplačen in odprt za vse.</p>
+            <h2>Število uporabnikov: <span id="number_of_users"></span></h2>
         </div>
         <div class="content-image">
             <img src="content.png" alt="KrokyPlus">
         </div>
     </content>
+    <content2>
+        <div class="content-text">
+            <h1>O nas</h1>
+            <p>KrokyPlus smo ustvarili trije dijaki, ki smo se naveličali vsakotedenskega naročanja hrane iz kroky.si.
+                Zato smo se odločili, da naredimo spletno storitev, ki nam bo to delo olajšala.</p>
+        </div>
+    </content2>
+    <script>
+        fetch('https://kroky-plus-backend.vercel.app/api/stat')
+            .then(res => res.json())
+            .then(data => {
+                const number_of_users = data.number_users
+                document.getElementById("number_of_users").innerHTML = number_of_users;
+            })
+            .catch(err => {
+                const number_of_users = "mnogo"
+                document.getElementById("number_of_users").innerHTML = number_of_users;
+            });
+    </script>
 </body>
 
 </html>

@@ -117,6 +117,12 @@ header .header-text button {
     background: none;
 }
 
+header .header-text button:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
 header .header-image {
     position: relative;
     width: 600px;
@@ -126,7 +132,7 @@ header .header-image {
     align-items: center;
 }
 
-content{
+content {
     position: absolute;
     width: 100%;
     min-height: 100vh;
@@ -140,35 +146,40 @@ content{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    rotate: 180deg;
 }
 
-content .content-text {
+.content-text {
     max-width: 600px;
-    rotate: 180deg;
 }
 
-content .content-text h1 {
+.content-text h1 {
     font-size: 60px;
     font-weight: 600;
     color: #fff;
     line-height: 70px;
 }
 
-content .content-text p {
+.content-text h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 70px;
+}
+
+.content-text p {
     font-size: 25px;
     font-weight: 500;
     color: #fff;
     margin: 20px 0;
 }
 
-content .content-text a {
+.content-text a {
     display: inline-block;
     text-decoration: none;
     color: #d3d3d3;
 }
 
-content .content-image{
+.content-image {
     position: relative;
     width: 600px;
     height: 600px;
@@ -176,4 +187,32 @@ content .content-image{
     justify-content: center;
     align-items: center;
     rotate: 180deg;
+}
+
+content{
+    rotate: 180deg;
+}
+
+content .content-text {
+    rotate: 180deg;
+}
+
+content .content-image{
+    rotate: 180deg;
+}
+
+content2{
+    position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.6s;
+        margin-top: 400vh;
+        background: url(old/files/other/stacked-waves-haikei.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 }
