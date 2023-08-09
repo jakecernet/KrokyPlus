@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(old/files/other/stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 1000;
+    background: #090a2771;
+    backdrop-filter: blur(5px);
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav .logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+}
+
+header .header-text {
+    max-width: 600px;
+}
+
+header .header-text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 70px;
+}
+
+header .header-text p {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 20px 0;
+}
+
+header .header-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+header .header-text button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    border: 2px solid #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: none;
+}
+
+header .header-image {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+content{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    margin-top: 200vh;
+    background: url(old/files/other/stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    rotate: 180deg;
+}
+
+content .content-text {
+    max-width: 600px;
+    rotate: 180deg;
+}
+
+content .content-text h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 70px;
+}
+
+content .content-text p {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 20px 0;
+}
+
+content .content-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+content .content-image{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: 180deg;
+}

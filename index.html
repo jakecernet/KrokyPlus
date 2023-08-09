@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="sl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrokyPlus</title>
+    <link rel="stylesheet" href="style.css">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Krokyplus">
     <meta property="og:description" content="Food ordering automation service.">
@@ -12,64 +13,43 @@
     <meta property="og:image" content="https://krokyplus.me/files/icon.png">
     <meta property="og:site_name" content="KrokyPlus">
     <meta property="og:locale" content="sl_SI">
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-    <link rel="shortcut icon" href="files/other/icon.png" />
-    <link rel="stylesheet" href="files/css/style.css">
-    <link rel="stylesheet" href="files/css/login.css">
-    <script src="files/firebase/firebase.js"></script>
-    <script src="files/script/login.js"></script>
-    <title>KrokyPlus | Vpis</title>
+    <link rel="shortcut icon" href="old/files/other/icon.png" />
 </head>
 
-<body onload="OnloadLogin()">
-    <a id="warning">Warning! Site in development!</a>
-    <div class="animation" id="animation" style="display: none;">
-        <div class="box">
-            <div class="ring"></div>
-            <a class="text"><span class="message">Logging in</span>...</a>
-            <progress max="8" value="1"></progress>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="old/files/other/icon.png" alt="KrokyPlus">
         </div>
-    </div>
-    <div class="title">
-        <h1>KrokyPlus</h1>
-    </div>
-    <div class="log-form" id="log-form">
-        <h2>Prijava</h2>
-        <form>
-            <span>
-                <input type="text" id="username" title="Uporabniško ime" placeholder="Uporabniško ime ali E-pošta" />
-            </span>
-            <span class="yes">
-                <input type="password" id="password" title="Geslo" placeholder="Geslo" />
-                <button class="showpass" onclick="showPassword()"><a>👁</a></button>
-            </span>
-            <span>
-                <button type="submit" class="btn" id="submit" onclick="login(); show()">Prijava</button>
-                <a class="register" href="profile">Registracija</a>
-            </span>
-        </form>
-    </div>
-    <div class="cookie-popup" id="cookie-popup">
-        <p>This website uses cookies to ensure you get the best experience.</p>
-        <div class="button">
-            <button onclick="acceptCookies()">Accept</button>
-        </div>
-    </div>
-    <footer>
-        <a href="https://github.com/jakecernet/KrokyPlus" target="_blank">© 2023 KrokyPlus</a>
-        <div class="footer-text">
+        <div class="nav-links">
             <ul>
-                <li><a href="profile" id="spodnji-naslov-registracije">Registracija</a></li>
-                <li><a href="index">Prijava</a></li>
-                <li><a href="https://github.com/jakecernet/KrokyPlus">Pomoč</a></li>
-                <li><a href="https://discord.gg/jGHReVrecJ" target="_blank">Discord</a></li>
+                <li><a href="https://krokyplus.me">Home</a></li>
+                <li><a href="https://krokyplus.me/about">About</a></li>
+                <li><a href="https://krokyplus.me/contact">Contact</a></li>
+                <li><a href="https://krokyplus.me/login">Login</a></li>
+                <li><a href="https://krokyplus.me/register">Register</a></li>
             </ul>
         </div>
-    </footer>
-    <script src="files/script/cookies.js"></script>
-    <script src="files/script/script.js"></script>
+    </nav>
+    <header>
+        <div class="header-text">
+            <h1>Avtomatizirajte naročanje hrane.</h1>
+            <p>Preprosto in hitro naročanje hrane iz <a href="https://kroky.si">kroky.si</a>.</p>
+            <button href="https://krokyplus.me/profil">Register</button>
+        </div>
+        <div class="header-image">
+            <img src="header.png" alt="KrokyPlus">
+        </div>
+    </header>
+    <content>
+        <div class="content-text">
+            <h1>Kaj je KrokyPlus?</h1>
+            <p>KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje hrane iz <a href="https://kroky.si">kroky.si</a>. KrokyPlus je namenjen predvsem študentom, ki želijo hitro in enostavno naročiti hrano iz kroky.si. KrokyPlus je brezplačen in odprt za vse.</p>
+        </div>
+        <div class="content-image">
+            <img src="content.png" alt="KrokyPlus">
+        </div>
+    </content>
 </body>
 
 </html>
