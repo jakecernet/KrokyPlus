@@ -12,8 +12,8 @@
 <!-- PROJECT LOGO -->
 <br/>
 <div align="center">
-  <a href="https://krokyplus.me">
-    <img src="https://krokyplus.me/old/files/other/icon.png" alt="Logo" width="80" height="80">
+  <a href="https://krokyplus.si">
+    <img src="https://krokyplus.si/old/files/other/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
@@ -47,14 +47,14 @@ First, you register with your Kroky username and password.
 
 <img src="http://www2.arnes.si/~jcern4/Posnetek%20zaslona%202023-04-22%20121453.png" width="1000px">-->
 
-### Built With
+<!--### Built With
 
 * [![HTML][HTML5]][Next-url]
 * [![CSS][CSS3]][Vue-url]
 * [![JavaScript][JavaScript]][React-url]
 * [![Python][Python]][Python-url]
 
-<br>
+<br>-->
 
 Project Link: [https://github.com/jakecernet/KrokyPlus](https://github.com/jakecernet/KrokyPlus)
 
