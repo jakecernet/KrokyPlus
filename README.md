@@ -13,7 +13,7 @@
 <br/>
 <div align="center">
   <a href="https://krokyplus.me">
-    <img src="https://krokyplus.me/files/other/icon.png" alt="Logo" width="80" height="80">
+    <img src="https://krokyplus.me/old/files/other/icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
