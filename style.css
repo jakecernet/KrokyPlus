@@ -26,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 8px 40px 8px 100px;
+    padding: 15px 40px 15px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -188,11 +188,20 @@ content {
 .content-image {
     position: relative;
     width: 600px;
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     rotate: 180deg;
+}
+
+.content-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0.2 0.2 0 10px #fff, 0 0 0 15px #021a40;
 }
 
 content {
@@ -270,14 +279,15 @@ content3 .content-text {
 }
 
 .grid-item h2 {
-    color: #000;
+    color: rgb(188, 188, 188);
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    text-align: center;
     top: 50%;
 }
 
-.grid-item .links{
+.grid-item .links {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -296,7 +306,7 @@ content3 .content-text {
     border-radius: 10px;
 }
 
-.grid-item:hover .links{
+.grid-item:hover .links {
     opacity: 1;
     transform: translateY(0%);
 }

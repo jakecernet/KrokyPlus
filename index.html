@@ -1,149 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KrokyPlus</title>
     <link rel="stylesheet" href="style.css" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Krokyplus" />
-    <meta
-      property="og:description"
-      content="Food ordering automation service."
-    />
+    <meta property="og:description" content="Food ordering automation service." />
     <meta property="og:url" content="https://krokyplus.me" />
-    <meta
-      property="og:image"
-      content="https://krokyplus.me/old/files/other/icon.png"
-    />
+    <meta property="og:image" content="https://krokyplus.me/old/files/other/icon.png" />
     <meta property="og:site_name" content="KrokyPlus" />
     <meta property="og:locale" content="sl_SI" />
     <link rel="shortcut icon" href="old/files/other/icon.png" />
-  </head>
+</head>
 
-  <body>
+<body>
     <nav>
-      <div class="logo">
-        <img src="old/files/other/icon.png" alt="KrokyPlus" />
-      </div>
-      <div class="nav-links">
-        <ul>
-          <li><a href="https://krokyplus.si">Domov</a></li>
-          <li><a href="#about">O nas</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-          <li><a href="https://app.krokyplus.si/">Odpri aplikacijo</a></li>
-        </ul>
-      </div>
+        <div class="logo">
+            <img src="old/files/other/icon.png" alt="KrokyPlus" />
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="https://krokyplus.si">Domov</a></li>
+                <li><a href="#about">O nas</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="https://app.krokyplus.si/">Odpri aplikacijo</a></li>
+            </ul>
+        </div>
     </nav>
     <header>
-      <div class="header-text">
-        <h1>Avtomatizirajte naročanje hrane.</h1>
-        <p>
-          Preprosto in hitro naročanje hrane iz
-          <a href="https://kroky.si">kroky.si</a>.
-        </p>
-        <button onclick="location.href = 'https://app.krokyplus.si'">
-  Odpri aplikacijo
-</button>
-
-      </div>
-      <img src="krokyplus.png" style="height: 100%; width: 80%" />
+        <div class="header-text">
+            <h1>Avtomatizirajte naročanje hrane.</h1>
+            <p>
+                Preprosto in hitro naročanje hrane iz
+                <a href="https://kroky.si">kroky.si</a>.
+            </p>
+            <button onclick="location.href = 'https://app.krokyplus.si'">
+                Odpri aplikacijo
+            </button>
+        </div>
+        <div class="header-image">
+            <img src="krokyplus.png" alt="KrokyPlus" />
+        </div>
     </header>
     <content id="about">
-      <div class="content-text">
-        <h1>Kaj je KrokyPlus?</h1>
-        <p>
-          KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje
-          hrane iz <a href="https://kroky.si">kroky.si</a>. KrokyPlus je
-          namenjen predvsem dijakom in študentom (za zdaj samo iz Vegove šole),
-          ki želijo hitro in enostavno naročiti hrano iz kroky.si. KrokyPlus je
-          brezplačen in odprt za vse.
-        </p>
-        <h2>Število uporabnikov: <span id="number_of_users"></span></h2>
-      </div>
-      <div class="content-image">
-        <img
-          src="slika-sole.jpg"
-          style="
-            width: 100%;
-            height: auto;
-            padding: 1px;
-            border: 10px solid #021a40;
-            box-shadow: 0.2 0.2 0 10px #fff, 0 0 0 15px #021a40;
-            border-radius: 5px;
-          "
-          alt="KrokyPlus"
-        />
-      </div>
+        <div class="content-text">
+            <h1>Kaj je KrokyPlus?</h1>
+            <p>
+                KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje
+                hrane iz <a href="https://kroky.si">kroky.si</a>. KrokyPlus je
+                namenjen predvsem dijakom in študentom (za zdaj samo iz Vegove šole),
+                ki želijo hitro in enostavno naročiti hrano iz kroky.si. KrokyPlus je
+                brezplačen in odprt za vse.
+            </p>
+            <h2>Število uporabnikov: <span id="number_of_users"></span></h2>
+        </div>
+        <div class="content-image">
+            <img src="slika-sole.jpg">
+        </div>
     </content>
     <content2>
-      <div class="content-text">
-        <h1>O nas</h1>
-        <p>
-          KrokyPlus smo ustvarili trije dijaki, ki smo se naveličali
-          vsakotedenskega naročanja hrane iz kroky.si. Zato smo se odločili, da
-          naredimo spletno storitev, ki nam bo to delo olajšala.
-        </p>
-      </div>
+        <div class="content-text">
+            <h1>O nas</h1>
+            <p>
+                KrokyPlus smo ustvarili trije dijaki, ki smo se naveličali
+                vsakotedenskega naročanja hrane iz kroky.si. Zato smo se odločili, da
+                naredimo spletno storitev, ki nam bo to delo olajšala.
+            </p>
+        </div>
     </content2>
     <content3 id="contact">
-      <div class="content-text">
-        <h1>Kontakt</h1>
-        <div class="grid">
-          <div class="grid-item">
-            <img
-              src="https://avatars.githubusercontent.com/u/68005465?v=4"
-              alt=""
-            />
-            <h2 style="color: rgb(188, 188, 188)">Lin Čadež</h2>
-            <div class="links">
-              <a href="https://github.com/lin-cadez" target="_blank">
-                <img src="https://jakecer.tk/img/git.png" alt="" />
-              </a>
+        <div class="content-text">
+            <h1>Kontakt</h1>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="https://avatars.githubusercontent.com/u/68005465?v=4" alt="" />
+                    <h2>Lin Čadež</h2>
+                    <div class="links">
+                        <a href="https://github.com/lin-cadez" target="_blank">
+                            <img src="https://jakecer.tk/img/git.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://jakecer.tk/img/logo.png" alt="" />
+                    <h2>Jaka Černetič</h2>
+                    <div class="links">
+                        <a href="https://github.com/jakecernet" target="_blank">
+                            <img src="https://jakecer.tk/img/git.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="https://avatars.githubusercontent.com/u/119863703?v=4" alt="" />
+                    <h2>Maj Mohar</h2>
+                    <div class="links">
+                        <a href="https://github.com/makovka44" target="_blank">
+                            <img src="https://jakecer.tk/img/git.png" alt="" />
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="grid-item">
-            <img src="https://jakecer.tk/img/logo.png" alt="" />
-            <h2 style="color: rgb(188, 188, 188)">Jaka Černetič</h2>
-            <div class="links">
-              <a href="https://github.com/jakecernet" target="_blank">
-                <img src="https://jakecer.tk/img/git.png" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="grid-item">
-            <img
-              src="https://avatars.githubusercontent.com/u/119863703?v=4"
-              alt=""
-            />
-            <h2 style="color: rgb(188, 188, 188)">Maj Mohar</h2>
-            <div class="links">
-              <a href="https://github.com/makovka4444" target="_blank">
-                <img src="https://jakecer.tk/img/git.png" alt="" />
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
     </content3>
     <footer>
-      <div class="footer-text">
-        <p>© 2023 KrokyPlus</p>
-      </div>
+        <div class="footer-text">
+            <p>© 2023 KrokyPlus</p>
+        </div>
     </footer>
     <script>
-      fetch("https://kroky-plus-backend.vercel.app/api/stat")
-        .then((res) => res.json())
-        .then((data) => {
-          const number_of_users = data.number_users;
-          document.getElementById("number_of_users").innerHTML =
-            number_of_users;
-        })
-        .catch((err) => {
-          const number_of_users = "mnogo";
-          document.getElementById("number_of_users").innerHTML =
-            number_of_users;
-        });
+        fetch("https://kroky-plus-backend.vercel.app/api/stat")
+            .then((res) => res.json())
+            .then((data) => {
+                const number_of_users = data.number_users;
+                document.getElementById("number_of_users").innerHTML =
+                    number_of_users;
+            })
+            .catch((err) => {
+                const number_of_users = "mnogo";
+                document.getElementById("number_of_users").innerHTML =
+                    number_of_users;
+            });
     </script>
-  </body>
+</body>
+
 </html>
