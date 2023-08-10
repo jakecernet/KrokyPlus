@@ -276,7 +276,7 @@ content3 .content-text {
     bottom: 0;
 }
 
-/*.grid-item {
+.grid-item .links{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -291,7 +291,7 @@ content3 .content-text {
     transform: translateY(100%);
 }
 
-.grid-item:hover h2{
+.grid-item:hover .links{
     opacity: 1;
     transform: translateY(0%);
 }
