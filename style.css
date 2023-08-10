@@ -32,7 +32,7 @@ nav {
     align-items: center;
     transition: 0.6s;
     z-index: 1000;
-    background: #090a2771;
+    background: #0b24476b;
     backdrop-filter: blur(5px);
 }
 
@@ -270,10 +270,10 @@ content3 .content-text {
 
 .grid-item h2 {
     color: #000;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 50%;
 }
 
 .grid-item .links{
@@ -281,17 +281,62 @@ content3 .content-text {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 60px;
     color: #000000;
     font-size: 20px;
     font-weight: 500;
-    background: linear-gradient(0deg, #000, transparent);
-    transition: 0.5s;
+    background: linear-gradient(0deg, #252525, transparent);
+    transition: 0.3s;
     opacity: 0;
     transform: translateY(100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .grid-item:hover .links{
     opacity: 1;
     transform: translateY(0%);
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.links a img {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    margin-top: 700vh;
+    background: #0b2447;
+}
+
+footer .footer-text {
+    max-width: 600px;
+}
+
+footer .footer-text p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin: 20px 0;
+    text-align: center;
 }
