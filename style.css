@@ -26,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 8px 40px 8px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,6 +40,7 @@ nav .logo {
     color: #fff;
     font-size: 35px;
     font-weight: 600;
+    padding-top: 10px;
     text-decoration: none;
 }
 
@@ -254,7 +255,7 @@ content3 .content-text {
     position: relative;
     height: 400px;
     width: 200px;
-    background: #fff;
+    background: #1e2851;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
