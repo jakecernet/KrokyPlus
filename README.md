@@ -20,7 +20,7 @@
   <p align="center">
     Improvment for food ordering service.
     <br />
-    <a href="https://krokyplus.me" target="_blank"><strong>Visit the website »</strong></a>
+    <a href="https://krokyplus.si" target="_blank"><strong>Visit the website »</strong></a>
     <br />
     <br />
     Discord server link for bugs and all things:
