@@ -26,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 40px 30px 100px;
+    padding: 15px 40px 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -234,7 +234,7 @@ content3 {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,7 +356,7 @@ footer .footer-text p {
 
 @media screen and (max-width: 700px) {
     nav {
-        padding: 15px 10px;
+        padding: 15px 30px;
         width: 100vw;
     }
 
@@ -395,7 +395,7 @@ footer .footer-text p {
     }
 
     header {
-        padding: 10px;
+        padding: 40px;
     }
 
     header .header-text h1 {
@@ -412,7 +412,7 @@ footer .footer-text p {
     }
 
     content {
-        padding: 50px;
+        padding: 40px;
     }
 
     .content-text {
@@ -431,6 +431,10 @@ footer .footer-text p {
 
     .content-image {
         display: none;
+    }
+
+    content2 {
+        padding: 40px;
     }
 
     .grid {
