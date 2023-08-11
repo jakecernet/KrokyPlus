@@ -234,7 +234,7 @@ content3 {
     position: absolute;
     width: 100%;
     min-height: 100vh;
-    padding: 40px;
+    padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -435,6 +435,10 @@ footer .footer-text p {
     }
 
     content2 {
+        padding: 40px;
+    }
+
+    content3{
         padding: 40px;
     }
 
