@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    text-decoration: none;
+    margin: 20px 0;
+    background: url(../old/files/other/stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+a {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
