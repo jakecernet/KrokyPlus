@@ -26,7 +26,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 40px 15px 100px;
+    padding: 15px 40px 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,8 +53,6 @@ nav .logo img {
 
 nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav ul li {
@@ -350,4 +348,107 @@ footer .footer-text p {
     color: #fff;
     margin: 20px 0;
     text-align: center;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        padding: 15px 10px;
+        width: 100vw;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .menu img {
+        width: 60px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        background: #0b24476b;
+        backdrop-filter: blur(5px);
+        margin-top: 90px;
+        overflow: hidden;
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header .header-text h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    header .header-text p {
+        font-size: 20px;
+    }
+
+    header .header-image {
+        display: none;
+    }
+
+    content {
+        padding: 50px;
+    }
+
+    .content-text {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .content-text h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    content .content-text p {
+        font-size: 20px;
+    }
+
+    .content-image {
+        display: none;
+    }
+
+    .grid {
+        place-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+
+    .grid-item h2 {
+        font-size: 20px;
+    }
+
+    footer {
+        margin-top: 760vh;
+    }
 }

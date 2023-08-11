@@ -21,7 +21,10 @@
         <div class="logo">
             <img src="old/files/other/icon.png" alt="KrokyPlus" />
         </div>
-        <div class="nav-links">
+        <div class="menu" onclick="displayMenu()">
+            <img src="https://jakecer.tk/img/menu.png" alt="Menu" />
+        </div>
+        <div class="nav-links" id="menu">
             <ul>
                 <li><a href="https://krokyplus.si">Domov</a></li>
                 <li><a href="#about">O nas</a></li>
@@ -110,20 +113,7 @@
             <p>© 2023 KrokyPlus</p>
         </div>
     </footer>
-    <script>
-        fetch("https://kroky-plus-backend.vercel.app/api/stat")
-            .then((res) => res.json())
-            .then((data) => {
-                const number_of_users = data.number_users;
-                document.getElementById("number_of_users").innerHTML =
-                    number_of_users;
-            })
-            .catch((err) => {
-                const number_of_users = "mnogo";
-                document.getElementById("number_of_users").innerHTML =
-                    number_of_users;
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
