@@ -21,17 +21,14 @@ body {
     background-position: center;
 }
 
-
-
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
-  }
-  
-  
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -450,7 +447,7 @@ footer .footer-text p {
         padding: 40px;
     }
 
-    content3{
+    content3 {
         padding: 40px;
     }
 
@@ -473,5 +470,3 @@ footer .footer-text p {
         margin-top: 760vh;
     }
 }
-
-

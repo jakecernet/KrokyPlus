@@ -1,6 +1,6 @@
 
-document.getElementById("image-widget").style.display = "block";
-document.getElementById("stats-widget").style.display = "none";
+document.getElementById("image-widget").style.display = "none";
+document.getElementById("stats-widget").style.display = "flex";
 
 function displayMenu() {
     menu = document.getElementById("menu");
