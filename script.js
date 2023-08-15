@@ -2,6 +2,15 @@
 document.getElementById("image-widget").style.display = "block";
 document.getElementById("stats-widget").style.display = "none";
 
+function displayMenu() {
+    menu = document.getElementById("menu");
+    if (menu.style.height == "0px") {
+        menu.style.height = "300px";
+    } else {
+        menu.style.height = "0px";
+    }
+}
+
 fetch("https://kroky-plus-backend.vercel.app/api/stat")
     .then((res) => res.json())
     .then((data) => {
