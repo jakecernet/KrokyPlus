@@ -135,7 +135,7 @@ header .header-text button:hover {
     cursor: pointer;
 }
 
-header .header-image {
+.header-image {
     position: relative;
     width: 600px;
     height: 600px;
@@ -271,6 +271,7 @@ content3 .content-text {
     position: relative;
     height: 400px;
     width: 200px;
+    max-width: 200px;
     background: #1e2851;
     border-radius: 10px;
     overflow: hidden;
@@ -417,17 +418,13 @@ footer .footer-text p {
         font-size: 20px;
     }
 
-    header .header-image {
-        display: none;
-    }
-
     content {
-        padding: 40px;
+        padding: 20px;
     }
 
     .content-text {
         width: 100%;
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     .content-text h1 {
@@ -435,7 +432,7 @@ footer .footer-text p {
         line-height: 50px;
     }
 
-    content .content-text p {
+    .content-text p {
         font-size: 20px;
     }
 
@@ -444,11 +441,13 @@ footer .footer-text p {
     }
 
     content2 {
-        padding: 40px;
+        padding: 20px;
     }
 
     content3 {
-        padding: 40px;
+        position: absolute;
+        margin-top: 680vh;
+        padding: 20px;
     }
 
     .grid {
@@ -467,6 +466,16 @@ footer .footer-text p {
     }
 
     footer {
-        margin-top: 760vh;
+        margin-top: 870vh;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .content-image {
+        display: none;
+    }
+
+    .header-image{
+        display: none;
     }
 }
