@@ -15,9 +15,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(old/files/other/stacked-waves-haikei.svg);
+    background: url(bkg.png);
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -154,7 +153,6 @@ content {
     align-items: center;
     transition: 0.6s;
     margin-top: 200vh;
-    background: url(old/files/other/stacked-waves-haikei.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -233,7 +231,6 @@ content2 {
     align-items: center;
     transition: 0.6s;
     margin-top: 400vh;
-    background: url(old/files/other/stacked-waves-haikei.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -249,7 +246,6 @@ content3 {
     align-items: center;
     transition: 0.6s;
     margin-top: 600vh;
-    background: url(old/files/other/stacked-waves-haikei.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
