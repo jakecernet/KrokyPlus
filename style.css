@@ -269,9 +269,9 @@ content3 .content-text {
 
 .grid-item {
     position: relative;
-    height: 400px;
+    height: 340px;
     width: 200px;
-    max-width: 200px;
+    max-width: 220px;
     background: #1e2851;
     border-radius: 10px;
     overflow: hidden;
@@ -284,6 +284,7 @@ content3 .content-text {
     left: 0;
     width: 100%;
     height: 50%;
+    object-fit: cover;
 }
 
 .grid-item h2 {
@@ -446,7 +447,7 @@ footer .footer-text p {
 
     content3 {
         position: absolute;
-        margin-top: 680vh;
+        margin-top: 650vh;
         padding: 20px;
     }
 
@@ -465,8 +466,13 @@ footer .footer-text p {
         font-size: 20px;
     }
 
+    .grid-item .links {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
     footer {
-        margin-top: 870vh;
+        margin-top: 820vh;
     }
 }
 
@@ -475,7 +481,7 @@ footer .footer-text p {
         display: none;
     }
 
-    .header-image{
+    .header-image {
         display: none;
     }
 }
