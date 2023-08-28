@@ -34,28 +34,34 @@
 
 
 <!-- ABOUT THE PROJECT -->
+# Welcome to KrokyPlus! 🍔🤖
 ## About The Project
 
-KrokyPlus uses AI to simplify the food ordering process on Kroky.si. Users can log in with their Kroky username and password and the app will automatically place an order for them based on their previous orders and preferences.
+KrokyPlus is here to revolutionize your food ordering experience on Kroky.si! 🚀 Say goodbye to the hassle of scrolling through menus and making selections. With the power of AI, KrokyPlus streamlines the food ordering process by learning from your previous orders and preferences.
 
-## Project Status
-KrokyPlus is currently in development and is not intended for production use.
+## How It Works
+Seamless Login: Log in effortlessly using your Kroky credentials.
+AI Magic: Once you're in, watch the app work its magic. Our AI buddy analyzes your history to understand your tastes and preferences.
+Why KrokyPlus?
+Effortless Ordering: No more browsing menus; your order is just a click away.
+Personalized Picks: KrokyPlus remembers what you love and tailors suggestions accordingly.
+Time-Saving: Speedy and accurate, KrokyPlus gets your order right while you relax.
+Project Status
+KrokyPlus is your culinary sidekick currently on an exciting development journey. 🛠️ While it's not quite ready for the big leagues of production yet, stay tuned for updates as we fine-tune and perfect this foodie AI gem! 💎
 
-<!--## How to use it
+## Get Involved
+Want to join the KrokyPlus ride? We'd love to have you on board! Check out our contributing guidelines to see how you can help make KrokyPlus even more amazing.
 
-First, you register with your Kroky username and password.
+## Disclaimer
+Remember, as of now, KrokyPlus is all about the behind-the-scenes action. It's a development playground and not yet suitable for real-deal food orders. But don't worry, we're cooking up something awesome for you!
 
-<img src="http://www2.arnes.si/~jcern4/Posnetek%20zaslona%202023-04-22%20121453.png" width="1000px">-->
+## Contact Us
+Got questions, ideas, or just want to chat food and tech? Hit us up at <contact@krokyplus.si>. We're all ears!
 
-<!--### Built With
+## Stay Hungry, Stay Updated
+Keep an eye on this repo for the latest scoop. 🍦 Star it, fork it – stay hungry for the future of food ordering!
 
-* [![HTML][HTML5]][Next-url]
-* [![CSS][CSS3]][Vue-url]
-* [![JavaScript][JavaScript]][React-url]
-* [![Python][Python]][Python-url]
-
-<br>-->
-
+Made with ❤️ by Jaka (and ChatGPT) and the KrokyPlus team.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
