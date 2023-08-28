@@ -1,13 +1,9 @@
-
-document.getElementById("image-widget").style.display = "block";
-document.getElementById("stats-widget").style.display = "none";
-
 function displayMenu() {
     menu = document.getElementById("menu");
-    if (menu.style.height == "0px") {
-        menu.style.height = "300px";
-    } else {
+    if (menu.style.height == "300px") {
         menu.style.height = "0px";
+    } else {
+        menu.style.height = "300px";
     }
 }
 
@@ -20,10 +16,14 @@ fetch("https://kroky-plus-backend.vercel.app/api/stat")
         const number_of_views = data.number_views;
         document.getElementById("number_of_views").innerHTML =
             number_of_views;
-            
+
     })
     .catch((err) => {
-        document.getElementById("image-widget").style.display = "block";
-        document.getElementById("stats-widget").style.display = "none";
+        const number_of_users = data.number_users;
+        document.getElementById("number_of_users").innerHTML =
+            "NaN";
+        const number_of_views = data.number_views;
+        document.getElementById("number_of_views").innerHTML =
+        "NaN";
+    });
 
-    }); 
