@@ -331,6 +331,7 @@ content3 .content-text {
     width: 50px;
     height: 50px;
     margin: 15px;
+    filter: invert(1);
 }
 
 footer {
