@@ -9,7 +9,7 @@
 </div>
 
 
-<!-- PROJECT LOGO -->
+
 <br/>
 <div align="center">
   <a href="https://krokyplus.si">
