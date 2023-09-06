@@ -126,12 +126,27 @@ header .header-text button {
     border-radius: 5px;
     transition: 0.3s;
     background: none;
+    display: flex;
 }
 
 header .header-text button:hover {
     background: #fff;
     color: #000;
     cursor: pointer;
+}
+
+.open{
+    height: 20px;
+    margin: 0 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    transition: 0.3s;
+}
+
+header .header-text button:hover .open{
+    filter: invert(1);
 }
 
 .header-image {
