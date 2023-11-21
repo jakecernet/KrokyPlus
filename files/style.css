@@ -408,6 +408,29 @@ footer .footer-text p {
         width: 100vw;
     }
 
+.nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        background: #0b24476b;
+        backdrop-filter: blur(5px);
+        margin-top: 90px;
+        overflow: hidden;
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        font-size: 20px;
+        padding: 20px;
+    }
+
     .menu {
         display: flex;
         justify-content: center;
