@@ -1,9 +1,9 @@
 function displayMenu() {
     menu = document.getElementById("menu");
-    if (menu.style.height == "300px") {
-        menu.style.height = "0px";
+    if (menu.style.left == "0%") {
+        menu.style.left = "-100%";
     } else {
-        menu.style.height = "300px";
+        menu.style.left = "0%";
     }
 }
 
