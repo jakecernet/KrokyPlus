@@ -30,8 +30,8 @@
 
 /* Navbar */
 nav {
-    background-color: rgba(11, 16, 81, 0.24);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(6, 8, 44, 0.144);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.24);
     position: sticky;
     top: 0;
     z-index: 1;

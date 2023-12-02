@@ -21,6 +21,7 @@ header {
     align-items: center;
     transition: 0.3s;
     top: 0;
+    margin: 20px;
 }
 
 header .header-text {
