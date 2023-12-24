@@ -1,248 +1,279 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg) no-repeat center center/cover;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg)
+		no-repeat center center/cover;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 header {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    top: 0;
-    margin: 20px;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	top: 0;
+	margin: 20px;
 }
 
 header .header-text {
-    max-width: 800px;
+	max-width: 800px;
 }
 
 header .header-text h1 {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 70px;
+	font-size: 60px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 70px;
 }
 
 header .header-text p {
-    font-size: 25px;
-    font-weight: 500;
-    color: #fff;
-    margin: 20px 0;
+	font-size: 25px;
+	font-weight: 500;
+	color: #fff;
+	margin: 20px 0;
 }
 
 header .header-text a {
-    display: inline-block;
-    text-decoration: none;
-    color: #d3d3d3;
+	display: inline-block;
+	text-decoration: none;
+	color: #d3d3d3;
 }
 
-header .header-text button {
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
+header .header-text a {
+	text-align: center;
+	margin: 50px auto;
+	position: relative;
+	background: transparent;
+	border: solid 2px #fff;
+	padding: 12px 30px;
+	border-radius: 5px;
+	color: #fff;
+	transition: all 0.2s;
+	transition-timing-function: linear;
     font-size: 18px;
-    border: 2px solid #fff;
-    padding: 12px 30px;
-    border-radius: 5px;
-    transition: 0.3s;
-    background: none;
+
+	&:before,
+	&:after {
+		content: " ";
+		width: 0;
+		height: 48px;
+		background-color: #fff;
+		display: block;
+		position: absolute;
+		top: 0;
+		transition: all 0.2s;
+		transition-timing-function: linear;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	&:before {
+		left: 50%;
+	}
+
+	&:after {
+		right: 50%;
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: #000;
+
+		&:after,
+		&:before {
+			width: 50%;
+			opacity: 1;
+		}
+	}
 }
 
-header .header-text button i {
-    margin-left: 10px;
-}
-
-header .header-text button:hover {
-    background: #fff;
-    color: #0b4251;
-    cursor: pointer;
+header .header-text a i {
+	margin-left: 10px;
 }
 
 .header-image {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 section {
-    padding: 100px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+	padding: 100px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 section .text {
-    max-width: 500px;
+	max-width: 500px;
 }
 
 section .text h1 {
-    font-size: 40px;
-    font-weight: 600;
-    color: #fff;
-    margin: 20px 0;
+	font-size: 40px;
+	font-weight: 600;
+	color: #fff;
+	margin: 20px 0;
 }
 
 section .text p {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-    margin: 20px 0;
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+	margin: 20px 0;
 }
 
 section .text h2 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 20px 0;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ffffff;
+	margin: 20px 0;
 }
 
 section .text a {
-    display: inline-block;
-    text-decoration: none;
-    color: #9c9c9c;
+	display: inline-block;
+	text-decoration: none;
+	color: #9c9c9c;
 }
 
 section img {
-    width: 400px;
+	width: 400px;
 }
 
 .kontakt {
-    padding: 100px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+	padding: 100px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .kontakt h1 {
-    font-size: 40px;
-    font-weight: 600;
-    color: #fff;
-    margin: 20px 0;
-    text-align: center;
+	font-size: 40px;
+	font-weight: 600;
+	color: #fff;
+	margin: 20px 0;
+	text-align: center;
 }
 
 .contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 50vh;
 }
 
 .contacts .contact {
-    border-radius: 10px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 0.3s;
+	border-radius: 10px;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.3s;
 }
 
 .contacts .contact:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 .contacts .contact h1 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    margin: 20px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #fff;
+	margin: 20px;
 }
 
 .contacts .contact img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 20px;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 20px;
 }
 
 footer {
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	color: #fff;
 }
 
 @media screen and (max-width: 1024px) {
-    body {
-        overflow-x: hidden;
-    }
+	body {
+		overflow-x: hidden;
+	}
 
-    header {
-        padding: 0 40px;
-    }
+	header {
+		padding: 0 40px;
+	}
 
-    header .header-text h1 {
-        font-size: 40px;
-        line-height: 50px;
-    }
+	header .header-text h1 {
+		font-size: 40px;
+		line-height: 50px;
+	}
 
-    header .header-text p {
-        font-size: 20px;
-    }
+	header .header-text p {
+		font-size: 20px;
+	}
 
-    header .header-text button {
-        font-size: 15px;
-    }
+	header .header-text button {
+		font-size: 15px;
+	}
 
-    .header-image {
-        display: none;
-    }
+	.header-image {
+		display: none;
+	}
 
-    section{
-        margin: 20px;
-        min-height: 50vh;
-    }
+	section {
+		margin: 20px;
+		min-height: 50vh;
+	}
 
-    section .text h1 {
-        font-size: 30px;
-    }
+	section .text h1 {
+		font-size: 30px;
+	}
 
-    section .text p {
-        font-size: 15px;
-    }
+	section .text p {
+		font-size: 15px;
+	}
 
-    section img {
-        width: 300px;
-    }
+	section img {
+		width: 300px;
+	}
 
-    .contacts{
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+	.contacts {
+		margin: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
-    .contacts .contact {
-        margin: 0;
-    }
+	.contacts .contact {
+		margin: 0;
+	}
 
-    .contacts .contact h1 {
-        font-size: 20px;
-    }
+	.contacts .contact h1 {
+		font-size: 20px;
+	}
 
-    .contacts .contact img {
-        width: 100px;
-        height: 100px;
-    }
+	.contacts .contact img {
+		width: 100px;
+		height: 100px;
+	}
 }

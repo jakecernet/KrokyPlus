@@ -1,104 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>KrokyPlus</title>
+		<link rel="stylesheet" href="files/index.css" />
+		<link rel="stylesheet" href="files/nav.css" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Krokyplus" />
+		<meta
+			property="og:description"
+			content="Food ordering automation service." />
+		<meta property="og:url" content="https://krokyplus.me" />
+		<meta
+			property="og:image"
+			content="https://app.krokyplus.si/favicon.ico" />
+		<meta property="og:site_name" content="KrokyPlus" />
+		<meta property="og:locale" content="sl_SI" />
+		<meta name="description" content="Food ordering automation service." />
+		<link rel="shortcut icon" href="https://app.krokyplus.si/favicon.ico" />
+		<script
+			src="https://kit.fontawesome.com/6b0af4bcb3.js"
+			crossorigin="anonymous"></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KrokyPlus</title>
-    <link rel="stylesheet" href="files/index.css">
-    <link rel="stylesheet" href="files/nav.css">
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Krokyplus" />
-    <meta property="og:description" content="Food ordering automation service." />
-    <meta property="og:url" content="https://krokyplus.me" />
-    <meta property="og:image" content="https://app.krokyplus.si/favicon.ico" />
-    <meta property="og:site_name" content="KrokyPlus" />
-    <meta property="og:locale" content="sl_SI" />
-    <meta name="description" content="Food ordering automation service." />
-    <link rel="shortcut icon" href="https://app.krokyplus.si/favicon.ico" />
-    <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <nav>
-        <div class="logo">
-            <i class="fas fa-plus"></i>
-        </div>
-        <ul class="nav-links slide" id="menu">
-            <li><a href="\">Domov</a></li>
-            <li><a href="#onas">O nas</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-            <li><a href="https://app.krokyplus.si">Odpri aplikacijo</a></li>
-        </ul>
-        <div class="burger" onclick="displayMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
-    <header>
-        <div class="header-text">
-            <h1>Avtomatizirajte naročanje hrane.</h1>
-            <p>
-                Preprosto in hitro naročanje hrane iz
-                <a href="https://kroky.si">kroky.si</a>.
-            </p>
-            <button onclick="location.href = `https://app.krokyplus.si`;">
-                Odpri aplikacijo
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-        <div class="header-image">
-            <img src="files/krokyplus.png" alt="KrokyPlus" />
-        </div>
-    </header>
-    <section>
-        <img src="files/asset1.png" alt="">
-        <div class="text">
-            <h1>Kaj je KrokyPlus?</h1>
-            <p>
-                KrokyPlus je spletna storitev, ki omogoča avtomatizirano naročanje
-                hrane iz <a href="https://kroky.si">kroky.si</a>. KrokyPlus je
-                namenjen predvsem dijakom in študentom (za zdaj samo iz Vegove šole),
-                ki želijo hitro in enostavno naročiti hrano iz kroky.si.
-            </p>
-            <h2>Število uporabnikov: <span id="number_of_users"></span></h2>
-        </div>
-    </section>
-    <section id="onas">
-        <div class="text">
-            <h1>O nas</h1>
-            <p>
-                KrokyPlus smo ustvarili trije dijaki, ki smo se naveličali
-                vsakotedenskega naročanja hrane iz kroky.si. Zato smo se odločili, da
-                naredimo spletno storitev, ki nam bo to delo olajšala. Tako smo
-                ustvarili KrokyPlus. Več o delovanju KrokyPlus si lahko preberete
-                <a href="https://github.com/KrokyPlus" target="_blank">tukaj</a>.
-            </p>
-        </div>
-        <img src="files/order.png" alt="">
-    </section>
-    <section class="kontakt" id="kontakt">
-        <h1>Kontakt</h1>
-        <div class="contacts">
-            <div class="contact" onclick="location.href = `https://bitcloud.si`;">
-                <h1>Lin Čadež</h1>
-                <img src="https://avatars.githubusercontent.com/u/68005465?v=4" alt="">
-            </div>
-            <div class="contact" onclick="location.href = `https://cernetic.cc`;">
-                <h1>Jaka Černetič</h1>
-                <img src="https://avatars.githubusercontent.com/u/117542696?v=4" alt="">
-            </div>
-            <div class="contact" onclick="location.href = `https://majmohar.me`;">
-                <h1>Maj Mohar</h1>
-                <img src="https://avatars.githubusercontent.com/u/119863703?v=4" alt="">
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>
-            © 2023 KrokyPlus. Vse pravice pridržane.
-        </p>
-    </footer>
-    <script src="files/script.js"></script>
-</body>
-
+	<body>
+		<nav>
+			<div class="logo">
+				<i class="fas fa-plus"></i>
+			</div>
+			<ul class="nav-links slide" id="menu">
+				<li><a href="\">Domov</a></li>
+				<li><a href="#onas">O nas</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+				<li><a href="https://app.krokyplus.si">Odpri aplikacijo</a></li>
+			</ul>
+			<div class="burger" onclick="displayMenu()">
+				<i class="fas fa-bars"></i>
+			</div>
+		</nav>
+		<header>
+			<div class="header-text">
+				<h1>Avtomatizirajte naročanje hrane.</h1>
+				<p>
+					Preprosto in hitro naročanje hrane iz kroky.si.
+				</p>
+				<a onclick="location.href = `https://app.krokyplus.si`;">
+					Odpri aplikacijo
+					<i class="fas fa-arrow-right"></i>
+				</a>
+			</div>
+			<div class="header-image">
+				<img src="files/krokyplus.png" alt="KrokyPlus" />
+			</div>
+		</header>
+		<section>
+			<img src="files/asset1.png" alt="" />
+			<div class="text">
+				<h1>Kaj je KrokyPlus?</h1>
+				<p>
+					KrokyPlus je spletna storitev, ki omogoča avtomatizirano
+					naročanje hrane iz <a href="https://kroky.si">kroky.si</a>.
+					KrokyPlus je namenjen predvsem dijakom in študentom (za zdaj
+					samo iz Vegove šole), ki želijo hitro in enostavno naročiti
+					hrano iz kroky.si.
+				</p>
+				<h2>Število uporabnikov: <span id="number_of_users"></span></h2>
+			</div>
+		</section>
+		<section id="onas">
+			<div class="text">
+				<h1>O nas</h1>
+				<p>
+					KrokyPlus smo ustvarili trije dijaki, ki smo se naveličali
+					vsakotedenskega naročanja hrane iz kroky.si. Zato smo se
+					odločili, da naredimo spletno storitev, ki nam bo to delo
+					olajšala. Tako smo ustvarili KrokyPlus. Več o delovanju
+					KrokyPlus si lahko preberete
+					<a href="https://github.com/KrokyPlus" target="_blank"
+						>tukaj</a
+					>.
+				</p>
+			</div>
+			<img src="files/order.png" alt="" />
+		</section>
+		<section class="kontakt" id="kontakt">
+			<h1>Kontakt</h1>
+			<div class="contacts">
+				<div
+					class="contact"
+					onclick="location.href = `https://bitcloud.si`;">
+					<h1>Lin Čadež</h1>
+					<img
+						src="https://avatars.githubusercontent.com/u/68005465?v=4"
+						alt="" />
+				</div>
+				<div
+					class="contact"
+					onclick="location.href = `https://cernetic.cc`;">
+					<h1>Jaka Černetič</h1>
+					<img
+						src="https://avatars.githubusercontent.com/u/117542696?v=4"
+						alt="" />
+				</div>
+				<div
+					class="contact"
+					onclick="location.href = `https://majmohar.me`;">
+					<h1>Maj Mohar</h1>
+					<img
+						src="https://avatars.githubusercontent.com/u/119863703?v=4"
+						alt="" />
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>© 2023 KrokyPlus. Vse pravice pridržane.</p>
+		</footer>
+		<script src="files/script.js"></script>
+	</body>
 </html>
