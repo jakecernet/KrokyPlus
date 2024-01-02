@@ -41,6 +41,8 @@ nav {
     height: 80px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 nav .logo {
@@ -48,6 +50,7 @@ nav .logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 99;
 }
 
 nav .logo a {
@@ -89,14 +92,17 @@ nav .burger {
 }
 
 @media screen and (max-width: 1024px) {
-    nav{
+    nav {
         height: 120px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        backdrop-filter: blur(8px);
+        border-radius: none;
+        margin: 0;
     }
 
-    .nav-links{
+    .nav-links {
         position: fixed;
         background-color: rgba(3, 3, 7, 0.767);
         backdrop-filter: blur(20px);
@@ -109,23 +115,23 @@ nav .burger {
         z-index: 1;
     }
 
-    .nav-links li{
+    .nav-links li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
 
-    .nav-links li a{
+    .nav-links li a {
         font-size: 20px;
     }
 
-    nav .burger{
+    nav .burger {
         display: flex;
         margin: 20px;
         z-index: 99;
     }
 
-    nav .burger i{
+    nav .burger i {
         font-size: 50px;
         color: #fff;
     }
