@@ -14,11 +14,11 @@
     width: 80%;
     margin-left: 10%;
     transform: scaleX(0);
-    height: 5px;
+    height: 4px;
     border-radius: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background: radial-gradient(circle, #fff 80%, transparent);
     transform-origin: bottom;
     transition: transform 0.2s ease-out;
 }
