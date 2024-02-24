@@ -7,8 +7,7 @@
 
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg)
-		no-repeat center center/cover;
+	background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg) no-repeat center center/cover;
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +59,7 @@ header .header-text a {
 	color: #fff;
 	transition: all 0.2s;
 	transition-timing-function: linear;
-    font-size: 18px;
+	font-size: 18px;
 
 	&:before,
 	&:after {
@@ -204,6 +203,7 @@ section img {
 .contacts .contact img {
 	width: 200px;
 	height: 200px;
+	object-fit: cover;
 	border-radius: 50%;
 	margin: 20px;
 	transition: 0.3s;
@@ -219,7 +219,7 @@ section img {
 	flex-wrap: wrap;
 }
 
-.about-text p{
+.about-text p {
 	font-size: 20px;
 	font-weight: 400;
 	color: #fff;
