@@ -1,48 +1,16 @@
-/* nav hover */
-.slide a {
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    padding: 10px;
-    cursor: pointer;
-    color: #fff;
-}
-
-.slide a::after {
-    content: '';
-    position: absolute;
-    width: 80%;
-    margin-left: 10%;
-    transform: scaleX(0);
-    height: 4px;
-    border-radius: 2px;
-    bottom: 0;
-    left: 0;
-    background: radial-gradient(circle, #fff 80%, transparent);
-    transform-origin: bottom;
-    transition: transform 0.2s ease-out;
-}
-
-.slide a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom;
-}
-
 /* Navbar */
 nav {
-    background-color: rgba(6, 8, 44, 0.144);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.24);
+    background-color: rgba(6, 8, 44, 0.062);
     position: sticky;
     top: 0;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 100px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    border-radius: 10px;
-    margin: 20px;
+    margin: 0 80px;
 }
 
 nav .logo {
@@ -51,13 +19,6 @@ nav .logo {
     align-items: center;
     justify-content: center;
     z-index: 99;
-}
-
-nav .logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-    margin-left: 15px;
 }
 
 nav .logo i {
@@ -70,13 +31,22 @@ nav .logo i {
 
 nav ul {
     float: right;
-    margin-right: 20px;
 }
 
 nav ul li {
     display: inline-block;
-    line-height: 30px;
+    line-height: 20px;
     margin: 0 5px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+    animation: wiggle 0.5s ease;
+    cursor: pointer;
+    scale: 1.05;
 }
 
 nav ul li a {
@@ -89,6 +59,28 @@ nav ul li a {
 nav .burger {
     display: none;
     cursor: pointer;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(4deg);
+    }
+
+    50% {
+        transform: rotate(-4deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @media screen and (max-width: 1024px) {

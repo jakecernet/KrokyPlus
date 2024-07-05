@@ -17,11 +17,10 @@ body {
 header {
 	height: 80vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	transition: 0.3s;
-	top: 0;
-	margin: 40px;
+	margin: 0 100px;
 }
 
 header .header-text {
@@ -118,7 +117,7 @@ section {
 }
 
 section .text {
-	max-width: 500px;
+	max-width: 600px;
 }
 
 section .text h1 {
@@ -149,8 +148,9 @@ section .text a {
 }
 
 section img {
-	width: 400px;
 	height: 400px;
+	width: 400px;
+	object-fit: cover;
 }
 
 .kontakt {
@@ -302,4 +302,24 @@ footer {
 		width: 100px;
 		height: 100px;
 	}
+}
+
+.arrow{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #3c4491;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.arrow i{
+	color: #fff;
+	font-size: 30px;
 }
