@@ -13,7 +13,7 @@
 <br/>
 <div align="center">
   <a href="https://krokyplus.si">
-    <img src="https://app.krokyplus.si/favicon.ico" alt="Logo" width="80" height="80">
+    <img src="https://jakecernet.github.io/KrokyPlus/files/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">KrokyPlus</h3>
