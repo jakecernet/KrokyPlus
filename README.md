@@ -56,7 +56,7 @@ Want to join the KrokyPlus ride? We'd love to have you on board! Check out our c
 Remember, as of now, KrokyPlus is all about the behind-the-scenes action. It's a development playground and not yet suitable for real-deal food orders. But don't worry, we're cooking up something awesome for you!
 
 ## Contact Us
-Got questions, ideas, or just want to chat food and tech? Hit us up at <contact@krokyplus.si>. We're all ears!
+Got questions, ideas, or just want to chat food and tech? Hit us up at <krokyplus@gmail.com>. We're all ears!
 
 ## Stay Hungry, Stay Updated
 Keep an eye on this repo for the latest scoop. 🍦 Star it, fork it – stay hungry for the future of food ordering!
