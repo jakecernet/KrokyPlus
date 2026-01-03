@@ -11,6 +11,38 @@ nav {
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     margin: 0 80px;
+
+    ul {
+        float: right;
+
+        li {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0 5px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+
+            a {
+                color: #fff;
+                font-size: 17px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+        }
+
+        li:hover {
+            animation: wiggle 0.5s ease;
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+
+    .burger {
+        display: none;
+        cursor: pointer;
+    }
 }
 
 nav .logo {
@@ -27,38 +59,6 @@ nav .logo i {
     display: inline-block;
     position: relative;
     color: #fff;
-}
-
-nav ul {
-    float: right;
-}
-
-nav ul li {
-    display: inline-block;
-    line-height: 20px;
-    margin: 0 5px;
-    padding: 10px 20px;
-    border-radius: 24px;
-    border: 2px solid #fff;
-    transition: all 0.3s ease;
-}
-
-nav ul li:hover {
-    animation: wiggle 0.5s ease;
-    cursor: pointer;
-    scale: 1.05;
-}
-
-nav ul li a {
-    color: #fff;
-    font-size: 17px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-nav .burger {
-    display: none;
-    cursor: pointer;
 }
 
 @keyframes wiggle {
