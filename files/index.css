@@ -7,7 +7,8 @@
 
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg) no-repeat center center/cover;
+	background: url(../files/stacked-waves-haikei.8ec0f5411dfb11ec26c7.svg)
+		no-repeat center center/cover;
 }
 
 ::-webkit-scrollbar {
@@ -304,7 +305,7 @@ footer {
 	}
 }
 
-.arrow{
+.arrow {
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
@@ -317,9 +318,8 @@ footer {
 	align-items: center;
 	cursor: pointer;
 	transition: 0.3s;
-}
-
-.arrow i{
-	color: #fff;
-	font-size: 30px;
+    
+	svg {
+		color: #fff;
+	}
 }

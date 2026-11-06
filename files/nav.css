@@ -1,130 +1,135 @@
 /* Navbar */
 nav {
-    background-color: rgba(6, 8, 44, 0.062);
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    margin: 0 80px;
+	background-color: rgba(6, 8, 44, 0.062);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	margin: 0 80px;
 
-    ul {
-        float: right;
+	ul {
+		float: right;
 
-        li {
-            display: inline-block;
-            line-height: 20px;
-            margin: 0 5px;
-            padding: 10px 20px;
-            border-radius: 24px;
-            border: 2px solid #fff;
-            transition: all 0.3s ease;
+		li {
+			display: inline-block;
+			margin: 0 5px;
+			transition: all 0.3s ease;
+            
+			a {
+                border: 2px solid #fff;
+                border-radius: 24px;
+                line-height: 20px;
+                padding: 10px 20px;
+				color: #fff;
+				font-size: 17px;
+				text-decoration: none;
+				transition: all 0.3s ease;
+			}
+		}
 
-            a {
-                color: #fff;
-                font-size: 17px;
-                text-decoration: none;
-                transition: all 0.3s ease;
-            }
-        }
+		li:hover {
+			animation: wiggle 0.5s ease;
+			cursor: pointer;
+			scale: 1.05;
+		}
+	}
 
-        li:hover {
-            animation: wiggle 0.5s ease;
-            cursor: pointer;
-            scale: 1.05;
-        }
-    }
+	.burger {
+		display: none;
+		cursor: pointer;
 
-    .burger {
-        display: none;
-        cursor: pointer;
-    }
-}
+		svg {
+			width: 30px;
+			height: 30px;
+			color: #fff;
+		}
+	}
 
-nav .logo {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-}
+	.logo {
+		margin-left: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 99;
 
-nav .logo i {
-    font-size: 40px;
-    margin-right: 5px;
-    display: inline-block;
-    position: relative;
-    color: #fff;
+		svg {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+			filter: invert(100%);
+		}
+	}
 }
 
 @keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
 
-    25% {
-        transform: rotate(4deg);
-    }
+	25% {
+		transform: rotate(4deg);
+	}
 
-    50% {
-        transform: rotate(-4deg);
-    }
+	50% {
+		transform: rotate(-4deg);
+	}
 
-    75% {
-        transform: rotate(4deg);
-    }
+	75% {
+		transform: rotate(4deg);
+	}
 
-    100% {
-        transform: rotate(0deg);
-    }
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 @media screen and (max-width: 1024px) {
-    nav {
-        height: 120px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        backdrop-filter: blur(8px);
-        border-radius: none;
-        margin: 0;
-    }
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		backdrop-filter: blur(8px);
+		border-radius: none;
+		margin: 0;
+	}
 
-    .nav-links {
-        position: fixed;
-        background-color: rgba(3, 3, 7, 0.767);
-        backdrop-filter: blur(20px);
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        text-align: center;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
+	.nav-links {
+		position: fixed;
+		background-color: rgba(3, 3, 7, 0.767);
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		text-align: center;
+		transition: all 0.5s ease;
+		z-index: 1000000;
+		padding: 20px;
 
-    .nav-links li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
+		li {
+			display: block;
+			line-height: 30px;
+            padding: 10px;
+            margin: 10px;
+            
+			a {
+                width: 100%;
+				font-size: 20px;
+			}
+		}
+	}
 
-    .nav-links li a {
-        font-size: 20px;
-    }
+	nav .burger {
+		display: flex;
+		margin: 20px;
+		z-index: 99;
+	}
 
-    nav .burger {
-        display: flex;
-        margin: 20px;
-        z-index: 99;
-    }
-
-    nav .burger i {
-        font-size: 50px;
-        color: #fff;
-    }
+	header {
+		margin: 0;
+	}
 }

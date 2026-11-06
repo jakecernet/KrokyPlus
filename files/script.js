@@ -13,3 +13,11 @@ fetch("https://kroky-plus-backend.vercel.app/api/stat")
 		const number_of_users = data.number_users;
 		document.getElementById("number_of_users").innerHTML = number_of_users;
 	});
+
+nav = document.getElementById("menu");
+
+onclick = function (e) {
+    if (e.target == nav || e.target.parentNode == nav) {
+        nav.style.left = "-100%";
+    }
+}
