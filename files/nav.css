@@ -1,3 +1,9 @@
+*{
+    scrollbar-width: thin;
+    scrollbar-color: #4c8ad1 #f1f1f1;
+    scrollbar-gutter: stable;
+}
+
 /* Navbar */
 nav {
 	background-color: rgba(6, 8, 44, 0.062);
@@ -10,7 +16,7 @@ nav {
 	height: 80px;
 	backdrop-filter: blur(10px);
 	transition: all 0.3s ease;
-	margin: 0 80px;
+    padding: 0 20px;
 
 	ul {
 		float: right;
